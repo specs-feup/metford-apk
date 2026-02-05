@@ -1,8 +1,8 @@
 {
-    "name": "@specs-feup/clava-project-template",
-    "version": "1.1.0",
-    "author": "L. Sousa",
-    "description": "A template for developing projects for Clava in Typescript",
+    "name": "@specs-feup/metford-apk",
+    "version": "0.0.1",
+    "author": "J. Neves",
+    "description": "Mutation testing framework for Android binaries",
     "type": "module",
     "files": [
       "api",
@@ -18,8 +18,8 @@
       "typedoc.config.js"
     ],     
     "scripts": {
-        "run": "npx clava classic dist/main.js -p CxxSources/",
-        "run:watch": "npx clava dist/main.js -w dist/main.js -- clang CxxSources/",
+        "run": "npx alpakka classic dist/main.js -p InputSources/",
+        "run:watch": "npx alpakka dist/main.js -w dist/main.js -- InputSources/",
         "build": "tsc",
         "build:watch": "tsc --watch",
         "lint": "eslint .",
@@ -29,7 +29,7 @@
         "test:watch": "npm run test -- --watch"
     },
     "dependencies": {
-        "@specs-feup/clava": "~3.5.0"
+        "@specs-feup/alpakka": "~1.2.0"
     },
     "devDependencies": {
         "@jest/globals": "^30.2.0",
