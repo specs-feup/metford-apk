@@ -1,38 +1,60 @@
-# clava-project-template
+# metford-apk
 
-A template for developing projects for Clava in Typescript
+Mutation testing framework for Android binaries using [Alpakka](https://github.com/specs-feup/alpakka).
 
-## Installing dev environment
+## Building the original APK
 
-Execute the following commands to download all the required code:
+```bash
+cd apps/MyApplication
+./gradlew assembleDebug
+cp app/build/outputs/apk/debug/app-debug.apk ../../InputSources/app-debug.apk
+```
+
+## Setup
+
+Install dependencies:
 
 ```bash
 npm install
 ```
 
-## Compiling and executing Clava-based project
+## Running a mutation
 
-First you need to compile the TypeScript files to JavaScript:
+Compile the TypeScript source and run Alpakka on the input APK:
 
 ```bash
 npm run build
-```
-
-Then you can execute your project by running the following on your terminal
-
-```bash
 npm run run
 ```
 
-By default it will run the script `main.ts`. Take a look inside the `scripts` field in the `package.json` file for more information.
+The input APK is read from `InputSources/` and the mutated APK is written to `mutated-app.apk`.
 
-You can also run tests, get test coverage information and generate documentation for your project.
+## Running tests against the mutated APK
 
-## Debugging
+### Prerequisites
 
-You can get debugging information using a `DEBUG` environment variable.
-This variable is used by the [debug](https://www.npmjs.com/package/debug) module to determine what to expose.
+These only need to be done once.
+
+**Build and install the test APK:**
 
 ```bash
-DEBUG="*" npm run run
+cd apps/MyApplication
+./gradlew assembleDebugAndroidTest
+adb install app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk
+```
+
+### For each mutation
+
+Sign and install the mutated APK, then run the tests:
+
+```bash
+zipalign -p -f 4 mutated-app.apk mutated-app-aligned.apk
+
+apksigner sign --ks ~/.android/debug.keystore --ks-pass pass:android mutated-app-aligned.apk
+
+adb install -r mutated-app-aligned.apk
+
+adb shell am instrument -w \
+  -e class com.example.myapplication.MainActivityInstrumentedTest \
+  com.example.myapplication.test/androidx.test.runner.AndroidJUnitRunner
 ```
