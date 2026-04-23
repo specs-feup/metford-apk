@@ -1,0 +1,28 @@
+{
+    "projectName": "MyApplication",
+
+    "inputApk": "InputSources/",
+    "outputApk": "mutated-app.apk",
+    "reportPath": "mutation-report.json",
+
+    "packageFilter": "com/example/myapplication",
+    "verbose": true,
+
+    "operators": [
+        "Arithmetic",
+        "Conditional",
+        "Constant",
+        "InvalidDate",
+        "NullIntent",
+        "RandomIntentAction",
+        "NullPutExtraValue",
+        "NullPutExtraKey",
+        "BuggyGUIListener",
+        "LengthyGUIListener",
+        "LengthyGUICreation",
+        "FindViewByIdReturnsNull",
+        "InvalidIDFindView",
+        "InvalidViewFocus",
+        "ViewComponentNotVisible"
+    ]
+}
