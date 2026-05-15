@@ -1,11 +1,6 @@
 import Query from "@specs-feup/lara/api/weaver/Query.js";
 import { Instruction, MethodNode, BinaryOp } from "@specs-feup/alpakka/api/Joinpoints.js";
 
-/**
- * One mutation proposal. The operator describes the change, but does NOT
- * modify the AST. The runner is responsible for grouping proposals by anchor,
- * building the schemata wrapper once per group, and detaching originals.
- */
 export interface MutationProposal {
     /** Where the schemata gets inserted. Defaults to `detach[0]` if omitted. */
     anchor?: Instruction;
@@ -20,6 +15,7 @@ export interface MutationProposal {
 export interface MutatorContext {
     method: MethodNode;
     tmpReg: string;
+    args: Record<string, unknown>;
 }
 
 export interface MutatorSpec<T = Instruction> {
@@ -45,16 +41,18 @@ export interface Mutator {
 
 /**
  * Build a `Mutator` class from a spec. The constructor accepts an optional
- * `MutationEngine` argument for backwards compatibility with old call sites —
- * the engine is unused; recording happens in the runner.
+ * args object (the extra fields from the config entry). Operators read
+ * configured values from `ctx.args` inside `process`.
  */
-export function defineMutator<T = Instruction>(spec: MutatorSpec<T>): new (engine?: unknown) => Mutator {
+export function defineMutator<T = Instruction>(spec: MutatorSpec<T>): new (args?: Record<string, unknown>) => Mutator {
     return class implements Mutator {
         readonly name = spec.name;
         readonly extraRegisters = spec.extraRegisters ?? 1;
+        private readonly args: Record<string, unknown>;
 
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        constructor(_engine?: unknown) {}
+        constructor(args?: Record<string, unknown>) {
+            this.args = args ?? {};
+        }
 
         propose(method: MethodNode, tmpReg: string): MutationProposal[] {
             if (spec.methodFilter && !spec.methodFilter(method)) return [];
@@ -65,7 +63,7 @@ export function defineMutator<T = Instruction>(spec: MutatorSpec<T>): new (engin
 
             const proposals: MutationProposal[] = [];
             for (const instr of instrs) {
-                const p = spec.process(instr, { method, tmpReg });
+                const p = spec.process(instr, { method, tmpReg, args: this.args });
                 if (!p) continue;
                 proposals.push({ ...p, anchor: p.anchor ?? p.detach[0] });
                 if (spec.oncePerMethod) break;

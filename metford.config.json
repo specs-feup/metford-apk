@@ -9,9 +9,21 @@
     "verbose": true,
 
     "operators": [
-        "Arithmetic",
-        "Conditional",
-        "Constant",
+        { "name": "Arithmetic", "from": "add", "to": ["sub", "mul"] },
+        { "name": "Arithmetic", "from": "sub", "to": ["add", "mul"] },
+        { "name": "Arithmetic", "from": "mul", "to": ["add", "sub"] },
+        { "name": "Arithmetic", "from": "div", "to": ["mul", "rem"] },
+        { "name": "Arithmetic", "from": "rem", "to": ["div", "mul"] },
+
+        { "name": "Conditional", "from": "if-eq", "to": ["if-ne"] },
+        { "name": "Conditional", "from": "if-ne", "to": ["if-eq"] },
+        { "name": "Conditional", "from": "if-lt", "to": ["if-ge"] },
+        { "name": "Conditional", "from": "if-ge", "to": ["if-lt"] },
+        { "name": "Conditional", "from": "if-gt", "to": ["if-le"] },
+        { "name": "Conditional", "from": "if-le", "to": ["if-gt"] },
+
+        { "name": "Constant", "to": ["0x0", "0x1"] },
+
         "InvalidDate",
         "NullIntent",
         "RandomIntentAction",

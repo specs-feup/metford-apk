@@ -6,8 +6,11 @@ import { Mutator, MutationProposal } from "./MutatorBase.js";
 import { buildSchemata } from "./SchemaBuilder.js";
 import { REGISTRY } from "./registry.js";
 
+/** One entry per operator instance. Bare string = no args; object = name + args. */
+export type OperatorEntry = string | { name: string; [key: string]: unknown };
+
 export interface RunOptions {
-    operators: string[];
+    operators: OperatorEntry[];
     projectName?: string;
     outputApk?: string;
     reportPath?: string;
@@ -86,10 +89,13 @@ export function runMutators(opts: RunOptions): void {
     const verbose = opts.verbose ?? true;
 
     const engine = new MutationEngine();
-    const mutators = opts.operators.map(name => {
+    const mutators = opts.operators.map(entry => {
+        const name = typeof entry === "string" ? entry : entry.name;
         const Ctor = REGISTRY[name];
         if (!Ctor) throw new Error(`Unknown operator: "${name}". Known: ${Object.keys(REGISTRY).join(", ")}`);
-        return new Ctor();
+        if (typeof entry === "string") return new Ctor();
+        const { name: _, ...args } = entry;
+        return new Ctor(args);
     });
 
     let t = Date.now();

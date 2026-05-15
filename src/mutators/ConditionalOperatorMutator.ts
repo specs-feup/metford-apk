@@ -1,23 +1,23 @@
 import { defineMutator } from "../MutatorBase.js";
 
-const NEGATIONS: Record<string, string> = {
-    "if-eq": "if-ne",
-    "if-ne": "if-eq",
-    "if-lt": "if-ge",
-    "if-ge": "if-lt",
-    "if-gt": "if-le",
-    "if-le": "if-gt",
-};
-
+/**
+ * Args (one config entry per source opcode):
+ *   from — source conditional opcode ("if-eq", "if-ne", "if-lt", "if-ge", "if-gt", "if-le")
+ *   to   — list of target opcodes; each produces one variant
+ *
+ * Example operators entry: { "name": "Conditional", "from": "if-eq", "to": ["if-ne"] }
+ */
 export const ConditionalOperatorMutator = defineMutator({
     name: "ConditionalOperatorMutator",
-    process: (instr) => {
-        const replacement = NEGATIONS[instr.opCodeName];
-        if (!replacement) return null;
+    process: (instr, { args }) => {
+        const from = args.from as string | undefined;
+        const to = args.to as string[] | undefined;
+        if (!from || !to || to.length === 0) return null;
+        if (instr.opCodeName !== from) return null;
 
         const originalCode = instr.code;
-        const variant = originalCode.replace(instr.opCodeName, replacement);
+        const variants = to.map(replacement => originalCode.replace(from, replacement));
 
-        return { originalCode, variants: [variant], detach: [instr] };
+        return { originalCode, variants, detach: [instr] };
     },
 });

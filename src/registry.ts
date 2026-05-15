@@ -15,7 +15,7 @@ import { InvalidIDFindViewMutator } from "./mutators/InvalidIDFindViewMutator.js
 import { InvalidViewFocusMutator } from "./mutators/InvalidViewFocusMutator.js";
 import { ViewComponentNotVisibleMutator } from "./mutators/ViewComponentNotVisibleMutator.js";
 
-type MutatorCtor = new () => Mutator;
+type MutatorCtor = new (args?: Record<string, unknown>) => Mutator;
 
 /**
  * Maps the config-level operator name to its mutator class. One entry per

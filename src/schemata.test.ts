@@ -58,7 +58,7 @@ describe("ArithmeticOperatorMutator", () => {
         loadSmali("ArithmeticMutation.smali");
 
         const engine = new MutationEngine();
-        runMutators([new ArithmeticOperatorMutator()], engine);
+        runMutators([new ArithmeticOperatorMutator({ from: "add", to: ["sub", "mul"] })], engine);
 
         fs.mkdirSync(OUTPUT_DIR, { recursive: true });
         fs.writeFileSync(path.join(OUTPUT_DIR, "ArithmeticMutation.smali"), (Query.root() as Program).code);
