@@ -7,13 +7,11 @@ export function buildSchemata(
   baseId: number,
   siteTag: string
 ): string {
-  const negBase = -baseId;
-  const negBaseHex = negBase < 0 ? `-0x${(-negBase).toString(16)}` : `0x0`;
+  const baseHex = `0x${baseId.toString(16)}`;
   const p = `pswitch_${siteTag}`;
 
   const lines: string[] = [
     `sget ${tmpReg}, ${MUTANT_ID}`,
-    `add-int/lit16 ${tmpReg}, ${tmpReg}, ${negBaseHex}`,
     `packed-switch ${tmpReg}, :${p}_data`,
     `goto :${p}_default`,
   ];
@@ -26,8 +24,9 @@ export function buildSchemata(
 
   lines.push(`:${p}_default`);
   lines.push(originalCode);
+  lines.push(`goto :${p}_end`);
   lines.push(`:${p}_data`);
-  lines.push(`.packed-switch 0x0`);
+  lines.push(`.packed-switch ${baseHex}`);
   for (let i = 0; i < mutantCodes.length; i++) {
     lines.push(`    :${p}_${i}`);
   }

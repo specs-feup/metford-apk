@@ -11,6 +11,16 @@ export function nextInstruction(instr: Instruction): Instruction | null {
     return next?.instanceOf("instruction") ? (next as Instruction) : null;
 }
 
+/** Walk forward past .line directives and labels until the next real instruction. */
+export function nextInstructionSkipping(instr: Instruction): Instruction | null {
+    let cur = instr.nextStatement as Statement | null;
+    while (cur) {
+        if (cur.instanceOf("instruction")) return cur as Instruction;
+        cur = (cur as any).nextStatement as Statement | null;
+    }
+    return null;
+}
+
 export function prevInstruction(instr: Instruction): Instruction | null {
     const prev = instr.prevStatement as Statement;
     return prev?.instanceOf("instruction") ? (prev as Instruction) : null;

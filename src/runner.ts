@@ -15,6 +15,7 @@ export interface RunOptions {
     outputApk?: string;
     reportPath?: string;
     verbose?: boolean;
+    excludeClasses?: string[];
 }
 
 /**
@@ -25,13 +26,22 @@ export interface RunOptions {
  */
 export function applyToMethod(method: MethodNode, mutators: Mutator[], engine: MutationEngine): void {
     const regsDir = method.registersDirective;
-    if (regsDir.type !== "I_LOCALS") return;
+    if (!regsDir || regsDir.type !== "I_LOCALS") return;
     const locals = regsDir.value;
     const tmpReg = `v${locals}`;
+
+    // How many extra local registers we can safely add before parameter registers
+    // exceed v15 (format35c limit). Adding a local shifts all param registers up by 1.
+    // Wide types (J=long, D=double) occupy 2 register slots each.
+    const paramSlots = ((method.prototype as any)?.parameters ?? [])
+        .reduce((sum: number, p: any) => sum + (/^[JD]$/.test(p.getCode?.() ?? p.code ?? "") ? 2 : 1), 0);
+    const numParams = (method.isStatic ? 0 : 1) + paramSlots;
+    const safeExtraSlots = Math.max(0, 15 - locals - numParams + 1);
 
     // Phase 1: collect every operator's proposals against the un-modified AST.
     const items: { proposal: MutationProposal; operator: string; extraRegisters: number }[] = [];
     for (const m of mutators) {
+        if (m.extraRegisters > safeExtraSlots) continue;
         for (const p of m.propose(method, tmpReg)) {
             items.push({ proposal: p, operator: m.name, extraRegisters: m.extraRegisters });
         }
@@ -74,10 +84,11 @@ export function applyToMethod(method: MethodNode, mutators: Mutator[], engine: M
         }
 
         const { baseId, siteTag } = engine.allocate(variants.length);
+        const lineNumber = (anchor.line as any)?.value ?? null;
         anchor.insertBefore(buildSchemata(originalCode, variants.map(v => v.code), tmpReg, baseId, siteTag));
         for (const node of detachSet) node.detach();
 
-        engine.record(siteTag, method.name, originalCode, variants);
+        engine.record(siteTag, method.name, lineNumber, originalCode, variants);
     }
 
     if (maxExtra > 0) regsDir.setValue(locals + maxExtra);
@@ -98,20 +109,26 @@ export function runMutators(opts: RunOptions): void {
         return new Ctor(args);
     });
 
+    const excludeClasses = opts.excludeClasses ?? [];
+
+    const methods = (Query.search(MethodNode) as any).get() as MethodNode[];
+    const total = methods.length;
     let t = Date.now();
-    for (const method of Query.search(MethodNode)) {
+    for (let i = 0; i < methods.length; i++) {
+        const method = methods[i];
+        if (excludeClasses.some(ex => method.name.includes(ex))) continue;
         applyToMethod(method, mutators, engine);
+
+        const sites = engine.records.length;
+        const pct = Math.round((i + 1) / total * 100);
+        const bar = "=".repeat(Math.floor(pct / 5)) + " ".repeat(20 - Math.floor(pct / 5));
+        process.stderr.write(`\r  [${bar}] ${pct}%  ${i + 1}/${total} methods  ${sites} sites`);
     }
+    process.stderr.write("\n");
 
     const totalMutants = engine.records.reduce((s, r) => s + r.variants.length, 0);
     console.log(`[schemata] mutations applied in ${Date.now() - t}ms`);
     console.log(`[schemata] ${engine.records.length} sites, ${totalMutants} total mutants`);
-    if (verbose) {
-        for (const r of engine.records) {
-            const ops = [...new Set(r.variants.map(v => v.operator))].join("+");
-            console.log(`  [${ops}] site ${r.siteTag} | ${r.method.split("->")[1] ?? r.method}`);
-        }
-    }
 
     fs.writeFileSync(reportPath, JSON.stringify({
         projectName: opts.projectName ?? null,
@@ -119,11 +136,22 @@ export function runMutators(opts: RunOptions): void {
         sites: engine.records.map(r => ({
             siteTag: r.siteTag,
             method: r.method,
+            line: r.line,
             original: r.original,
             variants: r.variants,
         })),
     }, null, 2));
     console.log(`[schemata] ${reportPath} written`);
+
+    const MUTATION_CONTROLLER_SMALI = [
+        ".class public Lpt/up/fe/specs/metford/MutationController;",
+        ".super Ljava/lang/Object;",
+        "",
+        ".field public static MUTANT_ID:I",
+    ].join("\n");
+    const mcDir = "output/smali/pt/up/fe/specs/metford";
+    fs.mkdirSync(mcDir, { recursive: true });
+    fs.writeFileSync(`${mcDir}/MutationController.smali`, MUTATION_CONTROLLER_SMALI);
 
     t = Date.now();
     const program = Query.root() as Program;

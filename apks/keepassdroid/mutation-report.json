@@ -1,0 +1,3910 @@
+{
+  "projectName": "keepassdroid",
+  "totalMutants": 486,
+  "sites": [
+    {
+      "siteTag": "1",
+      "method": "Lcom/keepassdroid/utils/UriUtil;->getFileName(Landroid/net/Uri;Landroid/content/Context;)Ljava/lang/String;",
+      "line": 197,
+      "original": ".line 197\nadd-int/lit8 v3, v2, 0x1",
+      "variants": [
+        {
+          "code": ".line 197\nadd-int/lit8 v3, v2, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "2",
+      "method": "Lcom/keepassdroid/fileselect/RecentFileHistory;->loadList(Ljava/util/List;Ljava/lang/String;)V",
+      "line": 187,
+      "original": ".line 187\nadd-int/lit8 v2, v2, 0x1",
+      "variants": [
+        {
+          "code": ".line 187\nadd-int/lit8 v2, v2, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "3",
+      "method": "Lcom/keepassdroid/fileselect/RecentFileHistory;->saveList(Ljava/lang/String;Ljava/util/List;)V",
+      "line": 198,
+      "original": ".line 198\nadd-int/lit8 v3, v3, 0x1",
+      "variants": [
+        {
+          "code": ".line 198\nadd-int/lit8 v3, v3, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "4",
+      "method": "Lcom/keepassdroid/fileselect/RecentFileHistory;->trimLists()V",
+      "line": null,
+      "original": "add-int/lit8 v1, v1, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v1, v1, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "5",
+      "method": "Lcom/keepassdroid/fileselect/RecentFileHistory;->deleteAllKeys()V",
+      "line": 282,
+      "original": ".line 282\nadd-int/lit8 v1, v1, 0x1",
+      "variants": [
+        {
+          "code": ".line 282\nadd-int/lit8 v1, v1, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "6",
+      "method": "Lcom/keepassdroid/fileselect/RecentFileHistory;->deleteFile(Landroid/net/Uri;Z)V",
+      "line": null,
+      "original": "add-int/lit8 v2, v2, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v2, v2, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "7",
+      "method": "Lcom/keepassdroid/fileselect/RecentFileHistory;->getFileByName(Landroid/net/Uri;)Landroid/net/Uri;",
+      "line": null,
+      "original": "add-int/lit8 v2, v2, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v2, v2, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "8",
+      "method": "Lcom/keepassdroid/fileselect/FileDbHelper;->deleteDatabase(Landroid/content/Context;)Z",
+      "line": null,
+      "original": "add-int/lit8 v7, v7, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v7, v7, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "9",
+      "method": "Lcom/keepassdroid/database/PwDatabaseV3;->getGrpRoots()Ljava/util/List;",
+      "line": null,
+      "original": "add-int/lit8 v2, v2, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v2, v2, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "10",
+      "method": "Lcom/keepassdroid/database/PwDatabaseV3;->getRootGroupId()I",
+      "line": null,
+      "original": "add-int/lit8 v0, v0, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v0, v0, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "11",
+      "method": "Lcom/keepassdroid/database/PwDatabase;->hexStringToByteArray(Ljava/lang/String;)[B",
+      "line": null,
+      "original": "add-int/lit8 v6, v2, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v6, v2, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "12",
+      "method": "Lcom/keepassdroid/database/PwDatabase;->hexStringToByteArray(Ljava/lang/String;)[B",
+      "line": 184,
+      "original": ".line 184\nadd-int/lit8 v2, v2, 0x2",
+      "variants": [
+        {
+          "code": ".line 184\nadd-int/lit8 v2, v2, -0x2",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "13",
+      "method": "Lcom/keepassdroid/database/PwDatabase;->hexStringToByteArray(Ljava/lang/String;)[B",
+      "line": null,
+      "original": "div-int/lit8 v1, v0, 0x2",
+      "variants": [
+        {
+          "code": "mul-int/lit8 v1, v0, 0x2",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "14",
+      "method": "Lcom/keepassdroid/database/PwDatabase;->hexStringToByteArray(Ljava/lang/String;)[B",
+      "line": 185,
+      "original": ".line 185\ndiv-int/lit8 v3, v2, 0x2",
+      "variants": [
+        {
+          "code": ".line 185\nmul-int/lit8 v3, v2, 0x2",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "15",
+      "method": "Lcom/keepassdroid/database/PwDatabase;->isGroupIdUsed(Lcom/keepassdroid/database/PwGroupId;)Z",
+      "line": null,
+      "original": "add-int/lit8 v1, v1, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v1, v1, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "16",
+      "method": "Lcom/keepassdroid/database/PwDatabase;->populateGlobals(Lcom/keepassdroid/database/PwGroup;)V",
+      "line": null,
+      "original": "add-int/lit8 v2, v2, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v2, v2, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        },
+        {
+          "code": "add-int/lit8 v2, v2, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "17",
+      "method": "Lcom/keepassdroid/database/PwGroup;->searchEntries(Lcom/keepassdroid/database/SearchParameters;Ljava/util/List;)V",
+      "line": null,
+      "original": "add-int/lit8 v5, v5, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v5, v5, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "18",
+      "method": "Lcom/keepassdroid/settings/AppSettingsFragement;->Launch(Landroid/content/Context;)V",
+      "line": 40,
+      "original": ".line 40\nnew-instance v0, Landroid/content/Intent;\n.line 40\nnew-instance v0, Landroid/content/Intent;\nconst-class v1, Lcom/keepassdroid/settings/AppSettingsFragement;\ninvoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/16 v0, 0x0",
+          "operator": "NullIntentMutator"
+        },
+        {
+          "code": "new-instance v0, Landroid/content/Intent;\nsget-object v2, Landroid/content/Intent;->ACTION_VIEW:Ljava/lang/String;\ninvoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        },
+        {
+          "code": "new-instance v0, Landroid/content/Intent;\nsget-object v2, Landroid/content/Intent;->ACTION_SEND:Ljava/lang/String;\ninvoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "19",
+      "method": "Lcom/keepassdroid/settings/AppSettingsFragement;->Launch(Landroid/content/Context;)V",
+      "line": null,
+      "original": "const-class v1, Lcom/keepassdroid/settings/AppSettingsFragement;\ninvoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const-class v1, Lcom/keepassdroid/settings/DBSettingsFragement$1;\ninvoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "IntentTargetReplacementMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "20",
+      "method": "Lcom/keepassdroid/settings/AppSettingsFragement;->Launch(Landroid/content/Context;)V",
+      "line": null,
+      "original": "invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/16 p0, 0x0\ninvoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "InvalidKeyIntentMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "21",
+      "method": "Lcom/keepassdroid/settings/AppSettingsFragement;->onCreate(Landroid/os/Bundle;)V",
+      "line": 47,
+      "original": ".line 47\ninvoke-super {p0, p1}, Landroidx/preference/PreferenceFragmentCompat;->onCreate(Landroid/os/Bundle;)V",
+      "variants": [
+        {
+          "code": ".line 47\ninvoke-super {p0, p1}, Landroidx/preference/PreferenceFragmentCompat;->onCreate(Landroid/os/Bundle;)V\nconst-wide/16 v1, 0x2710\ninvoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V",
+          "operator": "LengthyGUICreationMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "22",
+      "method": "Lcom/keepassdroid/settings/MainSettingsFragement;->Launch(Landroid/content/Context;)V",
+      "line": 38,
+      "original": ".line 38\nnew-instance v0, Landroid/content/Intent;\n.line 38\nnew-instance v0, Landroid/content/Intent;\nconst-class v1, Lcom/keepassdroid/settings/MainSettingsFragement;\ninvoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/16 v0, 0x0",
+          "operator": "NullIntentMutator"
+        },
+        {
+          "code": "new-instance v0, Landroid/content/Intent;\nsget-object v2, Landroid/content/Intent;->ACTION_VIEW:Ljava/lang/String;\ninvoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        },
+        {
+          "code": "new-instance v0, Landroid/content/Intent;\nsget-object v2, Landroid/content/Intent;->ACTION_SEND:Ljava/lang/String;\ninvoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "23",
+      "method": "Lcom/keepassdroid/settings/MainSettingsFragement;->Launch(Landroid/content/Context;)V",
+      "line": null,
+      "original": "const-class v1, Lcom/keepassdroid/settings/MainSettingsFragement;\ninvoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const-class v1, Lcom/keepassdroid/settings/DBSettingsFragement$1;\ninvoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "IntentTargetReplacementMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "24",
+      "method": "Lcom/keepassdroid/settings/MainSettingsFragement;->Launch(Landroid/content/Context;)V",
+      "line": null,
+      "original": "invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/16 p0, 0x0\ninvoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "InvalidKeyIntentMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "25",
+      "method": "Lcom/keepassdroid/settings/MainSettingsFragement;->onCreate(Landroid/os/Bundle;)V",
+      "line": 45,
+      "original": ".line 45\ninvoke-super {p0, p1}, Landroidx/preference/PreferenceFragmentCompat;->onCreate(Landroid/os/Bundle;)V",
+      "variants": [
+        {
+          "code": ".line 45\ninvoke-super {p0, p1}, Landroidx/preference/PreferenceFragmentCompat;->onCreate(Landroid/os/Bundle;)V\nconst-wide/16 v1, 0x2710\ninvoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V",
+          "operator": "LengthyGUICreationMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "26",
+      "method": "Lcom/keepassdroid/settings/AppSettingsActivity;->Launch(Landroid/content/Context;)V",
+      "line": 32,
+      "original": ".line 32\nnew-instance v0, Landroid/content/Intent;\n.line 32\nnew-instance v0, Landroid/content/Intent;\nconst-class v1, Lcom/keepassdroid/settings/AppSettingsActivity;\ninvoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/16 v0, 0x0",
+          "operator": "NullIntentMutator"
+        },
+        {
+          "code": "new-instance v0, Landroid/content/Intent;\nsget-object v2, Landroid/content/Intent;->ACTION_VIEW:Ljava/lang/String;\ninvoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        },
+        {
+          "code": "new-instance v0, Landroid/content/Intent;\nsget-object v2, Landroid/content/Intent;->ACTION_SEND:Ljava/lang/String;\ninvoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "27",
+      "method": "Lcom/keepassdroid/settings/AppSettingsActivity;->Launch(Landroid/content/Context;)V",
+      "line": null,
+      "original": "const-class v1, Lcom/keepassdroid/settings/AppSettingsActivity;\ninvoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const-class v1, Lcom/keepassdroid/settings/DBSettingsFragement$1;\ninvoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "IntentTargetReplacementMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "28",
+      "method": "Lcom/keepassdroid/settings/AppSettingsActivity;->Launch(Landroid/content/Context;)V",
+      "line": null,
+      "original": "invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/16 p0, 0x0\ninvoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "InvalidKeyIntentMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "29",
+      "method": "Lcom/keepassdroid/settings/AppSettingsActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": 39,
+      "original": ".line 39\ninvoke-super {p0, p1}, Lcom/keepassdroid/LockCloseActivity;->onCreate(Landroid/os/Bundle;)V",
+      "variants": [
+        {
+          "code": ".line 39\ninvoke-super {p0, p1}, Lcom/keepassdroid/LockCloseActivity;->onCreate(Landroid/os/Bundle;)V\nconst-wide/16 v3, 0x2710\ninvoke-static {v3, v4}, Ljava/lang/Thread;->sleep(J)V",
+          "operator": "LengthyGUICreationMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "30",
+      "method": "Lcom/keepassdroid/settings/DBSettingsFragement;->Launch(Landroid/content/Context;)V",
+      "line": 44,
+      "original": ".line 44\nnew-instance v0, Landroid/content/Intent;\n.line 44\nnew-instance v0, Landroid/content/Intent;\nconst-class v1, Lcom/keepassdroid/settings/DBSettingsFragement;\ninvoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/16 v0, 0x0",
+          "operator": "NullIntentMutator"
+        },
+        {
+          "code": "new-instance v0, Landroid/content/Intent;\nsget-object v2, Landroid/content/Intent;->ACTION_VIEW:Ljava/lang/String;\ninvoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        },
+        {
+          "code": "new-instance v0, Landroid/content/Intent;\nsget-object v2, Landroid/content/Intent;->ACTION_SEND:Ljava/lang/String;\ninvoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "31",
+      "method": "Lcom/keepassdroid/settings/DBSettingsFragement;->Launch(Landroid/content/Context;)V",
+      "line": null,
+      "original": "const-class v1, Lcom/keepassdroid/settings/DBSettingsFragement;\ninvoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const-class v1, Lcom/keepassdroid/settings/DBSettingsFragement$1;\ninvoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "IntentTargetReplacementMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "32",
+      "method": "Lcom/keepassdroid/settings/DBSettingsFragement;->Launch(Landroid/content/Context;)V",
+      "line": null,
+      "original": "invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/16 p0, 0x0\ninvoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "InvalidKeyIntentMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "33",
+      "method": "Lcom/keepassdroid/settings/DBSettingsFragement;->onCreate(Landroid/os/Bundle;)V",
+      "line": 51,
+      "original": ".line 51\ninvoke-super {p0, p1}, Landroidx/preference/PreferenceFragmentCompat;->onCreate(Landroid/os/Bundle;)V",
+      "variants": [
+        {
+          "code": ".line 51\ninvoke-super {p0, p1}, Landroidx/preference/PreferenceFragmentCompat;->onCreate(Landroid/os/Bundle;)V\nconst-wide/16 v1, 0x2710\ninvoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V",
+          "operator": "LengthyGUICreationMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "34",
+      "method": "Lcom/keepassdroid/settings/RoundsPreferenceFragment;->onBindDialogView(Landroid/view/View;)V",
+      "line": null,
+      "original": "invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+      "variants": [
+        {
+          "code": "const/16 v0, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v0, 0x7fffffff\ninvoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v0\ninvoke-virtual {v0}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v0\nconst/16 v4, 0x4\ninvoke-virtual {v0, v4}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "35",
+      "method": "Lcom/keepassdroid/PwGroupListAdapter;->filterAndSort()V",
+      "line": null,
+      "original": "add-int/lit8 v0, v0, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v0, v0, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "36",
+      "method": "Lcom/keepassdroid/PwGroupListAdapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;",
+      "line": null,
+      "original": "sub-int v1, p1, v0",
+      "variants": [
+        {
+          "code": "add-int v1, p1, v0",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "37",
+      "method": "Lcom/keepassdroid/AboutDialog$1;->onClick(Landroid/view/View;)V",
+      "line": 52,
+      "original": ".line 52\nreturn-void ",
+      "variants": [
+        {
+          "code": "const-wide/16 v1, 0x2710\ninvoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V\n.line 52\nreturn-void ",
+          "operator": "LengthyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "38",
+      "method": "Lcom/keepassdroid/PasswordActivity;->Launch(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;)V",
+      "line": null,
+      "original": "new-instance v2, Landroid/content/Intent;\nnew-instance v2, Landroid/content/Intent;\nconst-class v3, Lcom/keepassdroid/PasswordActivity;\ninvoke-direct {v2, p0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/16 v2, 0x0",
+          "operator": "NullIntentMutator"
+        },
+        {
+          "code": "new-instance v2, Landroid/content/Intent;\nsget-object v4, Landroid/content/Intent;->ACTION_VIEW:Ljava/lang/String;\ninvoke-direct {v2, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        },
+        {
+          "code": "new-instance v2, Landroid/content/Intent;\nsget-object v4, Landroid/content/Intent;->ACTION_SEND:Ljava/lang/String;\ninvoke-direct {v2, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "39",
+      "method": "Lcom/keepassdroid/PasswordActivity;->Launch(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;)V",
+      "line": null,
+      "original": "const-class v3, Lcom/keepassdroid/PasswordActivity;\ninvoke-direct {v2, p0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const-class v3, Lcom/keepassdroid/Database;\ninvoke-direct {v2, p0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "IntentTargetReplacementMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "40",
+      "method": "Lcom/keepassdroid/PasswordActivity;->Launch(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;)V",
+      "line": null,
+      "original": "invoke-virtual {v2, v3, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;",
+      "variants": [
+        {
+          "code": "const/16 p1, 0x0\ninvoke-virtual {v2, v3, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;",
+          "operator": "NullPutExtraValueMutator"
+        },
+        {
+          "code": "const-string v3, \"__metford_invalid_key__\"\ninvoke-virtual {v2, v3, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;",
+          "operator": "NullPutExtraKeyMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "41",
+      "method": "Lcom/keepassdroid/PasswordActivity;->Launch(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;)V",
+      "line": null,
+      "original": "invoke-virtual {v2, v3, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;",
+      "variants": [
+        {
+          "code": "const/16 p2, 0x0\ninvoke-virtual {v2, v3, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;",
+          "operator": "NullPutExtraValueMutator"
+        },
+        {
+          "code": "const-string v3, \"__metford_invalid_key__\"\ninvoke-virtual {v2, v3, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;",
+          "operator": "NullPutExtraKeyMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "42",
+      "method": "Lcom/keepassdroid/PasswordActivity;->Launch(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;)V",
+      "line": null,
+      "original": "invoke-direct {v2, p0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/16 p0, 0x0\ninvoke-direct {v2, p0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "InvalidKeyIntentMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "43",
+      "method": "Lcom/keepassdroid/PasswordActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": 85,
+      "original": ".line 85\ninvoke-super {p0, p1}, Lcom/keepassdroid/LockingActivity;->onCreate(Landroid/os/Bundle;)V",
+      "variants": [
+        {
+          "code": ".line 85\ninvoke-super {p0, p1}, Lcom/keepassdroid/LockingActivity;->onCreate(Landroid/os/Bundle;)V\nconst-wide/16 v1, 0x2710\ninvoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V",
+          "operator": "LengthyGUICreationMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "44",
+      "method": "Lcom/keepassdroid/PasswordActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": null,
+      "original": "invoke-virtual {p0, v0}, Lcom/keepassdroid/PasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+      "variants": [
+        {
+          "code": "const/16 v0, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v0, 0x7fffffff\ninvoke-virtual {p0, v0}, Lcom/keepassdroid/PasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v0}, Lcom/keepassdroid/PasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v0\ninvoke-virtual {v0}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v0}, Lcom/keepassdroid/PasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v0\nconst/16 v1, 0x4\ninvoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "45",
+      "method": "Lcom/keepassdroid/utils/Types;->bytestoUUID([BI)Ljava/util/UUID;",
+      "line": null,
+      "original": "add-int v5, v2, p1",
+      "variants": [
+        {
+          "code": "sub-int v5, v2, p1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "46",
+      "method": "Lcom/keepassdroid/utils/Types;->bytestoUUID([BI)Ljava/util/UUID;",
+      "line": null,
+      "original": "add-int v8, v2, p1",
+      "variants": [
+        {
+          "code": "sub-int v8, v2, p1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "47",
+      "method": "Lcom/keepassdroid/utils/Types;->strlen([BI)I",
+      "line": null,
+      "original": "add-int v1, p1, v0",
+      "variants": [
+        {
+          "code": "sub-int v1, p1, v0",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "48",
+      "method": "Lcom/keepassdroid/utils/Types;->strlen([BI)I",
+      "line": 96,
+      "original": ".line 96\nadd-int/lit8 v0, v0, 0x1",
+      "variants": [
+        {
+          "code": ".line 96\nadd-int/lit8 v0, v0, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "49",
+      "method": "Lcom/keepassdroid/utils/Util;->copyStream(Ljava/io/InputStream;Ljava/io/OutputStream;I)I",
+      "line": null,
+      "original": "sub-int v0, v3, p2",
+      "variants": [
+        {
+          "code": "add-int v0, v3, p2",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "50",
+      "method": "Lcom/keepassdroid/utils/Util;->getEditText(Landroid/app/Activity;I)Ljava/lang/String;",
+      "line": 79,
+      "original": ".line 79\ninvoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+      "variants": [
+        {
+          "code": "const/16 v0, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const p1, 0x7fffffff\n.line 79\ninvoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": ".line 79\ninvoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;\nmove-result-object v0\ninvoke-virtual {v0}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": ".line 79\ninvoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;\nmove-result-object v0\nconst/16 v2, 0x4\ninvoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "51",
+      "method": "Lcom/keepassdroid/utils/Util;->gotoUrl(Landroid/content/Context;Ljava/lang/String;)V",
+      "line": null,
+      "original": "new-instance v1, Landroid/content/Intent;\nnew-instance v1, Landroid/content/Intent;\nconst-string v2, \"android.intent.action.VIEW\"\ninvoke-direct {v1, v2, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "NullIntentMutator"
+        },
+        {
+          "code": "new-instance v1, Landroid/content/Intent;\nsget-object v3, Landroid/content/Intent;->ACTION_VIEW:Ljava/lang/String;\ninvoke-direct {v1, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        },
+        {
+          "code": "new-instance v1, Landroid/content/Intent;\nsget-object v3, Landroid/content/Intent;->ACTION_SEND:Ljava/lang/String;\ninvoke-direct {v1, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "52",
+      "method": "Lcom/keepassdroid/utils/Util;->setEditText(Landroid/app/Activity;ILjava/lang/String;)V",
+      "line": 89,
+      "original": ".line 89\ninvoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+      "variants": [
+        {
+          "code": "const/16 v0, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const p1, 0x7fffffff\n.line 89\ninvoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": ".line 89\ninvoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;\nmove-result-object v0\ninvoke-virtual {v0}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": ".line 89\ninvoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;\nmove-result-object v0\nconst/16 v1, 0x4\ninvoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "53",
+      "method": "Lcom/keepassdroid/utils/DateUtil;->convertKDBX4Time(J)Ljava/util/Date;",
+      "line": null,
+      "original": "mul-long v1, v1, p0",
+      "variants": [
+        {
+          "code": "div-long v1, v1, p0",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "54",
+      "method": "Lcom/keepassdroid/utils/Interaction;->isIntentAvailable(Landroid/content/Context;Ljava/lang/String;)Z",
+      "line": null,
+      "original": "new-instance v1, Landroid/content/Intent;\nnew-instance v1, Landroid/content/Intent;\ninvoke-direct {v1, p1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "NullIntentMutator"
+        },
+        {
+          "code": "new-instance v1, Landroid/content/Intent;\nsget-object v4, Landroid/content/Intent;->ACTION_VIEW:Ljava/lang/String;\ninvoke-direct {v1, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        },
+        {
+          "code": "new-instance v1, Landroid/content/Intent;\nsget-object v4, Landroid/content/Intent;->ACTION_SEND:Ljava/lang/String;\ninvoke-direct {v1, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "55",
+      "method": "Lcom/keepassdroid/utils/SprEngineV4;->fillRefPlaceholders(Ljava/lang/String;Lcom/keepassdroid/utils/SprContextV4;I)Ljava/lang/String;",
+      "line": null,
+      "original": "add-int/lit8 v3, v2, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v3, v2, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "56",
+      "method": "Lcom/keepassdroid/utils/SprEngineV4;->fillRefPlaceholders(Ljava/lang/String;Lcom/keepassdroid/utils/SprContextV4;I)Ljava/lang/String;",
+      "line": null,
+      "original": "add-int/lit8 v4, v3, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v4, v3, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "57",
+      "method": "Lcom/keepassdroid/utils/SprEngineV4;->fillRefPlaceholders(Ljava/lang/String;Lcom/keepassdroid/utils/SprContextV4;I)Ljava/lang/String;",
+      "line": 105,
+      "original": ".line 105\nadd-int/lit8 v0, v2, 0x1",
+      "variants": [
+        {
+          "code": ".line 105\nadd-int/lit8 v0, v2, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "58",
+      "method": "Lcom/keepassdroid/utils/SprEngineV4;->fillRefPlaceholders(Ljava/lang/String;Lcom/keepassdroid/utils/SprContextV4;I)Ljava/lang/String;",
+      "line": 112,
+      "original": ".line 112\nadd-int/lit8 v10, p3, 0x1",
+      "variants": [
+        {
+          "code": ".line 112\nadd-int/lit8 v10, p3, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "59",
+      "method": "Lcom/keepassdroid/utils/SprEngineV4;->fillRefPlaceholders(Ljava/lang/String;Lcom/keepassdroid/utils/SprContextV4;I)Ljava/lang/String;",
+      "line": null,
+      "original": "add-int/lit8 v0, v2, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v0, v2, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "60",
+      "method": "Lcom/keepassdroid/utils/SprEngineV4;->fillRefPlaceholders(Ljava/lang/String;Lcom/keepassdroid/utils/SprContextV4;I)Ljava/lang/String;",
+      "line": null,
+      "original": "add-int/lit8 v1, v1, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v1, v1, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "61",
+      "method": "Lcom/keepassdroid/utils/UuidUtil;->byteToChar(C)C",
+      "line": 59,
+      "original": ".line 59\nadd-int/lit8 v1, p0, 0x41",
+      "variants": [
+        {
+          "code": ".line 59\nadd-int/lit8 v1, p0, -0x41",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "62",
+      "method": "Lcom/keepassdroid/utils/UuidUtil;->byteToChar(C)C",
+      "line": null,
+      "original": "add-int/lit8 v0, p0, 0x30",
+      "variants": [
+        {
+          "code": "add-int/lit8 v0, p0, -0x30",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "63",
+      "method": "Lcom/keepassdroid/utils/UuidUtil;->toHexString(Ljava/util/UUID;)Ljava/lang/String;",
+      "line": null,
+      "original": "add-int/lit8 v3, v3, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v3, v3, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "64",
+      "method": "Lcom/keepassdroid/utils/StrUtil;->splitSearchTerms(Ljava/lang/String;)Ljava/util/List;",
+      "line": null,
+      "original": "add-int/lit8 v3, v3, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v3, v3, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "65",
+      "method": "Lcom/keepassdroid/icons/Icons;->buildList()V",
+      "line": null,
+      "original": "add-int/lit8 v2, v2, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v2, v2, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "66",
+      "method": "Lcom/keepassdroid/AboutDialog;->setVersion()V",
+      "line": null,
+      "original": "invoke-virtual {p0, v2}, Lcom/keepassdroid/AboutDialog;->findViewById(I)Landroid/view/View;\nmove-result-object v2",
+      "variants": [
+        {
+          "code": "const/16 v2, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v2, 0x7fffffff\ninvoke-virtual {p0, v2}, Lcom/keepassdroid/AboutDialog;->findViewById(I)Landroid/view/View;\nmove-result-object v2",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v2}, Lcom/keepassdroid/AboutDialog;->findViewById(I)Landroid/view/View;\nmove-result-object v2\ninvoke-virtual {v2}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v2}, Lcom/keepassdroid/AboutDialog;->findViewById(I)Landroid/view/View;\nmove-result-object v2\nconst/16 v4, 0x4\ninvoke-virtual {v2, v4}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "67",
+      "method": "Lcom/keepassdroid/AboutDialog;->onCreate(Landroid/os/Bundle;)V",
+      "line": null,
+      "original": "invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0\ninvoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+          "operator": "BuggyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "68",
+      "method": "Lcom/keepassdroid/AboutDialog;->onCreate(Landroid/os/Bundle;)V",
+      "line": 42,
+      "original": ".line 42\ninvoke-super {p0, p1}, Landroidx/appcompat/app/AppCompatDialog;->onCreate(Landroid/os/Bundle;)V",
+      "variants": [
+        {
+          "code": ".line 42\ninvoke-super {p0, p1}, Landroidx/appcompat/app/AppCompatDialog;->onCreate(Landroid/os/Bundle;)V\nconst-wide/16 v2, 0x2710\ninvoke-static {v2, v3}, Ljava/lang/Thread;->sleep(J)V",
+          "operator": "LengthyGUICreationMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "69",
+      "method": "Lcom/keepassdroid/AboutDialog;->onCreate(Landroid/os/Bundle;)V",
+      "line": null,
+      "original": "invoke-virtual {p0, v0}, Lcom/keepassdroid/AboutDialog;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+      "variants": [
+        {
+          "code": "const/16 v0, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v0, 0x7fffffff\ninvoke-virtual {p0, v0}, Lcom/keepassdroid/AboutDialog;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v0}, Lcom/keepassdroid/AboutDialog;->findViewById(I)Landroid/view/View;\nmove-result-object v0\ninvoke-virtual {v0}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v0}, Lcom/keepassdroid/AboutDialog;->findViewById(I)Landroid/view/View;\nmove-result-object v0\nconst/16 v2, 0x4\ninvoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "70",
+      "method": "Lcom/keepassdroid/timers/Timeout;->buildIntent(Landroid/content/Context;)Landroid/app/PendingIntent;",
+      "line": 41,
+      "original": ".line 41\nnew-instance v0, Landroid/content/Intent;\n.line 41\nnew-instance v0, Landroid/content/Intent;\nconst-string v1, \"com.keepassdroid.timeout\"\ninvoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+      "variants": [
+        {
+          "code": "const/16 v0, 0x0",
+          "operator": "NullIntentMutator"
+        },
+        {
+          "code": "new-instance v0, Landroid/content/Intent;\nsget-object v4, Landroid/content/Intent;->ACTION_VIEW:Ljava/lang/String;\ninvoke-direct {v0, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        },
+        {
+          "code": "new-instance v0, Landroid/content/Intent;\nsget-object v4, Landroid/content/Intent;->ACTION_SEND:Ljava/lang/String;\ninvoke-direct {v0, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "71",
+      "method": "Lcom/keepassdroid/GeneratePasswordActivity$1;->onClick(Landroid/view/View;)V",
+      "line": 51,
+      "original": ".line 51\nreturn-void ",
+      "variants": [
+        {
+          "code": "const-wide/16 v3, 0x2710\ninvoke-static {v3, v4}, Ljava/lang/Thread;->sleep(J)V\n.line 51\nreturn-void ",
+          "operator": "LengthyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "72",
+      "method": "Lcom/keepassdroid/GeneratePasswordActivity$1;->onClick(Landroid/view/View;)V",
+      "line": null,
+      "original": "invoke-virtual {v1, v2}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v2, 0x7fffffff\ninvoke-virtual {v1, v2}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {v1, v2}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {v1, v2}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v3, 0x4\ninvoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "73",
+      "method": "Lcom/keepassdroid/IconPickerActivity$1;->onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V",
+      "line": null,
+      "original": "new-instance v0, Landroid/content/Intent;\nnew-instance v0, Landroid/content/Intent;\ninvoke-direct {v0}, Landroid/content/Intent;-><init>()V",
+      "variants": [
+        {
+          "code": "const/16 v0, 0x0",
+          "operator": "NullIntentMutator"
+        },
+        {
+          "code": "new-instance v0, Landroid/content/Intent;\nsget-object v3, Landroid/content/Intent;->ACTION_VIEW:Ljava/lang/String;\ninvoke-direct {v0, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        },
+        {
+          "code": "new-instance v0, Landroid/content/Intent;\nsget-object v3, Landroid/content/Intent;->ACTION_SEND:Ljava/lang/String;\ninvoke-direct {v0, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "74",
+      "method": "Lcom/keepassdroid/IconPickerActivity$1;->onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V",
+      "line": null,
+      "original": "invoke-virtual {v0, v1, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;",
+      "variants": [
+        {
+          "code": "const/16 p3, 0x0\ninvoke-virtual {v0, v1, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;",
+          "operator": "NullPutExtraValueMutator"
+        },
+        {
+          "code": "const-string v1, \"__metford_invalid_key__\"\ninvoke-virtual {v0, v1, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;",
+          "operator": "NullPutExtraKeyMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "75",
+      "method": "Lcom/keepassdroid/SetPasswordDialog;->onCreate(Landroid/os/Bundle;)V",
+      "line": null,
+      "original": "invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0\ninvoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+          "operator": "BuggyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "76",
+      "method": "Lcom/keepassdroid/SetPasswordDialog;->onCreate(Landroid/os/Bundle;)V",
+      "line": null,
+      "original": "invoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+      "variants": [
+        {
+          "code": "const/16 v2, 0x0\ninvoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+          "operator": "BuggyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "77",
+      "method": "Lcom/keepassdroid/SetPasswordDialog;->onCreate(Landroid/os/Bundle;)V",
+      "line": 70,
+      "original": ".line 70\ninvoke-super {p0, p1}, Lcom/keepassdroid/CancelDialog;->onCreate(Landroid/os/Bundle;)V",
+      "variants": [
+        {
+          "code": ".line 70\ninvoke-super {p0, p1}, Lcom/keepassdroid/CancelDialog;->onCreate(Landroid/os/Bundle;)V\nconst-wide/16 v3, 0x2710\ninvoke-static {v3, v4}, Ljava/lang/Thread;->sleep(J)V",
+          "operator": "LengthyGUICreationMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "78",
+      "method": "Lcom/keepassdroid/SetPasswordDialog;->onCreate(Landroid/os/Bundle;)V",
+      "line": null,
+      "original": "invoke-virtual {p0, v0}, Lcom/keepassdroid/SetPasswordDialog;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+      "variants": [
+        {
+          "code": "const/16 v0, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v0, 0x7fffffff\ninvoke-virtual {p0, v0}, Lcom/keepassdroid/SetPasswordDialog;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v0}, Lcom/keepassdroid/SetPasswordDialog;->findViewById(I)Landroid/view/View;\nmove-result-object v0\ninvoke-virtual {v0}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v0}, Lcom/keepassdroid/SetPasswordDialog;->findViewById(I)Landroid/view/View;\nmove-result-object v0\nconst/16 v3, 0x4\ninvoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "79",
+      "method": "Lcom/keepassdroid/SetPasswordDialog;->onCreate(Landroid/os/Bundle;)V",
+      "line": null,
+      "original": "invoke-virtual {p0, v1}, Lcom/keepassdroid/SetPasswordDialog;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p0, v1}, Lcom/keepassdroid/SetPasswordDialog;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lcom/keepassdroid/SetPasswordDialog;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lcom/keepassdroid/SetPasswordDialog;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v3, 0x4\ninvoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "80",
+      "method": "Lcom/keepassdroid/stream/HmacBlockInputStream;->read()I",
+      "line": null,
+      "original": "add-int/lit8 v1, v1, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v1, v1, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "81",
+      "method": "Lcom/keepassdroid/stream/HmacBlockInputStream;->read([BII)I",
+      "line": 71,
+      "original": ".line 71\nsub-int v1, p3, v0",
+      "variants": [
+        {
+          "code": ".line 71\nadd-int v1, p3, v0",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "82",
+      "method": "Lcom/keepassdroid/stream/HmacBlockInputStream;->read([BII)I",
+      "line": null,
+      "original": "sub-int v2, p3, v0",
+      "variants": [
+        {
+          "code": "add-int v2, p3, v0",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "83",
+      "method": "Lcom/keepassdroid/stream/HashedBlockInputStream;->ReadHashedBlock()Z",
+      "line": 106,
+      "original": ".line 106\nadd-int/lit8 v8, v8, 0x1",
+      "variants": [
+        {
+          "code": ".line 106\nadd-int/lit8 v8, v8, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "84",
+      "method": "Lcom/keepassdroid/stream/HashedBlockInputStream;->read()I",
+      "line": null,
+      "original": "add-int/lit8 v1, v1, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v1, v1, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "85",
+      "method": "Lcom/keepassdroid/stream/HashedBlockInputStream;->read([BII)I",
+      "line": 61,
+      "original": ".line 61\nsub-int v1, p3, v0",
+      "variants": [
+        {
+          "code": ".line 61\nadd-int v1, p3, v0",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "86",
+      "method": "Lcom/keepassdroid/stream/LEDataOutputStream;->writeInt(I[BI)V",
+      "line": 122,
+      "original": ".line 122\nadd-int/lit8 v0, p2, 0x1",
+      "variants": [
+        {
+          "code": ".line 122\nadd-int/lit8 v0, p2, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "87",
+      "method": "Lcom/keepassdroid/stream/LEDataOutputStream;->writeInt(I[BI)V",
+      "line": 123,
+      "original": ".line 123\nadd-int/lit8 v0, p2, 0x2",
+      "variants": [
+        {
+          "code": ".line 123\nadd-int/lit8 v0, p2, -0x2",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "88",
+      "method": "Lcom/keepassdroid/stream/LEDataOutputStream;->writeInt(I[BI)V",
+      "line": 124,
+      "original": ".line 124\nadd-int/lit8 v0, p2, 0x3",
+      "variants": [
+        {
+          "code": ".line 124\nadd-int/lit8 v0, p2, -0x3",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "89",
+      "method": "Lcom/keepassdroid/stream/LEDataOutputStream;->writeLong(J[BI)V",
+      "line": 135,
+      "original": ".line 135\nadd-int/lit8 v0, p3, 0x1",
+      "variants": [
+        {
+          "code": ".line 135\nadd-int/lit8 v0, p3, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "90",
+      "method": "Lcom/keepassdroid/stream/LEDataOutputStream;->writeLong(J[BI)V",
+      "line": 136,
+      "original": ".line 136\nadd-int/lit8 v0, p3, 0x2",
+      "variants": [
+        {
+          "code": ".line 136\nadd-int/lit8 v0, p3, -0x2",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "91",
+      "method": "Lcom/keepassdroid/stream/LEDataOutputStream;->writeLong(J[BI)V",
+      "line": 137,
+      "original": ".line 137\nadd-int/lit8 v0, p3, 0x3",
+      "variants": [
+        {
+          "code": ".line 137\nadd-int/lit8 v0, p3, -0x3",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "92",
+      "method": "Lcom/keepassdroid/stream/LEDataOutputStream;->writeLong(J[BI)V",
+      "line": 138,
+      "original": ".line 138\nadd-int/lit8 v0, p3, 0x4",
+      "variants": [
+        {
+          "code": ".line 138\nadd-int/lit8 v0, p3, -0x4",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "93",
+      "method": "Lcom/keepassdroid/stream/LEDataOutputStream;->writeLong(J[BI)V",
+      "line": 139,
+      "original": ".line 139\nadd-int/lit8 v0, p3, 0x5",
+      "variants": [
+        {
+          "code": ".line 139\nadd-int/lit8 v0, p3, -0x5",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "94",
+      "method": "Lcom/keepassdroid/stream/LEDataOutputStream;->writeLong(J[BI)V",
+      "line": 140,
+      "original": ".line 140\nadd-int/lit8 v0, p3, 0x6",
+      "variants": [
+        {
+          "code": ".line 140\nadd-int/lit8 v0, p3, -0x6",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "95",
+      "method": "Lcom/keepassdroid/stream/LEDataOutputStream;->writeLong(J[BI)V",
+      "line": 141,
+      "original": ".line 141\nadd-int/lit8 v0, p3, 0x7",
+      "variants": [
+        {
+          "code": ".line 141\nadd-int/lit8 v0, p3, -0x7",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "96",
+      "method": "Lcom/keepassdroid/stream/LEDataOutputStream;->writeUShort(I[BI)V",
+      "line": 110,
+      "original": ".line 110\nadd-int/lit8 v0, p2, 0x1",
+      "variants": [
+        {
+          "code": ".line 110\nadd-int/lit8 v0, p2, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "97",
+      "method": "Lcom/keepassdroid/stream/BetterCipherInputStream;->read()I",
+      "line": null,
+      "original": "add-int/lit8 v1, v2, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v1, v2, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "98",
+      "method": "Lcom/keepassdroid/stream/BetterCipherInputStream;->read()I",
+      "line": 105,
+      "original": ".line 105\nadd-int/lit8 v1, v2, 0x1",
+      "variants": [
+        {
+          "code": ".line 105\nadd-int/lit8 v1, v2, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "99",
+      "method": "Lcom/keepassdroid/stream/BetterCipherInputStream;->read([BII)I",
+      "line": 174,
+      "original": ".line 174\nadd-int v1, p2, v0",
+      "variants": [
+        {
+          "code": ".line 174\nsub-int v1, p2, v0",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "100",
+      "method": "Lcom/keepassdroid/stream/BetterCipherInputStream;->read([BII)I",
+      "line": null,
+      "original": "add-int/lit8 v0, v0, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v0, v0, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "101",
+      "method": "Lcom/keepassdroid/stream/LEDataInputStream;->padOut([BI)[B",
+      "line": 184,
+      "original": ".line 184\nadd-int/lit8 v1, v1, 0x1",
+      "variants": [
+        {
+          "code": ".line 184\nadd-int/lit8 v1, v1, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "102",
+      "method": "Lcom/keepassdroid/stream/LEDataInputStream;->readBytes(Ljava/io/InputStream;I)[B",
+      "line": 114,
+      "original": ".line 114\nsub-int v2, p1, v1",
+      "variants": [
+        {
+          "code": ".line 114\nadd-int v2, p1, v1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "103",
+      "method": "Lcom/keepassdroid/stream/LEDataInputStream;->readInt([BI)I",
+      "line": null,
+      "original": "add-int/lit8 v1, p1, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v1, p1, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "104",
+      "method": "Lcom/keepassdroid/stream/LEDataInputStream;->readInt([BI)I",
+      "line": null,
+      "original": "add-int/lit8 v1, p1, 0x2",
+      "variants": [
+        {
+          "code": "add-int/lit8 v1, p1, -0x2",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "105",
+      "method": "Lcom/keepassdroid/stream/LEDataInputStream;->readInt([BI)I",
+      "line": null,
+      "original": "add-int/lit8 v1, p1, 0x3",
+      "variants": [
+        {
+          "code": "add-int/lit8 v1, p1, -0x3",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "106",
+      "method": "Lcom/keepassdroid/stream/LEDataInputStream;->readLong([BI)J",
+      "line": null,
+      "original": "add-int/lit8 v4, p1, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v4, p1, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "107",
+      "method": "Lcom/keepassdroid/stream/LEDataInputStream;->readLong([BI)J",
+      "line": null,
+      "original": "add-int/lit8 v4, p1, 0x2",
+      "variants": [
+        {
+          "code": "add-int/lit8 v4, p1, -0x2",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "108",
+      "method": "Lcom/keepassdroid/stream/LEDataInputStream;->readLong([BI)J",
+      "line": null,
+      "original": "add-int/lit8 v4, p1, 0x3",
+      "variants": [
+        {
+          "code": "add-int/lit8 v4, p1, -0x3",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "109",
+      "method": "Lcom/keepassdroid/stream/LEDataInputStream;->readLong([BI)J",
+      "line": null,
+      "original": "add-int/lit8 v4, p1, 0x4",
+      "variants": [
+        {
+          "code": "add-int/lit8 v4, p1, -0x4",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "110",
+      "method": "Lcom/keepassdroid/stream/LEDataInputStream;->readLong([BI)J",
+      "line": null,
+      "original": "add-int/lit8 v4, p1, 0x5",
+      "variants": [
+        {
+          "code": "add-int/lit8 v4, p1, -0x5",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "111",
+      "method": "Lcom/keepassdroid/stream/LEDataInputStream;->readLong([BI)J",
+      "line": null,
+      "original": "add-int/lit8 v4, p1, 0x6",
+      "variants": [
+        {
+          "code": "add-int/lit8 v4, p1, -0x6",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "112",
+      "method": "Lcom/keepassdroid/stream/LEDataInputStream;->readLong([BI)J",
+      "line": null,
+      "original": "add-int/lit8 v4, p1, 0x7",
+      "variants": [
+        {
+          "code": "add-int/lit8 v4, p1, -0x7",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "113",
+      "method": "Lcom/keepassdroid/stream/LEDataInputStream;->readUShort([BI)I",
+      "line": null,
+      "original": "add-int/lit8 v1, p1, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v1, p1, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "114",
+      "method": "Lcom/keepassdroid/IconPickerActivity$ImageAdapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;",
+      "line": null,
+      "original": "invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v4, 0x4\ninvoke-virtual {v1, v4}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "115",
+      "method": "Lcom/keepassdroid/IconPickerActivity$ImageAdapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;",
+      "line": null,
+      "original": "invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v2",
+      "variants": [
+        {
+          "code": "const/16 v2, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v2, 0x7fffffff\ninvoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v2",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v2\ninvoke-virtual {v2}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v2\nconst/16 v4, 0x4\ninvoke-virtual {v2, v4}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "116",
+      "method": "Lcom/keepassdroid/view/GroupHeaderView;->inflate(Landroid/content/Context;)V",
+      "line": null,
+      "original": "invoke-virtual {p0, v1}, Lcom/keepassdroid/view/GroupHeaderView;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p0, v1}, Lcom/keepassdroid/view/GroupHeaderView;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lcom/keepassdroid/view/GroupHeaderView;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lcom/keepassdroid/view/GroupHeaderView;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v3, 0x4\ninvoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "117",
+      "method": "Lcom/keepassdroid/view/FileNameView;->updateExternalStorageWarning()V",
+      "line": null,
+      "original": "invoke-virtual {p0, v2}, Lcom/keepassdroid/view/FileNameView;->findViewById(I)Landroid/view/View;\nmove-result-object v3",
+      "variants": [
+        {
+          "code": "const/16 v3, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v2, 0x7fffffff\ninvoke-virtual {p0, v2}, Lcom/keepassdroid/view/FileNameView;->findViewById(I)Landroid/view/View;\nmove-result-object v3",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v2}, Lcom/keepassdroid/view/FileNameView;->findViewById(I)Landroid/view/View;\nmove-result-object v3\ninvoke-virtual {v3}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v2}, Lcom/keepassdroid/view/FileNameView;->findViewById(I)Landroid/view/View;\nmove-result-object v3\nconst/16 v8, 0x4\ninvoke-virtual {v3, v8}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "118",
+      "method": "Lcom/keepassdroid/view/FileNameView;->updateExternalStorageWarning()V",
+      "line": null,
+      "original": "invoke-virtual {p0, v4}, Lcom/keepassdroid/view/FileNameView;->findViewById(I)Landroid/view/View;\nmove-result-object v4",
+      "variants": [
+        {
+          "code": "const/16 v4, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v4, 0x7fffffff\ninvoke-virtual {p0, v4}, Lcom/keepassdroid/view/FileNameView;->findViewById(I)Landroid/view/View;\nmove-result-object v4",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v4}, Lcom/keepassdroid/view/FileNameView;->findViewById(I)Landroid/view/View;\nmove-result-object v4\ninvoke-virtual {v4}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v4}, Lcom/keepassdroid/view/FileNameView;->findViewById(I)Landroid/view/View;\nmove-result-object v4\nconst/16 v8, 0x4\ninvoke-virtual {v4, v8}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "119",
+      "method": "Lcom/keepassdroid/view/GroupRootView;->inflate(Landroid/content/Context;)V",
+      "line": null,
+      "original": "invoke-virtual {p0, v1}, Lcom/keepassdroid/view/GroupRootView;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p0, v1}, Lcom/keepassdroid/view/GroupRootView;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lcom/keepassdroid/view/GroupRootView;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lcom/keepassdroid/view/GroupRootView;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v3, 0x4\ninvoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "120",
+      "method": "Lcom/keepassdroid/view/GroupViewOnlyView;->inflate(Landroid/content/Context;)V",
+      "line": null,
+      "original": "invoke-virtual {p0, v1}, Lcom/keepassdroid/view/GroupViewOnlyView;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p0, v1}, Lcom/keepassdroid/view/GroupViewOnlyView;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lcom/keepassdroid/view/GroupViewOnlyView;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lcom/keepassdroid/view/GroupViewOnlyView;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v8, 0x4\ninvoke-virtual {v1, v8}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "121",
+      "method": "Lcom/keepassdroid/view/GroupViewOnlyView;->inflate(Landroid/content/Context;)V",
+      "line": null,
+      "original": "invoke-virtual {p0, v3}, Lcom/keepassdroid/view/GroupViewOnlyView;->findViewById(I)Landroid/view/View;\nmove-result-object v3",
+      "variants": [
+        {
+          "code": "const/16 v3, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v3, 0x7fffffff\ninvoke-virtual {p0, v3}, Lcom/keepassdroid/view/GroupViewOnlyView;->findViewById(I)Landroid/view/View;\nmove-result-object v3",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v3}, Lcom/keepassdroid/view/GroupViewOnlyView;->findViewById(I)Landroid/view/View;\nmove-result-object v3\ninvoke-virtual {v3}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v3}, Lcom/keepassdroid/view/GroupViewOnlyView;->findViewById(I)Landroid/view/View;\nmove-result-object v3\nconst/16 v8, 0x4\ninvoke-virtual {v3, v8}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "122",
+      "method": "Lcom/keepassdroid/view/GroupViewOnlyView;->inflate(Landroid/content/Context;)V",
+      "line": null,
+      "original": "invoke-virtual {p0, v4}, Lcom/keepassdroid/view/GroupViewOnlyView;->findViewById(I)Landroid/view/View;\nmove-result-object v4",
+      "variants": [
+        {
+          "code": "const/16 v4, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v4, 0x7fffffff\ninvoke-virtual {p0, v4}, Lcom/keepassdroid/view/GroupViewOnlyView;->findViewById(I)Landroid/view/View;\nmove-result-object v4",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v4}, Lcom/keepassdroid/view/GroupViewOnlyView;->findViewById(I)Landroid/view/View;\nmove-result-object v4\ninvoke-virtual {v4}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v4}, Lcom/keepassdroid/view/GroupViewOnlyView;->findViewById(I)Landroid/view/View;\nmove-result-object v4\nconst/16 v8, 0x4\ninvoke-virtual {v4, v8}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "123",
+      "method": "Lcom/keepassdroid/view/GroupViewOnlyView;->inflate(Landroid/content/Context;)V",
+      "line": null,
+      "original": "invoke-virtual {p0, v2}, Lcom/keepassdroid/view/GroupViewOnlyView;->findViewById(I)Landroid/view/View;\nmove-result-object v2",
+      "variants": [
+        {
+          "code": "const/16 v2, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v2, 0x7fffffff\ninvoke-virtual {p0, v2}, Lcom/keepassdroid/view/GroupViewOnlyView;->findViewById(I)Landroid/view/View;\nmove-result-object v2",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v2}, Lcom/keepassdroid/view/GroupViewOnlyView;->findViewById(I)Landroid/view/View;\nmove-result-object v2\ninvoke-virtual {v2}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v2}, Lcom/keepassdroid/view/GroupViewOnlyView;->findViewById(I)Landroid/view/View;\nmove-result-object v2\nconst/16 v8, 0x4\ninvoke-virtual {v2, v8}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "124",
+      "method": "Lcom/keepassdroid/view/EntrySection;->setText(ILjava/lang/String;)V",
+      "line": 60,
+      "original": ".line 60\ninvoke-virtual {p0, p1}, Lcom/keepassdroid/view/EntrySection;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+      "variants": [
+        {
+          "code": "const/16 v0, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const p1, 0x7fffffff\n.line 60\ninvoke-virtual {p0, p1}, Lcom/keepassdroid/view/EntrySection;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": ".line 60\ninvoke-virtual {p0, p1}, Lcom/keepassdroid/view/EntrySection;->findViewById(I)Landroid/view/View;\nmove-result-object v0\ninvoke-virtual {v0}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": ".line 60\ninvoke-virtual {p0, p1}, Lcom/keepassdroid/view/EntrySection;->findViewById(I)Landroid/view/View;\nmove-result-object v0\nconst/16 v1, 0x4\ninvoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "125",
+      "method": "Lcom/keepassdroid/view/PwGroupView;-><init>(Lcom/keepassdroid/GroupBaseActivity;Lcom/keepassdroid/database/PwGroup;)V",
+      "line": null,
+      "original": "sub-float v3, v1, v3",
+      "variants": [
+        {
+          "code": "add-float v3, v1, v3",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "126",
+      "method": "Lcom/keepassdroid/view/PwGroupView;-><init>(Lcom/keepassdroid/GroupBaseActivity;Lcom/keepassdroid/database/PwGroup;)V",
+      "line": null,
+      "original": "invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v6, 0x4\ninvoke-virtual {v1, v6}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "127",
+      "method": "Lcom/keepassdroid/view/PwGroupView;-><init>(Lcom/keepassdroid/GroupBaseActivity;Lcom/keepassdroid/database/PwGroup;)V",
+      "line": null,
+      "original": "invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v2",
+      "variants": [
+        {
+          "code": "const/16 v2, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v2, 0x7fffffff\ninvoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v2",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v2\ninvoke-virtual {v2}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v2\nconst/16 v6, 0x4\ninvoke-virtual {v2, v6}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "128",
+      "method": "Lcom/keepassdroid/view/PwGroupView;->populateView(Landroid/view/View;Lcom/keepassdroid/database/PwGroup;)V",
+      "line": null,
+      "original": "invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+      "variants": [
+        {
+          "code": "const/16 v0, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v0, 0x7fffffff\ninvoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v0\ninvoke-virtual {v0}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v0\nconst/16 v4, 0x4\ninvoke-virtual {v0, v4}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "129",
+      "method": "Lcom/keepassdroid/view/PwEntryView;-><init>(Lcom/keepassdroid/GroupBaseActivity;Lcom/keepassdroid/database/PwEntry;I)V",
+      "line": null,
+      "original": "invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v4, 0x4\ninvoke-virtual {v1, v4}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "130",
+      "method": "Lcom/keepassdroid/view/PwEntryView;->populateView(Landroid/view/View;Lcom/keepassdroid/database/PwEntry;I)V",
+      "line": null,
+      "original": "invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+      "variants": [
+        {
+          "code": "const/16 v0, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v0, 0x7fffffff\ninvoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v0\ninvoke-virtual {v0}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v0\nconst/16 v4, 0x4\ninvoke-virtual {v0, v4}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "131",
+      "method": "Lcom/keepassdroid/view/EntryEditSection;->setText(ILjava/lang/String;)V",
+      "line": 78,
+      "original": ".line 78\ninvoke-virtual {p0, p1}, Lcom/keepassdroid/view/EntryEditSection;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+      "variants": [
+        {
+          "code": "const/16 v0, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const p1, 0x7fffffff\n.line 78\ninvoke-virtual {p0, p1}, Lcom/keepassdroid/view/EntryEditSection;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": ".line 78\ninvoke-virtual {p0, p1}, Lcom/keepassdroid/view/EntryEditSection;->findViewById(I)Landroid/view/View;\nmove-result-object v0\ninvoke-virtual {v0}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": ".line 78\ninvoke-virtual {p0, p1}, Lcom/keepassdroid/view/EntryEditSection;->findViewById(I)Landroid/view/View;\nmove-result-object v0\nconst/16 v1, 0x4\ninvoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "132",
+      "method": "Lcom/keepassdroid/view/EntryEditSection;->setData(Ljava/lang/String;Lcom/keepassdroid/database/security/ProtectedString;)V",
+      "line": null,
+      "original": "invoke-virtual {p0, v0}, Lcom/keepassdroid/view/EntryEditSection;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+      "variants": [
+        {
+          "code": "const/16 v0, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v0, 0x7fffffff\ninvoke-virtual {p0, v0}, Lcom/keepassdroid/view/EntryEditSection;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v0}, Lcom/keepassdroid/view/EntryEditSection;->findViewById(I)Landroid/view/View;\nmove-result-object v0\ninvoke-virtual {v0}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v0}, Lcom/keepassdroid/view/EntryEditSection;->findViewById(I)Landroid/view/View;\nmove-result-object v0\nconst/16 v2, 0x4\ninvoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "133",
+      "method": "Lcom/keepassdroid/search/SearchResults;->query(Ljava/lang/String;)V",
+      "line": null,
+      "original": "invoke-virtual {p0, v0}, Lcom/keepassdroid/search/SearchResults;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+      "variants": [
+        {
+          "code": "const/16 v0, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v0, 0x7fffffff\ninvoke-virtual {p0, v0}, Lcom/keepassdroid/search/SearchResults;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v0}, Lcom/keepassdroid/search/SearchResults;->findViewById(I)Landroid/view/View;\nmove-result-object v0\ninvoke-virtual {v0}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v0}, Lcom/keepassdroid/search/SearchResults;->findViewById(I)Landroid/view/View;\nmove-result-object v0\nconst/16 v3, 0x4\ninvoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "134",
+      "method": "Lcom/keepassdroid/search/SearchResults;->onCreate(Landroid/os/Bundle;)V",
+      "line": 44,
+      "original": ".line 44\ninvoke-super {p0, p1}, Lcom/keepassdroid/GroupBaseActivity;->onCreate(Landroid/os/Bundle;)V",
+      "variants": [
+        {
+          "code": ".line 44\ninvoke-super {p0, p1}, Lcom/keepassdroid/GroupBaseActivity;->onCreate(Landroid/os/Bundle;)V\nconst-wide/16 v1, 0x2710\ninvoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V",
+          "operator": "LengthyGUICreationMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "135",
+      "method": "Lcom/keepassdroid/database/PwCompressionAlgorithm;->fromId(I)Lcom/keepassdroid/database/PwCompressionAlgorithm;",
+      "line": null,
+      "original": "add-int/lit8 v2, v2, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v2, v2, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "136",
+      "method": "Lcom/keepassdroid/database/load/ImporterV3;->bsw32([BI)V",
+      "line": null,
+      "original": "add-int/lit8 v1, p1, 0x3",
+      "variants": [
+        {
+          "code": "add-int/lit8 v1, p1, -0x3",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "137",
+      "method": "Lcom/keepassdroid/database/load/ImporterV3;->bsw32([BI)V",
+      "line": 323,
+      "original": ".line 323\nadd-int/lit8 v1, p1, 0x3",
+      "variants": [
+        {
+          "code": ".line 323\nadd-int/lit8 v1, p1, -0x3",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "138",
+      "method": "Lcom/keepassdroid/database/load/ImporterV3;->bsw32([BI)V",
+      "line": 324,
+      "original": ".line 324\nadd-int/lit8 v1, p1, 0x1",
+      "variants": [
+        {
+          "code": ".line 324\nadd-int/lit8 v1, p1, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "139",
+      "method": "Lcom/keepassdroid/database/load/ImporterV3;->bsw32([BI)V",
+      "line": 325,
+      "original": ".line 325\nadd-int/lit8 v1, p1, 0x1",
+      "variants": [
+        {
+          "code": ".line 325\nadd-int/lit8 v1, p1, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "140",
+      "method": "Lcom/keepassdroid/database/load/ImporterV3;->bsw32([BI)V",
+      "line": null,
+      "original": "add-int/lit8 v2, p1, 0x2",
+      "variants": [
+        {
+          "code": "add-int/lit8 v2, p1, -0x2",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "141",
+      "method": "Lcom/keepassdroid/database/load/ImporterV3;->bsw32([BI)V",
+      "line": 326,
+      "original": ".line 326\nadd-int/lit8 v1, p1, 0x2",
+      "variants": [
+        {
+          "code": ".line 326\nadd-int/lit8 v1, p1, -0x2",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "142",
+      "method": "Lcom/keepassdroid/database/load/ImporterV3;->makePad([B)[B",
+      "line": null,
+      "original": "add-int v2, v0, v1",
+      "variants": [
+        {
+          "code": "sub-int v2, v0, v1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "143",
+      "method": "Lcom/keepassdroid/database/load/ImporterV3;->makePad([B)[B",
+      "line": 310,
+      "original": ".line 310\nadd-int v3, v0, v1",
+      "variants": [
+        {
+          "code": ".line 310\nsub-int v3, v0, v1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "144",
+      "method": "Lcom/keepassdroid/database/load/ImporterV3;->makePad([B)[B",
+      "line": 313,
+      "original": ".line 313\nadd-int/lit8 v3, v3, 0x4",
+      "variants": [
+        {
+          "code": ".line 313\nadd-int/lit8 v3, v3, -0x4",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "145",
+      "method": "Lcom/keepassdroid/database/load/ImporterV3;->readEntryField(Lcom/keepassdroid/database/PwDatabaseV3;Lcom/keepassdroid/database/PwEntryV3;[BI)V",
+      "line": null,
+      "original": "add-int/lit8 p4, p4, 0x2",
+      "variants": [
+        {
+          "code": "add-int/lit8 p4, p4, -0x2",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "146",
+      "method": "Lcom/keepassdroid/database/load/ImporterV3;->readEntryField(Lcom/keepassdroid/database/PwDatabaseV3;Lcom/keepassdroid/database/PwEntryV3;[BI)V",
+      "line": null,
+      "original": "add-int/lit8 p4, p4, 0x4",
+      "variants": [
+        {
+          "code": "add-int/lit8 p4, p4, -0x4",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "147",
+      "method": "Lcom/keepassdroid/database/PwDbHeaderV3;->loadFromFile([BI)V",
+      "line": 93,
+      "original": ".line 93\nadd-int/lit8 v0, p2, 0x4",
+      "variants": [
+        {
+          "code": ".line 93\nadd-int/lit8 v0, p2, -0x4",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "148",
+      "method": "Lcom/keepassdroid/database/PwDbHeaderV3;->loadFromFile([BI)V",
+      "line": 94,
+      "original": ".line 94\nadd-int/lit8 v0, p2, 0x8",
+      "variants": [
+        {
+          "code": ".line 94\nadd-int/lit8 v0, p2, -0x8",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "149",
+      "method": "Lcom/keepassdroid/database/PwDbHeaderV3;->loadFromFile([BI)V",
+      "line": 95,
+      "original": ".line 95\nadd-int/lit8 v0, p2, 0xc",
+      "variants": [
+        {
+          "code": ".line 95\nadd-int/lit8 v0, p2, -0xc",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "150",
+      "method": "Lcom/keepassdroid/database/PwDbHeaderV3;->loadFromFile([BI)V",
+      "line": 97,
+      "original": ".line 97\nadd-int/lit8 v0, p2, 0x10",
+      "variants": [
+        {
+          "code": ".line 97\nadd-int/lit8 v0, p2, -0x10",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "151",
+      "method": "Lcom/keepassdroid/database/PwDbHeaderV3;->loadFromFile([BI)V",
+      "line": 98,
+      "original": ".line 98\nadd-int/lit8 v0, p2, 0x20",
+      "variants": [
+        {
+          "code": ".line 98\nadd-int/lit8 v0, p2, -0x20",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "152",
+      "method": "Lcom/keepassdroid/database/PwDbHeaderV3;->loadFromFile([BI)V",
+      "line": 100,
+      "original": ".line 100\nadd-int/lit8 v0, p2, 0x30",
+      "variants": [
+        {
+          "code": ".line 100\nadd-int/lit8 v0, p2, -0x30",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "153",
+      "method": "Lcom/keepassdroid/database/PwDbHeaderV3;->loadFromFile([BI)V",
+      "line": 101,
+      "original": ".line 101\nadd-int/lit8 v0, p2, 0x34",
+      "variants": [
+        {
+          "code": ".line 101\nadd-int/lit8 v0, p2, -0x34",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "154",
+      "method": "Lcom/keepassdroid/database/PwDbHeaderV3;->loadFromFile([BI)V",
+      "line": 103,
+      "original": ".line 103\nadd-int/lit8 v0, p2, 0x38",
+      "variants": [
+        {
+          "code": ".line 103\nadd-int/lit8 v0, p2, -0x38",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "155",
+      "method": "Lcom/keepassdroid/database/PwDbHeaderV3;->loadFromFile([BI)V",
+      "line": 105,
+      "original": ".line 105\nadd-int/lit8 v0, p2, 0x58",
+      "variants": [
+        {
+          "code": ".line 105\nadd-int/lit8 v0, p2, -0x58",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "156",
+      "method": "Lcom/keepassdroid/database/PwDbHeaderV3;->loadFromFile([BI)V",
+      "line": 106,
+      "original": ".line 106\nadd-int/lit8 v0, p2, 0x78",
+      "variants": [
+        {
+          "code": ".line 106\nadd-int/lit8 v0, p2, -0x78",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "157",
+      "method": "Lcom/keepassdroid/database/PwIconCustom;->hashCode()I",
+      "line": null,
+      "original": "mul-int/lit8 v2, v1, 0x1f",
+      "variants": [
+        {
+          "code": "div-int/lit8 v2, v1, 0x1f",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "158",
+      "method": "Lcom/keepassdroid/database/PwDatabaseV4;->decodeKeyV2(Ljava/lang/String;)[B",
+      "line": 305,
+      "original": ".line 305\nadd-int/lit8 v5, v2, 0x1",
+      "variants": [
+        {
+          "code": ".line 305\nadd-int/lit8 v5, v2, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "159",
+      "method": "Lcom/keepassdroid/database/PwDatabaseV4;->decodeKeyV2(Ljava/lang/String;)[B",
+      "line": null,
+      "original": "add-int/lit8 v2, v2, 0x2",
+      "variants": [
+        {
+          "code": "add-int/lit8 v2, v2, -0x2",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "160",
+      "method": "Lcom/keepassdroid/database/PwDatabaseV4;->decodeKeyV2(Ljava/lang/String;)[B",
+      "line": null,
+      "original": "div-int/lit8 v0, v1, 0x2",
+      "variants": [
+        {
+          "code": "mul-int/lit8 v0, v1, 0x2",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "161",
+      "method": "Lcom/keepassdroid/database/PwDatabaseV4;->getVersion(Lorg/w3c/dom/NodeList;)J",
+      "line": null,
+      "original": "add-int/lit8 v7, v7, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v7, v7, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "162",
+      "method": "Lcom/keepassdroid/database/PwDatabaseV4;->getVersion(Lorg/w3c/dom/NodeList;)J",
+      "line": null,
+      "original": "add-int/lit8 v4, v4, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v4, v4, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "163",
+      "method": "Lcom/keepassdroid/database/PwDatabaseV4;->getVersion(Lorg/w3c/dom/NodeList;)J",
+      "line": null,
+      "original": "add-int/lit8 v0, v0, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v0, v0, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "164",
+      "method": "Lcom/keepassdroid/database/PwDatabaseV4;->hexToByte(C)B",
+      "line": null,
+      "original": "add-int/lit8 v0, v0, 0xa",
+      "variants": [
+        {
+          "code": "add-int/lit8 v0, v0, -0xa",
+          "operator": "ArithmeticOperatorMutator"
+        },
+        {
+          "code": "add-int/lit8 v0, v0, -0xa",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "165",
+      "method": "Lcom/keepassdroid/database/PwIconStandard;->hashCode()I",
+      "line": null,
+      "original": "mul-int/lit8 v2, v1, 0x1f",
+      "variants": [
+        {
+          "code": "div-int/lit8 v2, v1, 0x1f",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "166",
+      "method": "Lcom/keepassdroid/database/iterator/EntrySearchStringIteratorV3;->useSearchParameters()V",
+      "line": null,
+      "original": "add-int/lit8 v1, v1, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v1, v1, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "167",
+      "method": "Lcom/keepassdroid/database/iterator/EntrySearchStringIteratorV3;->next()Ljava/lang/String;",
+      "line": null,
+      "original": "add-int/lit8 v1, v1, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v1, v1, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "168",
+      "method": "Lcom/keepassdroid/database/edit/DeleteGroup;->run()V",
+      "line": null,
+      "original": "add-int/lit8 v1, v1, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v1, v1, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "169",
+      "method": "Lcom/keepassdroid/database/edit/DeleteGroup;->run()V",
+      "line": null,
+      "original": "add-int/lit8 v2, v2, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v2, v2, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "170",
+      "method": "Lcom/keepassdroid/database/edit/SetPassword;->erase([B)V",
+      "line": 123,
+      "original": ".line 123\nadd-int/lit8 v0, v0, 0x1",
+      "variants": [
+        {
+          "code": ".line 123\nadd-int/lit8 v0, v0, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "171",
+      "method": "Lcom/keepassdroid/database/CrsAlgorithm;->fromId(I)Lcom/keepassdroid/database/CrsAlgorithm;",
+      "line": null,
+      "original": "add-int/lit8 v2, v2, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v2, v2, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "172",
+      "method": "Lcom/keepassdroid/database/BinaryPool;->findUnusedKey()I",
+      "line": 97,
+      "original": ".line 97\nadd-int/lit8 v0, v0, 0x1",
+      "variants": [
+        {
+          "code": ".line 97\nadd-int/lit8 v0, v0, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "173",
+      "method": "Lcom/keepassdroid/database/PwGroupV4;->buildChildEntriesRecursive(Ljava/util/List;)V",
+      "line": 116,
+      "original": ".line 116\nadd-int/lit8 v0, v0, 0x1",
+      "variants": [
+        {
+          "code": ".line 116\nadd-int/lit8 v0, v0, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "174",
+      "method": "Lcom/keepassdroid/database/PwGroupV4;->buildChildEntriesRecursive(Ljava/util/List;)V",
+      "line": null,
+      "original": "add-int/lit8 v0, v0, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v0, v0, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "175",
+      "method": "Lcom/keepassdroid/database/PwGroupV4;->buildChildGroupsRecursive(Ljava/util/List;)V",
+      "line": null,
+      "original": "add-int/lit8 v0, v0, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v0, v0, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "176",
+      "method": "Lcom/keepassdroid/database/save/PwEntryOutputV3;->output()V",
+      "line": null,
+      "original": "add-int/lit8 v5, v5, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v5, v5, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "177",
+      "method": "Lcom/keepassdroid/database/save/PwEntryOutputV3;->output()V",
+      "line": null,
+      "original": "add-int/lit8 v6, v6, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v6, v6, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "178",
+      "method": "Lcom/keepassdroid/database/save/PwDbV4Output;->safeXmlString(Ljava/lang/String;)Ljava/lang/String;",
+      "line": null,
+      "original": "add-int/lit8 v1, v1, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v1, v1, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "179",
+      "method": "Lcom/keepassdroid/database/save/PwDbV3Output;->sortGroupsForOutput()V",
+      "line": 251,
+      "original": ".line 251\nadd-int/lit8 v2, v2, 0x1",
+      "variants": [
+        {
+          "code": ".line 251\nadd-int/lit8 v2, v2, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "180",
+      "method": "Lcom/keepassdroid/database/save/PwDbV3Output;->outputPlanGroupAndEntries(Ljava/io/OutputStream;)V",
+      "line": null,
+      "original": "add-int/lit8 v2, v2, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v2, v2, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        },
+        {
+          "code": "add-int/lit8 v2, v2, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "181",
+      "method": "Lcom/keepassdroid/database/PwEntryV3;->fill([BB)V",
+      "line": 219,
+      "original": ".line 219\nadd-int/lit8 v0, v0, 0x1",
+      "variants": [
+        {
+          "code": ".line 219\nadd-int/lit8 v0, v0, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "182",
+      "method": "Lcom/keepassdroid/database/PwEntryV4;->removeOldestBackup()V",
+      "line": null,
+      "original": "add-int/lit8 v2, v2, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v2, v2, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "183",
+      "method": "Lcom/keepassdroid/crypto/NativeAESCipherSpi;->engineGetOutputSize(I)I",
+      "line": null,
+      "original": "add-int/lit8 v0, v0, 0x10",
+      "variants": [
+        {
+          "code": "add-int/lit8 v0, v0, -0x10",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "184",
+      "method": "Lcom/keepassdroid/LockCloseHideActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": 36,
+      "original": ".line 36\ninvoke-super {p0, p1}, Lcom/keepassdroid/LockCloseActivity;->onCreate(Landroid/os/Bundle;)V",
+      "variants": [
+        {
+          "code": ".line 36\ninvoke-super {p0, p1}, Lcom/keepassdroid/LockCloseActivity;->onCreate(Landroid/os/Bundle;)V\nconst-wide/16 v3, 0x2710\ninvoke-static {v3, v4}, Ljava/lang/Thread;->sleep(J)V",
+          "operator": "LengthyGUICreationMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "185",
+      "method": "Lcom/keepassdroid/IconPickerActivity;->Launch(Landroid/app/Activity;)V",
+      "line": 45,
+      "original": ".line 45\nnew-instance v0, Landroid/content/Intent;\n.line 45\nnew-instance v0, Landroid/content/Intent;\nconst-class v1, Lcom/keepassdroid/IconPickerActivity;\ninvoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/16 v0, 0x0",
+          "operator": "NullIntentMutator"
+        },
+        {
+          "code": "new-instance v0, Landroid/content/Intent;\nsget-object v2, Landroid/content/Intent;->ACTION_VIEW:Ljava/lang/String;\ninvoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        },
+        {
+          "code": "new-instance v0, Landroid/content/Intent;\nsget-object v2, Landroid/content/Intent;->ACTION_SEND:Ljava/lang/String;\ninvoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "186",
+      "method": "Lcom/keepassdroid/IconPickerActivity;->Launch(Landroid/app/Activity;)V",
+      "line": null,
+      "original": "const-class v1, Lcom/keepassdroid/IconPickerActivity;\ninvoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const-class v1, Lcom/keepassdroid/Database;\ninvoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "IntentTargetReplacementMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "187",
+      "method": "Lcom/keepassdroid/IconPickerActivity;->Launch(Landroid/app/Activity;)V",
+      "line": null,
+      "original": "invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/16 p0, 0x0\ninvoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "InvalidKeyIntentMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "188",
+      "method": "Lcom/keepassdroid/IconPickerActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": 52,
+      "original": ".line 52\ninvoke-super {p0, p1}, Lcom/keepassdroid/LockCloseActivity;->onCreate(Landroid/os/Bundle;)V",
+      "variants": [
+        {
+          "code": ".line 52\ninvoke-super {p0, p1}, Lcom/keepassdroid/LockCloseActivity;->onCreate(Landroid/os/Bundle;)V\nconst-wide/16 v2, 0x2710\ninvoke-static {v2, v3}, Ljava/lang/Thread;->sleep(J)V",
+          "operator": "LengthyGUICreationMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "189",
+      "method": "Lcom/keepassdroid/IconPickerActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": null,
+      "original": "invoke-virtual {p0, v0}, Lcom/keepassdroid/IconPickerActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+      "variants": [
+        {
+          "code": "const/16 v0, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v0, 0x7fffffff\ninvoke-virtual {p0, v0}, Lcom/keepassdroid/IconPickerActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v0}, Lcom/keepassdroid/IconPickerActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v0\ninvoke-virtual {v0}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v0}, Lcom/keepassdroid/IconPickerActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v0\nconst/16 v2, 0x4\ninvoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "190",
+      "method": "Lcom/keepassdroid/GeneratePasswordActivity$3;->onClick(Landroid/view/View;)V",
+      "line": null,
+      "original": "new-instance v1, Landroid/content/Intent;\nnew-instance v1, Landroid/content/Intent;\ninvoke-direct {v1}, Landroid/content/Intent;-><init>()V",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "NullIntentMutator"
+        },
+        {
+          "code": "new-instance v1, Landroid/content/Intent;\nsget-object v4, Landroid/content/Intent;->ACTION_VIEW:Ljava/lang/String;\ninvoke-direct {v1, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        },
+        {
+          "code": "new-instance v1, Landroid/content/Intent;\nsget-object v4, Landroid/content/Intent;->ACTION_SEND:Ljava/lang/String;\ninvoke-direct {v1, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "191",
+      "method": "Lcom/keepassdroid/GeneratePasswordActivity$3;->onClick(Landroid/view/View;)V",
+      "line": null,
+      "original": "invoke-virtual {v1, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;",
+      "variants": [
+        {
+          "code": "const/16 v2, 0x0\ninvoke-virtual {v1, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;",
+          "operator": "NullPutExtraValueMutator"
+        },
+        {
+          "code": "const-string v3, \"__metford_invalid_key__\"\ninvoke-virtual {v1, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;",
+          "operator": "NullPutExtraKeyMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "192",
+      "method": "Lcom/keepassdroid/GeneratePasswordActivity$3;->onClick(Landroid/view/View;)V",
+      "line": 84,
+      "original": ".line 84\nreturn-void ",
+      "variants": [
+        {
+          "code": "const-wide/16 v4, 0x2710\ninvoke-static {v4, v5}, Ljava/lang/Thread;->sleep(J)V\n.line 84\nreturn-void ",
+          "operator": "LengthyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "193",
+      "method": "Lcom/keepassdroid/GeneratePasswordActivity$3;->onClick(Landroid/view/View;)V",
+      "line": null,
+      "original": "invoke-virtual {v0, v1}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+      "variants": [
+        {
+          "code": "const/16 v0, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {v0, v1}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {v0, v1}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v0\ninvoke-virtual {v0}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {v0, v1}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v0\nconst/16 v4, 0x4\ninvoke-virtual {v0, v4}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "194",
+      "method": "Lcom/keepassdroid/GeneratePasswordActivity$4;->onClick(Landroid/view/View;)V",
+      "line": 94,
+      "original": ".line 94\nreturn-void ",
+      "variants": [
+        {
+          "code": "const-wide/16 v2, 0x2710\ninvoke-static {v2, v3}, Ljava/lang/Thread;->sleep(J)V\n.line 94\nreturn-void ",
+          "operator": "LengthyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "195",
+      "method": "Lcom/keepassdroid/SetPasswordDialog$2;->onClick(Landroid/view/View;)V",
+      "line": null,
+      "original": "return-void ",
+      "variants": [
+        {
+          "code": "const-wide/16 v1, 0x2710\ninvoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V\nreturn-void ",
+          "operator": "LengthyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "196",
+      "method": "Lcom/keepassdroid/GeneratePasswordActivity$2;->onClick(Landroid/view/View;)V",
+      "line": 69,
+      "original": ".line 69\nreturn-void ",
+      "variants": [
+        {
+          "code": "const-wide/16 v1, 0x2710\ninvoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V\n.line 69\nreturn-void ",
+          "operator": "LengthyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "197",
+      "method": "Lcom/keepassdroid/SetPasswordDialog$1;->onClick(Landroid/view/View;)V",
+      "line": null,
+      "original": "invoke-virtual {v0, v1}, Lcom/keepassdroid/SetPasswordDialog;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+      "variants": [
+        {
+          "code": "const/16 v0, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {v0, v1}, Lcom/keepassdroid/SetPasswordDialog;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {v0, v1}, Lcom/keepassdroid/SetPasswordDialog;->findViewById(I)Landroid/view/View;\nmove-result-object v0\ninvoke-virtual {v0}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {v0, v1}, Lcom/keepassdroid/SetPasswordDialog;->findViewById(I)Landroid/view/View;\nmove-result-object v0\nconst/16 v13, 0x4\ninvoke-virtual {v0, v13}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "198",
+      "method": "Lcom/keepassdroid/SetPasswordDialog$1;->onClick(Landroid/view/View;)V",
+      "line": null,
+      "original": "invoke-virtual {v2, v3}, Lcom/keepassdroid/SetPasswordDialog;->findViewById(I)Landroid/view/View;\nmove-result-object v2",
+      "variants": [
+        {
+          "code": "const/16 v2, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v3, 0x7fffffff\ninvoke-virtual {v2, v3}, Lcom/keepassdroid/SetPasswordDialog;->findViewById(I)Landroid/view/View;\nmove-result-object v2",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {v2, v3}, Lcom/keepassdroid/SetPasswordDialog;->findViewById(I)Landroid/view/View;\nmove-result-object v2\ninvoke-virtual {v2}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {v2, v3}, Lcom/keepassdroid/SetPasswordDialog;->findViewById(I)Landroid/view/View;\nmove-result-object v2\nconst/16 v13, 0x4\ninvoke-virtual {v2, v13}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "199",
+      "method": "Lcom/keepassdroid/SetPasswordDialog$1;->onClick(Landroid/view/View;)V",
+      "line": null,
+      "original": "invoke-virtual {v2, v4}, Lcom/keepassdroid/SetPasswordDialog;->findViewById(I)Landroid/view/View;\nmove-result-object v2",
+      "variants": [
+        {
+          "code": "const/16 v2, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v4, 0x7fffffff\ninvoke-virtual {v2, v4}, Lcom/keepassdroid/SetPasswordDialog;->findViewById(I)Landroid/view/View;\nmove-result-object v2",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {v2, v4}, Lcom/keepassdroid/SetPasswordDialog;->findViewById(I)Landroid/view/View;\nmove-result-object v2\ninvoke-virtual {v2}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {v2, v4}, Lcom/keepassdroid/SetPasswordDialog;->findViewById(I)Landroid/view/View;\nmove-result-object v2\nconst/16 v13, 0x4\ninvoke-virtual {v2, v13}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "200",
+      "method": "Lcom/keepassdroid/GroupBaseActivity;->ensureCorrectListView()V",
+      "line": null,
+      "original": "invoke-virtual {p0, v0}, Lcom/keepassdroid/GroupBaseActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+      "variants": [
+        {
+          "code": "const/16 v0, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v0, 0x7fffffff\ninvoke-virtual {p0, v0}, Lcom/keepassdroid/GroupBaseActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v0}, Lcom/keepassdroid/GroupBaseActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v0\ninvoke-virtual {v0}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v0}, Lcom/keepassdroid/GroupBaseActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v0\nconst/16 v2, 0x4\ninvoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "201",
+      "method": "Lcom/keepassdroid/GroupBaseActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": 88,
+      "original": ".line 88\ninvoke-super {p0, p1}, Lcom/keepassdroid/LockCloseListActivity;->onCreate(Landroid/os/Bundle;)V",
+      "variants": [
+        {
+          "code": ".line 88\ninvoke-super {p0, p1}, Lcom/keepassdroid/LockCloseListActivity;->onCreate(Landroid/os/Bundle;)V\nconst-wide/16 v1, 0x2710\ninvoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V",
+          "operator": "LengthyGUICreationMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "202",
+      "method": "Lcom/keepassdroid/GroupBaseActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": null,
+      "original": "invoke-virtual {p0, v0}, Lcom/keepassdroid/GroupBaseActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+      "variants": [
+        {
+          "code": "const/16 v0, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v0, 0x7fffffff\ninvoke-virtual {p0, v0}, Lcom/keepassdroid/GroupBaseActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v0}, Lcom/keepassdroid/GroupBaseActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v0\ninvoke-virtual {v0}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v0}, Lcom/keepassdroid/GroupBaseActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v0\nconst/16 v1, 0x4\ninvoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "203",
+      "method": "Lcom/keepassdroid/GroupBaseActivity;->setGroupIcon()V",
+      "line": null,
+      "original": "invoke-virtual {p0, v0}, Lcom/keepassdroid/GroupBaseActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+      "variants": [
+        {
+          "code": "const/16 v0, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v0, 0x7fffffff\ninvoke-virtual {p0, v0}, Lcom/keepassdroid/GroupBaseActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v0}, Lcom/keepassdroid/GroupBaseActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v0\ninvoke-virtual {v0}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v0}, Lcom/keepassdroid/GroupBaseActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v0\nconst/16 v4, 0x4\ninvoke-virtual {v0, v4}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "204",
+      "method": "Lcom/keepassdroid/GroupBaseActivity;->setGroupTitle()V",
+      "line": 120,
+      "original": ".line 120\ninvoke-virtual {p0, v1}, Lcom/keepassdroid/GroupBaseActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\n.line 120\ninvoke-virtual {p0, v1}, Lcom/keepassdroid/GroupBaseActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": ".line 120\ninvoke-virtual {p0, v1}, Lcom/keepassdroid/GroupBaseActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": ".line 120\ninvoke-virtual {p0, v1}, Lcom/keepassdroid/GroupBaseActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v3, 0x4\ninvoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "205",
+      "method": "Lcom/keepassdroid/GroupBaseActivity;->setGroupTitle()V",
+      "line": null,
+      "original": "invoke-virtual {p0, v1}, Lcom/keepassdroid/GroupBaseActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p0, v1}, Lcom/keepassdroid/GroupBaseActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lcom/keepassdroid/GroupBaseActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lcom/keepassdroid/GroupBaseActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v3, 0x4\ninvoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "206",
+      "method": "Lcom/keepassdroid/fragments/PasswordFragment$InitTask$2;->lookForOpenIntentsFilePicker()V",
+      "line": 609,
+      "original": ".line 609\nnew-instance v0, Landroid/content/Intent;\n.line 608\niget-object v0, p0, Lcom/keepassdroid/fragments/PasswordFragment$InitTask$2;->this$1:Lcom/keepassdroid/fragments/PasswordFragment$InitTask;\niget-object v0, v0, Lcom/keepassdroid/fragments/PasswordFragment$InitTask;->this$0:Lcom/keepassdroid/fragments/PasswordFragment;\ninvoke-static {v0}, Lcom/keepassdroid/fragments/PasswordFragment;->access$300(Lcom/keepassdroid/fragments/PasswordFragment;)Landroidx/appcompat/app/AppCompatActivity;\nmove-result-object v0\nconst-string v1, \"org.openintents.action.PICK_FILE\"\ninvoke-static {v0, v1}, Lcom/keepassdroid/utils/Interaction;->isIntentAvailable(Landroid/content/Context;Ljava/lang/String;)Z\nmove-result v0\nif-eqz v0, :cond_1\n.line 609\nnew-instance v0, Landroid/content/Intent;\ninvoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+      "variants": [
+        {
+          "code": "const/16 v0, 0x0",
+          "operator": "NullIntentMutator"
+        },
+        {
+          "code": "new-instance v0, Landroid/content/Intent;\nsget-object v5, Landroid/content/Intent;->ACTION_VIEW:Ljava/lang/String;\ninvoke-direct {v0, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        },
+        {
+          "code": "new-instance v0, Landroid/content/Intent;\nsget-object v5, Landroid/content/Intent;->ACTION_SEND:Ljava/lang/String;\ninvoke-direct {v0, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "207",
+      "method": "Lcom/keepassdroid/fragments/PasswordFragment$InitTask$2;->onClick(Landroid/view/View;)V",
+      "line": 590,
+      "original": ".line 590\nnew-instance v0, Landroid/content/Intent;\n.line 589\niget-object v0, p0, Lcom/keepassdroid/fragments/PasswordFragment$InitTask$2;->this$1:Lcom/keepassdroid/fragments/PasswordFragment$InitTask;\niget-object v0, v0, Lcom/keepassdroid/fragments/PasswordFragment$InitTask;->this$0:Lcom/keepassdroid/fragments/PasswordFragment;\ninvoke-static {v0}, Lcom/keepassdroid/fragments/PasswordFragment;->access$300(Lcom/keepassdroid/fragments/PasswordFragment;)Landroidx/appcompat/app/AppCompatActivity;\nmove-result-object v0\ninvoke-static {v0}, Lcom/keepassdroid/compat/StorageAF;->useStorageFramework(Landroid/content/Context;)Z\nmove-result v0\nconst-string v1, \"*/*\"\nconst-string v2, \"android.intent.category.OPENABLE\"\nif-eqz v0, :cond_0\n.line 590\nnew-instance v0, Landroid/content/Intent;\nsget-object v3, Lcom/keepassdroid/compat/StorageAF;->ACTION_OPEN_DOCUMENT:Ljava/lang/String;\ninvoke-direct {v0, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+      "variants": [
+        {
+          "code": "const/16 v0, 0x0",
+          "operator": "NullIntentMutator"
+        },
+        {
+          "code": "new-instance v0, Landroid/content/Intent;\nsget-object v4, Landroid/content/Intent;->ACTION_VIEW:Ljava/lang/String;\ninvoke-direct {v0, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        },
+        {
+          "code": "new-instance v0, Landroid/content/Intent;\nsget-object v4, Landroid/content/Intent;->ACTION_SEND:Ljava/lang/String;\ninvoke-direct {v0, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "208",
+      "method": "Lcom/keepassdroid/fragments/PasswordFragment$InitTask$2;->onClick(Landroid/view/View;)V",
+      "line": null,
+      "original": "new-instance v0, Landroid/content/Intent;\nnew-instance v0, Landroid/content/Intent;\nconst-string v3, \"android.intent.action.GET_CONTENT\"\ninvoke-direct {v0, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+      "variants": [
+        {
+          "code": "const/16 v0, 0x0",
+          "operator": "NullIntentMutator"
+        },
+        {
+          "code": "new-instance v0, Landroid/content/Intent;\nsget-object v4, Landroid/content/Intent;->ACTION_VIEW:Ljava/lang/String;\ninvoke-direct {v0, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        },
+        {
+          "code": "new-instance v0, Landroid/content/Intent;\nsget-object v4, Landroid/content/Intent;->ACTION_SEND:Ljava/lang/String;\ninvoke-direct {v0, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "209",
+      "method": "Lcom/keepassdroid/fragments/PasswordFragment$InitTask$2;->onClick(Landroid/view/View;)V",
+      "line": null,
+      "original": "return-void ",
+      "variants": [
+        {
+          "code": "const-wide/16 v4, 0x2710\ninvoke-static {v4, v5}, Ljava/lang/Thread;->sleep(J)V\nreturn-void ",
+          "operator": "LengthyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "210",
+      "method": "Lcom/keepassdroid/fragments/PasswordFragment;->populateView()V",
+      "line": null,
+      "original": "invoke-virtual {v3, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v3",
+      "variants": [
+        {
+          "code": "const/16 v3, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v4, 0x7fffffff\ninvoke-virtual {v3, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v3",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {v3, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v3\ninvoke-virtual {v3}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {v3, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v3\nconst/16 v6, 0x4\ninvoke-virtual {v3, v6}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "211",
+      "method": "Lcom/keepassdroid/fragments/PasswordFragment;->retrieveSettings()V",
+      "line": null,
+      "original": "invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v2, 0x7fffffff\ninvoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v3, 0x4\ninvoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "212",
+      "method": "Lcom/keepassdroid/fragments/PasswordFragment;->setEditText(ILjava/lang/String;)V",
+      "line": null,
+      "original": "invoke-virtual {v0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+      "variants": [
+        {
+          "code": "const/16 v0, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const p1, 0x7fffffff\ninvoke-virtual {v0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {v0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v0\ninvoke-virtual {v0}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {v0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v0\nconst/16 v2, 0x4\ninvoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "213",
+      "method": "Lcom/keepassdroid/fragments/PasswordFragment;->onActivityResult(IILandroid/content/Intent;)V",
+      "line": null,
+      "original": "invoke-virtual {v4, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {v4, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {v4, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {v4, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v5, 0x4\ninvoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "214",
+      "method": "Lcom/keepassdroid/fragments/PasswordFragment;->onActivityResult(IILandroid/content/Intent;)V",
+      "line": null,
+      "original": "invoke-virtual {v3, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {v3, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {v3, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {v3, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v5, 0x4\ninvoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "215",
+      "method": "Lcom/keepassdroid/fragments/PasswordFragment;->onCreate(Landroid/os/Bundle;)V",
+      "line": 131,
+      "original": ".line 131\ninvoke-super {p0, p1}, Landroidx/fragment/app/Fragment;->onCreate(Landroid/os/Bundle;)V",
+      "variants": [
+        {
+          "code": ".line 131\ninvoke-super {p0, p1}, Landroidx/fragment/app/Fragment;->onCreate(Landroid/os/Bundle;)V\nconst-wide/16 v1, 0x2710\ninvoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V",
+          "operator": "LengthyGUICreationMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "216",
+      "method": "Lcom/keepassdroid/fragments/PasswordFragment;->onResume()V",
+      "line": null,
+      "original": "invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+      "variants": [
+        {
+          "code": "const/16 v0, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v0\ninvoke-virtual {v0}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v0\nconst/16 v3, 0x4\ninvoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "217",
+      "method": "Lcom/keepassdroid/fragments/PasswordFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V",
+      "line": null,
+      "original": "invoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+      "variants": [
+        {
+          "code": "const/16 v2, 0x0\ninvoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+          "operator": "BuggyGUIListenerMutator"
+        },
+        {
+          "code": "const/16 v2, 0x0\ninvoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+          "operator": "BuggyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "218",
+      "method": "Lcom/keepassdroid/fragments/PasswordFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V",
+      "line": null,
+      "original": "invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v5, 0x4\ninvoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v5, 0x4\ninvoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v5, 0x4\ninvoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v5, 0x4\ninvoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v5, 0x4\ninvoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v5, 0x4\ninvoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "219",
+      "method": "Lcom/keepassdroid/fragments/PasswordFragment$2;->onClick(Landroid/view/View;)V",
+      "line": 174,
+      "original": ".line 174\nreturn-void ",
+      "variants": [
+        {
+          "code": "const-wide/16 v1, 0x2710\ninvoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V\n.line 174\nreturn-void ",
+          "operator": "LengthyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "220",
+      "method": "Lcom/keepassdroid/fragments/PasswordFragment$InitTask$1;->onCheckedChanged(Landroid/widget/CompoundButton;Z)V",
+      "line": null,
+      "original": "invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+      "variants": [
+        {
+          "code": "const/16 v0, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v0\ninvoke-virtual {v0}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v0\nconst/16 v2, 0x4\ninvoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "221",
+      "method": "Lcom/keepassdroid/fragments/PasswordFragment$InitTask;->onPostExecute(Ljava/lang/Integer;)V",
+      "line": null,
+      "original": "invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0\ninvoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+          "operator": "BuggyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "222",
+      "method": "Lcom/keepassdroid/fragments/PasswordFragment$InitTask;->onPostExecute(Ljava/lang/Integer;)V",
+      "line": null,
+      "original": "invoke-virtual {v2, v3}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+      "variants": [
+        {
+          "code": "const/16 v3, 0x0\ninvoke-virtual {v2, v3}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+          "operator": "BuggyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "223",
+      "method": "Lcom/keepassdroid/fragments/PasswordFragment$InitTask;->onPostExecute(Ljava/lang/Integer;)V",
+      "line": null,
+      "original": "invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+      "variants": [
+        {
+          "code": "const/16 v0, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v0\ninvoke-virtual {v0}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v0\nconst/16 v6, 0x4\ninvoke-virtual {v0, v6}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "224",
+      "method": "Lcom/keepassdroid/fragments/PasswordFragment$InitTask;->onPostExecute(Ljava/lang/Integer;)V",
+      "line": null,
+      "original": "invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v2, 0x7fffffff\ninvoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v2, 0x7fffffff\ninvoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v6, 0x4\ninvoke-virtual {v1, v6}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v6, 0x4\ninvoke-virtual {v1, v6}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "225",
+      "method": "Lcom/keepassdroid/fragments/PasswordFragment$InitTask;->onPostExecute(Ljava/lang/Integer;)V",
+      "line": null,
+      "original": "invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v2",
+      "variants": [
+        {
+          "code": "const/16 v2, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v3, 0x7fffffff\ninvoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v2",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v2\ninvoke-virtual {v2}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v2\nconst/16 v6, 0x4\ninvoke-virtual {v2, v6}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "226",
+      "method": "Lcom/keepassdroid/fragments/PasswordFragment$1;->onClick(Landroid/view/View;)V",
+      "line": 167,
+      "original": ".line 167\nreturn-void ",
+      "variants": [
+        {
+          "code": "const-wide/16 v1, 0x2710\ninvoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V\n.line 167\nreturn-void ",
+          "operator": "LengthyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "227",
+      "method": "Lcom/keepassdroid/fragments/PasswordFragment$OkClickHandler;->onClick(Landroid/view/View;)V",
+      "line": 824,
+      "original": ".line 824\nreturn-void ",
+      "variants": [
+        {
+          "code": "const-wide/16 v3, 0x2710\ninvoke-static {v3, v4}, Ljava/lang/Thread;->sleep(J)V\n.line 824\nreturn-void ",
+          "operator": "LengthyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "228",
+      "method": "Lcom/keepassdroid/timeout/TimeoutHelper;->resume(Landroid/app/Activity;)V",
+      "line": null,
+      "original": "sub-long v3, v0, v6",
+      "variants": [
+        {
+          "code": "add-long v3, v0, v6",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "229",
+      "method": "Lcom/keepassdroid/GeneratePasswordActivity;->Launch(Landroid/app/Activity;)V",
+      "line": 40,
+      "original": ".line 40\nnew-instance v0, Landroid/content/Intent;\n.line 40\nnew-instance v0, Landroid/content/Intent;\nconst-class v1, Lcom/keepassdroid/GeneratePasswordActivity;\ninvoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/16 v0, 0x0",
+          "operator": "NullIntentMutator"
+        },
+        {
+          "code": "new-instance v0, Landroid/content/Intent;\nsget-object v2, Landroid/content/Intent;->ACTION_VIEW:Ljava/lang/String;\ninvoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        },
+        {
+          "code": "new-instance v0, Landroid/content/Intent;\nsget-object v2, Landroid/content/Intent;->ACTION_SEND:Ljava/lang/String;\ninvoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "230",
+      "method": "Lcom/keepassdroid/GeneratePasswordActivity;->Launch(Landroid/app/Activity;)V",
+      "line": null,
+      "original": "const-class v1, Lcom/keepassdroid/GeneratePasswordActivity;\ninvoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const-class v1, Lcom/keepassdroid/Database;\ninvoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "IntentTargetReplacementMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "231",
+      "method": "Lcom/keepassdroid/GeneratePasswordActivity;->Launch(Landroid/app/Activity;)V",
+      "line": null,
+      "original": "invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/16 p0, 0x0\ninvoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "InvalidKeyIntentMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "232",
+      "method": "Lcom/keepassdroid/GeneratePasswordActivity;->fillPassword()V",
+      "line": null,
+      "original": "invoke-virtual {p0, v0}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+      "variants": [
+        {
+          "code": "const/16 v0, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v0, 0x7fffffff\ninvoke-virtual {p0, v0}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v0}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v0\ninvoke-virtual {v0}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v0}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v0\nconst/16 v2, 0x4\ninvoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "233",
+      "method": "Lcom/keepassdroid/GeneratePasswordActivity;->generatePassword()Ljava/lang/String;",
+      "line": null,
+      "original": "invoke-virtual {p0, v1}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+      "variants": [
+        {
+          "code": "invoke-virtual {p0, v1}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v13, 0x4\ninvoke-virtual {v1, v13}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v13, 0x4\ninvoke-virtual {v1, v13}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v13, 0x4\ninvoke-virtual {v1, v13}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v13, 0x4\ninvoke-virtual {v1, v13}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v13, 0x4\ninvoke-virtual {v1, v13}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v13, 0x4\ninvoke-virtual {v1, v13}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v13, 0x4\ninvoke-virtual {v1, v13}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v13, 0x4\ninvoke-virtual {v1, v13}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "234",
+      "method": "Lcom/keepassdroid/GeneratePasswordActivity;->generatePassword()Ljava/lang/String;",
+      "line": null,
+      "original": "invoke-virtual {p0, v1}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v3",
+      "variants": [
+        {
+          "code": "invoke-virtual {p0, v1}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v3\ninvoke-virtual {v3}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v3\nconst/16 v13, 0x4\ninvoke-virtual {v3, v13}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "235",
+      "method": "Lcom/keepassdroid/GeneratePasswordActivity;->generatePassword()Ljava/lang/String;",
+      "line": 117,
+      "original": ".line 117\ninvoke-virtual {p0, v1}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+      "variants": [
+        {
+          "code": ".line 117\ninvoke-virtual {p0, v1}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": ".line 117\ninvoke-virtual {p0, v1}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v13, 0x4\ninvoke-virtual {v1, v13}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "236",
+      "method": "Lcom/keepassdroid/GeneratePasswordActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": null,
+      "original": "add-int/lit8 v0, v0, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v0, v0, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "237",
+      "method": "Lcom/keepassdroid/GeneratePasswordActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": null,
+      "original": "invoke-virtual {v4, v5}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+      "variants": [
+        {
+          "code": "const/16 v5, 0x0\ninvoke-virtual {v4, v5}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+          "operator": "BuggyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "238",
+      "method": "Lcom/keepassdroid/GeneratePasswordActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": null,
+      "original": "invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0\ninvoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+          "operator": "BuggyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "239",
+      "method": "Lcom/keepassdroid/GeneratePasswordActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": null,
+      "original": "invoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+      "variants": [
+        {
+          "code": "const/16 v2, 0x0\ninvoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+          "operator": "BuggyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "240",
+      "method": "Lcom/keepassdroid/GeneratePasswordActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": null,
+      "original": "invoke-virtual {v2, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+      "variants": [
+        {
+          "code": "const/16 v3, 0x0\ninvoke-virtual {v2, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+          "operator": "BuggyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "241",
+      "method": "Lcom/keepassdroid/GeneratePasswordActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": 56,
+      "original": ".line 56\ninvoke-super {p0, p1}, Lcom/keepassdroid/LockCloseActivity;->onCreate(Landroid/os/Bundle;)V",
+      "variants": [
+        {
+          "code": ".line 56\ninvoke-super {p0, p1}, Lcom/keepassdroid/LockCloseActivity;->onCreate(Landroid/os/Bundle;)V\nconst-wide/16 v6, 0x2710\ninvoke-static {v6, v7}, Ljava/lang/Thread;->sleep(J)V",
+          "operator": "LengthyGUICreationMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "242",
+      "method": "Lcom/keepassdroid/GeneratePasswordActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": null,
+      "original": "invoke-virtual {p0, v3}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v4",
+      "variants": [
+        {
+          "code": "const/16 v4, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v3, 0x7fffffff\ninvoke-virtual {p0, v3}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v4",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v3}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v4\ninvoke-virtual {v4}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v3}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v4\nconst/16 v6, 0x4\ninvoke-virtual {v4, v6}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "243",
+      "method": "Lcom/keepassdroid/GeneratePasswordActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": null,
+      "original": "invoke-virtual {p0, v0}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+      "variants": [
+        {
+          "code": "const/16 v0, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v0, 0x7fffffff\ninvoke-virtual {p0, v0}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v0}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v0\ninvoke-virtual {v0}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v0}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v0\nconst/16 v6, 0x4\ninvoke-virtual {v0, v6}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "244",
+      "method": "Lcom/keepassdroid/GeneratePasswordActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": null,
+      "original": "invoke-virtual {p0, v1}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p0, v1}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v6, 0x4\ninvoke-virtual {v1, v6}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "245",
+      "method": "Lcom/keepassdroid/GeneratePasswordActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": null,
+      "original": "invoke-virtual {p0, v2}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v2",
+      "variants": [
+        {
+          "code": "const/16 v2, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v2, 0x7fffffff\ninvoke-virtual {p0, v2}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v2",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v2}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v2\ninvoke-virtual {v2}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v2}, Lcom/keepassdroid/GeneratePasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v2\nconst/16 v6, 0x4\ninvoke-virtual {v2, v6}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    }
+  ]
+}

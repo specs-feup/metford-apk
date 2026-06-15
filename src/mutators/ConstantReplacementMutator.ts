@@ -1,34 +1,37 @@
 import { defineMutator } from "../MutatorBase.js";
-import { const16 } from "../utils/SmaliBuilders.js";
+import { const16, lines } from "../utils/SmaliBuilders.js";
 
-const CONST_RE = /(v\d+|p\d+),\s+(-?(?:0x[\da-fA-F]+|\d+))/;
+// Matches iput / iput-boolean / iput-byte / iput-char / iput-short / iput-object
+// and the sput equivalents. Skips *-wide (needs const-wide, different treatment).
+const PUT_RE = /^[is]put(?:-boolean|-byte|-char|-short|-object)?$/;
+
+// First register in the instruction (the value being stored).
+const FIRST_REG_RE = /\s(v\d+|p\d+)\s*,/;
 
 /**
- * Args:
- *   to — list of Smali literals to substitute (e.g. "0x0", "0x1", "0x7fffffff").
- *        Defaults to ["0x0", "0x1"] when omitted.
+ * Replaces the value stored into a field with a fixed constant.
  *
- * Example operators entry: { "name": "Constant", "to": ["0x0", "0x1"] }
- * Or just: "Constant"  (uses defaults)
+ * Targets iput / sput (and typed variants except -wide).
+ * For numeric fields defaults to ["0x0", "0x1"]; for -object fields defaults to ["0x0"] (null).
+ *
+ * No extra registers are consumed — the value register is reused as the scratch.
  */
 export const ConstantReplacementMutator = defineMutator({
     name: "ConstantReplacementMutator",
     process: (instr, { args }) => {
-        if (!instr.opCodeName.startsWith("const")) return null;
+        if (!PUT_RE.test(instr.opCodeName)) return null;
 
-        const match = instr.code.match(CONST_RE);
+        const match = instr.code.match(FIRST_REG_RE);
         if (!match) return null;
-        const [, destReg, literal] = match;
+        const valReg = match[1];
 
-        const to = (args.to as string[] | undefined) ?? ["0x0", "0x1"];
-
-        // Don't emit a variant identical to the original literal.
-        const filtered = to.filter(v => Number(v) !== Number(literal));
-        if (filtered.length === 0) return null;
+        const isObject = instr.opCodeName.endsWith("-object");
+        const to = (args.to as string[] | undefined)
+            ?? (isObject ? ["0x0"] : ["0x0", "0x1"]);
 
         return {
             originalCode: instr.code,
-            variants: filtered.map(v => const16(destReg, v)),
+            variants: to.map(v => lines(const16(valReg, v), instr.code)),
             detach: [instr],
         };
     },

@@ -1,11 +1,6 @@
-/**
- * Small helpers that produce single Smali instructions (or short groups).
- * They exist so mutator definitions can read closer to intent — e.g. `nullify(reg)`
- * instead of `` `const/4 ${reg}, 0x0` ``.
- */
+// Smali instruction builders used by mutators to construct replacement code snippets.
 
-export const nullify = (reg: string) => `const/4 ${reg}, 0x0`;
-export const const4 = (reg: string, value: string) => `const/4 ${reg}, ${value}`;
+export const nullify = (reg: string) => `const/16 ${reg}, 0x0`;
 export const const16 = (reg: string, value: string) => `const/16 ${reg}, ${value}`;
 export const constInt = (reg: string, value: string) => `const ${reg}, ${value}`;
 export const constString = (reg: string, value: string) => `const-string ${reg}, "${value}"`;

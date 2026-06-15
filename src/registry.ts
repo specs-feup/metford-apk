@@ -14,14 +14,14 @@ import { FindViewByIdReturnsNullMutator } from "./mutators/FindViewByIdReturnsNu
 import { InvalidIDFindViewMutator } from "./mutators/InvalidIDFindViewMutator.js";
 import { InvalidViewFocusMutator } from "./mutators/InvalidViewFocusMutator.js";
 import { ViewComponentNotVisibleMutator } from "./mutators/ViewComponentNotVisibleMutator.js";
+import { InvalidKeyIntentMutator } from "./mutators/InvalidKeyIntentMutator.js";
+import { IntentTargetReplacementMutator } from "./mutators/IntentTargetReplacementMutator.js";
 
 type MutatorCtor = new (args?: Record<string, unknown>) => Mutator;
 
 /**
- * Maps the config-level operator name to its mutator class. One entry per
- * conceptual operator (Kadabra-style); when two of them target the same
- * instruction at runtime, the schemata runner merges their variants into one
- * site automatically.
+ * Maps config operator names (as written in metford.config.json) to their
+ * mutator constructors. Add new operators here after implementing their class.
  */
 export const REGISTRY: Record<string, MutatorCtor> = {
     Arithmetic: ArithmeticOperatorMutator,
@@ -39,4 +39,6 @@ export const REGISTRY: Record<string, MutatorCtor> = {
     InvalidIDFindView: InvalidIDFindViewMutator,
     InvalidViewFocus: InvalidViewFocusMutator,
     ViewComponentNotVisible: ViewComponentNotVisibleMutator,
+    InvalidKeyIntent: InvalidKeyIntentMutator,
+    IntentTargetReplacement: IntentTargetReplacementMutator,
 };

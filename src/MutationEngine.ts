@@ -1,8 +1,4 @@
-/**
- * Per-variant attribution — each schemata site can hold variants contributed by
- * multiple operators, so the operator that produced a variant is recorded per
- * variant rather than per site.
- */
+/** One mutant variant: the smali replacement code and the operator that produced it. */
 export interface VariantRecord {
     code: string;
     operator: string;
@@ -11,6 +7,7 @@ export interface VariantRecord {
 export interface MutationRecord {
     siteTag: string;
     method: string;
+    line: number | null;
     original: string;
     variants: VariantRecord[];
 }
@@ -27,7 +24,7 @@ export class MutationEngine {
         return { baseId, siteTag };
     }
 
-    record(siteTag: string, method: string, original: string, variants: VariantRecord[]) {
-        this.records.push({ siteTag, method, original, variants });
+    record(siteTag: string, method: string, line: number | null, original: string, variants: VariantRecord[]) {
+        this.records.push({ siteTag, method, line, original, variants });
     }
 }

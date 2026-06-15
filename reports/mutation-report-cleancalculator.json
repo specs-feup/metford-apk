@@ -1,0 +1,266 @@
+{
+  "projectName": "cleancalculator",
+  "totalMutants": 31,
+  "sites": [
+    {
+      "siteTag": "1",
+      "method": "Lhome/jmstudios/calc/Main;->addText(Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/Boolean;)V",
+      "line": null,
+      "original": "add-int v5, v0, v2",
+      "variants": [
+        {
+          "code": "sub-int v5, v0, v2",
+          "operator": "ArithmeticOperatorMutator"
+        },
+        {
+          "code": "sub-int v5, v0, v2",
+          "operator": "ArithmeticOperatorMutator"
+        },
+        {
+          "code": "sub-int v5, v0, v2",
+          "operator": "ArithmeticOperatorMutator"
+        },
+        {
+          "code": "sub-int v5, v0, v2",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "2",
+      "method": "Lhome/jmstudios/calc/Main;->addText(Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/Boolean;)V",
+      "line": null,
+      "original": "add-int v5, v2, v3",
+      "variants": [
+        {
+          "code": "sub-int v5, v2, v3",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "3",
+      "method": "Lhome/jmstudios/calc/Main;->onClickListenerPoint(Landroid/view/View;)V",
+      "line": null,
+      "original": "add-int/lit8 v3, v3, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v3, v3, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "4",
+      "method": "Lhome/jmstudios/calc/Main;->onClickListener_del(Landroid/view/View;)V",
+      "line": null,
+      "original": "add-int/lit8 v3, v3, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v3, v3, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "5",
+      "method": "Lhome/jmstudios/calc/Main;->onOptionsItemSelected(Landroid/view/MenuItem;)Z",
+      "line": null,
+      "original": "new-instance v0, Landroid/content/Intent;\nnew-instance v0, Landroid/content/Intent;\nconst-class v3, Lhome/jmstudios/calc/About;\ninvoke-direct {v0, p0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/16 v0, 0x0",
+          "operator": "NullIntentMutator"
+        },
+        {
+          "code": "new-instance v0, Landroid/content/Intent;\nsget-object v4, Landroid/content/Intent;->ACTION_VIEW:Ljava/lang/String;\ninvoke-direct {v0, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        },
+        {
+          "code": "new-instance v0, Landroid/content/Intent;\nsget-object v4, Landroid/content/Intent;->ACTION_SEND:Ljava/lang/String;\ninvoke-direct {v0, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "6",
+      "method": "Lhome/jmstudios/calc/Main;->onOptionsItemSelected(Landroid/view/MenuItem;)Z",
+      "line": null,
+      "original": "new-instance v1, Landroid/content/Intent;\nnew-instance v1, Landroid/content/Intent;\nconst-class v3, Lhome/jmstudios/calc/Preferences;\ninvoke-direct {v1, p0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "NullIntentMutator"
+        },
+        {
+          "code": "new-instance v1, Landroid/content/Intent;\nsget-object v4, Landroid/content/Intent;->ACTION_VIEW:Ljava/lang/String;\ninvoke-direct {v1, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        },
+        {
+          "code": "new-instance v1, Landroid/content/Intent;\nsget-object v4, Landroid/content/Intent;->ACTION_SEND:Ljava/lang/String;\ninvoke-direct {v1, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "7",
+      "method": "Lhome/jmstudios/calc/Main;->onOptionsItemSelected(Landroid/view/MenuItem;)Z",
+      "line": null,
+      "original": "const-class v3, Lhome/jmstudios/calc/About;\ninvoke-direct {v0, p0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const-class v3, Lhome/jmstudios/calc/R$menu;\ninvoke-direct {v0, p0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "IntentTargetReplacementMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "8",
+      "method": "Lhome/jmstudios/calc/Main;->onOptionsItemSelected(Landroid/view/MenuItem;)Z",
+      "line": null,
+      "original": "const-class v3, Lhome/jmstudios/calc/Preferences;\ninvoke-direct {v1, p0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const-class v3, Lhome/jmstudios/calc/R$menu;\ninvoke-direct {v1, p0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "IntentTargetReplacementMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "9",
+      "method": "Lhome/jmstudios/calc/Main;->onOptionsItemSelected(Landroid/view/MenuItem;)Z",
+      "line": null,
+      "original": "invoke-direct {v0, p0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/16 p0, 0x0\ninvoke-direct {v0, p0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "InvalidKeyIntentMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "10",
+      "method": "Lhome/jmstudios/calc/Main;->onOptionsItemSelected(Landroid/view/MenuItem;)Z",
+      "line": null,
+      "original": "invoke-direct {v1, p0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/16 p0, 0x0\ninvoke-direct {v1, p0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "InvalidKeyIntentMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "11",
+      "method": "Lhome/jmstudios/calc/Preferences;->onCreate(Landroid/os/Bundle;)V",
+      "line": 22,
+      "original": ".line 22\ninvoke-super {p0, p1}, Landroid/preference/PreferenceActivity;->onCreate(Landroid/os/Bundle;)V",
+      "variants": [
+        {
+          "code": ".line 22\ninvoke-super {p0, p1}, Landroid/preference/PreferenceActivity;->onCreate(Landroid/os/Bundle;)V\nconst-wide/16 v0, 0x2710\ninvoke-static {v0, v1}, Ljava/lang/Thread;->sleep(J)V",
+          "operator": "LengthyGUICreationMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "12",
+      "method": "Lhome/jmstudios/calc/Main$9;->eval(Ljava/util/List;)Ljava/math/BigDecimal;",
+      "line": null,
+      "original": "add-int/lit8 v5, v5, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v5, v5, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "13",
+      "method": "Lhome/jmstudios/calc/About;->mailFeedback(Landroid/view/View;)V",
+      "line": 49,
+      "original": ".line 49\nnew-instance v0, Landroid/content/Intent;\n.line 49\nnew-instance v0, Landroid/content/Intent;\nconst-string v1, \"android.intent.action.VIEW\"\nconst-string v2, \"mailto:jmproductions.studio@gmail.com\"\ninvoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;\nmove-result-object v2\ninvoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V",
+      "variants": [
+        {
+          "code": "const/16 v0, 0x0",
+          "operator": "NullIntentMutator"
+        },
+        {
+          "code": "new-instance v0, Landroid/content/Intent;\nsget-object v3, Landroid/content/Intent;->ACTION_VIEW:Ljava/lang/String;\ninvoke-direct {v0, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        },
+        {
+          "code": "new-instance v0, Landroid/content/Intent;\nsget-object v3, Landroid/content/Intent;->ACTION_SEND:Ljava/lang/String;\ninvoke-direct {v0, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "14",
+      "method": "Lhome/jmstudios/calc/About;->mailFeedback(Landroid/view/View;)V",
+      "line": null,
+      "original": "invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;",
+      "variants": [
+        {
+          "code": "const/16 v2, 0x0\ninvoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;",
+          "operator": "NullPutExtraValueMutator"
+        },
+        {
+          "code": "const-string v1, \"__metford_invalid_key__\"\ninvoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;",
+          "operator": "NullPutExtraKeyMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "15",
+      "method": "Lhome/jmstudios/calc/About;->onCreate(Landroid/os/Bundle;)V",
+      "line": 17,
+      "original": ".line 17\ninvoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V",
+      "variants": [
+        {
+          "code": ".line 17\ninvoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V\nconst-wide/16 v2, 0x2710\ninvoke-static {v2, v3}, Ljava/lang/Thread;->sleep(J)V",
+          "operator": "LengthyGUICreationMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "16",
+      "method": "Lhome/jmstudios/calc/About;->openPlayStore(Landroid/view/View;)V",
+      "line": null,
+      "original": "new-instance v0, Landroid/content/Intent;\nnew-instance v0, Landroid/content/Intent;\nconst-string v2, \"android.intent.action.VIEW\"\ninvoke-direct {v0, v2, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V",
+      "variants": [
+        {
+          "code": "const/16 v0, 0x0",
+          "operator": "NullIntentMutator"
+        },
+        {
+          "code": "new-instance v0, Landroid/content/Intent;\nsget-object v3, Landroid/content/Intent;->ACTION_VIEW:Ljava/lang/String;\ninvoke-direct {v0, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        },
+        {
+          "code": "new-instance v0, Landroid/content/Intent;\nsget-object v3, Landroid/content/Intent;->ACTION_SEND:Ljava/lang/String;\ninvoke-direct {v0, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "17",
+      "method": "Lhome/jmstudios/calc/About;->openPlayStoreDon(Landroid/view/View;)V",
+      "line": null,
+      "original": "new-instance v0, Landroid/content/Intent;\nnew-instance v0, Landroid/content/Intent;\nconst-string v2, \"android.intent.action.VIEW\"\ninvoke-direct {v0, v2, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V",
+      "variants": [
+        {
+          "code": "const/16 v0, 0x0",
+          "operator": "NullIntentMutator"
+        },
+        {
+          "code": "new-instance v0, Landroid/content/Intent;\nsget-object v3, Landroid/content/Intent;->ACTION_VIEW:Ljava/lang/String;\ninvoke-direct {v0, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        },
+        {
+          "code": "new-instance v0, Landroid/content/Intent;\nsget-object v3, Landroid/content/Intent;->ACTION_SEND:Ljava/lang/String;\ninvoke-direct {v0, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        }
+      ]
+    }
+  ]
+}

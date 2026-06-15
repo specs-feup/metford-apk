@@ -13,7 +13,8 @@ export const InvalidViewFocusMutator = defineMutator({
         const prev = prevInstruction(instr);
         if (!prev || !prev.code.includes(FIND_VIEW_BY_ID)) return null;
 
-        const viewReg = instr.code.split(/\s+/)[1];
+        const viewReg = instr.code.match(/move-result-object\s+([vp]\d+)/)?.[1];
+        if (!viewReg) return null;
         const originalCode = lines(prev.code, instr.code);
 
         return {

@@ -6,6 +6,10 @@ import fs from "fs";
 
 const config = JSON.parse(fs.readFileSync("metford.config.json", "utf-8"));
 
+// Clean only the smali tree — leftover files from a previous run pollute the rebuild.
+if (fs.existsSync("output/smali")) fs.rmSync("output/smali", { recursive: true, force: true });
+fs.mkdirSync("reports", { recursive: true });
+
 const args = ["alpakka", "classic", "dist/schemata.js", "-p", config.inputApk ?? "InputSources/"];
 if (config.packageFilter) args.push("-f", config.packageFilter);
 

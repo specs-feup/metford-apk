@@ -1,11 +1,11 @@
 import { defineMutator } from "../MutatorBase.js";
 
 /**
- * Args (one config entry per source opcode):
- *   from — source conditional opcode ("if-eq", "if-ne", "if-lt", "if-ge", "if-gt", "if-le")
- *   to   — list of target opcodes; each produces one variant
+ * Replaces conditional branch opcodes (e.g. `if-eq` → `if-ne`).
+ * Config args: `from` (source opcode), `to` (list of replacement opcodes).
  *
- * Example operators entry: { "name": "Conditional", "from": "if-eq", "to": ["if-ne"] }
+ * Example config entry:
+ *   { "name": "Conditional", "from": "if-eq", "to": ["if-ne"] }
  */
 export const ConditionalOperatorMutator = defineMutator({
     name: "ConditionalOperatorMutator",
