@@ -6,6 +6,7 @@ let t = Date.now();
 
 for (const method of Query.search(MethodNode, (m) => m.name.includes("mutationOperatorAdd"))) {
   const regsDirective = method.registersDirective;
+  if (!regsDirective || regsDirective.type !== "I_LOCALS") continue;
   const newLocals = regsDirective.value + 1;
   const mutantReg = `v${newLocals - 1}`;
   regsDirective.setValue(newLocals);

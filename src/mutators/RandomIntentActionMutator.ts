@@ -1,9 +1,9 @@
-import { Instruction } from "@specs-feup/alpakka/api/Joinpoints.js";
 import { defineMutator } from "../MutatorBase.js";
-import { parseRegisters, prevInstruction, prevInstructionWhere } from "../utils/SmaliUtils.js";
+import { parseRegisters, captureObjectConstruction } from "../utils/SmaliUtils.js";
 import { newInstance, sgetObject, invokeDirect, lines } from "../utils/SmaliBuilders.js";
 
 const INTENT_INIT = "Landroid/content/Intent;-><init>";
+const INTENT_TYPE = "Landroid/content/Intent;";
 const ACTION_VIEW = "Landroid/content/Intent;->ACTION_VIEW:Ljava/lang/String;";
 const ACTION_SEND = "Landroid/content/Intent;->ACTION_SEND:Ljava/lang/String;";
 const INTENT_INIT_STRING = "Landroid/content/Intent;-><init>(Ljava/lang/String;)V";
@@ -18,20 +18,8 @@ export const RandomIntentActionMutator = defineMutator({
         if (!regs) return null;
         const objReg = regs[0];
 
-        const newInst = prevInstructionWhere(instr, i =>
-            i.opCodeName === "new-instance" &&
-            i.code.includes("Landroid/content/Intent;") &&
-            i.code.includes(objReg)
-        );
-        if (!newInst) return null;
-
-        const between: Instruction[] = [];
-        let cur = prevInstruction(instr);
-        while (cur && cur !== newInst) {
-            between.unshift(cur);
-            cur = prevInstruction(cur);
-        }
-        const allInstrs = [newInst, ...between, instr];
+        const allInstrs = captureObjectConstruction(instr, objReg, regs.slice(1), INTENT_TYPE);
+        if (!allInstrs) return null;
 
         const buildAction = (action: string) => lines(
             newInstance(objReg, "Landroid/content/Intent;"),

@@ -34,3 +34,47 @@ export function prevInstructionWhere(instr: Instruction, predicate: (i: Instruct
     }
     return null;
 }
+
+/** First register written by a pure value-loading instruction (const or sget family), or null. */
+function loaderDest(instr: Instruction): string | null {
+    const op = instr.opCodeName;
+    if (!op.startsWith("const") && !op.startsWith("sget")) return null;
+    const m = instr.code.match(/v\d+/);
+    return m ? m[0] : null;
+}
+
+/**
+ * Capture the instructions that build `objReg` of type `typeDescriptor`:
+ * the nearest `new-instance objReg`, the constructor `invokeDirect`, and only
+ * the pure argument-loading instructions in between.
+ *
+ * Returns `[newInstance, ...argLoads, invokeDirect]`, or `null` if the range is
+ * not self-contained — i.e. the backward walk hits anything other than an
+ * arg-load (a method call, a store, a write to a register that is not a
+ * constructor argument) before reaching the allocation. Bailing keeps the
+ * mutated site minimal and prevents dropping registers that are live elsewhere.
+ */
+export function captureObjectConstruction(
+    invokeDirect: Instruction,
+    objReg: string,
+    argRegs: string[],
+    typeDescriptor: string,
+): Instruction[] | null {
+    const between: Instruction[] = [];
+    let cur = prevInstruction(invokeDirect);
+    while (cur !== null) {
+        if (cur.opCodeName === "new-instance" &&
+            cur.code.includes(typeDescriptor) &&
+            cur.code.includes(objReg)) {
+            return [cur, ...between, invokeDirect];
+        }
+        const dst = loaderDest(cur);
+        if (dst !== null && argRegs.includes(dst)) {
+            between.unshift(cur);
+            cur = prevInstruction(cur);
+            continue;
+        }
+        return null; // not a clean construction sequence — skip this site
+    }
+    return null;
+}

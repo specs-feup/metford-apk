@@ -1,9 +1,9 @@
-import { Instruction } from "@specs-feup/alpakka/api/Joinpoints.js";
 import { defineMutator } from "../MutatorBase.js";
-import { parseRegisters, prevInstruction, prevInstructionWhere } from "../utils/SmaliUtils.js";
+import { parseRegisters, captureObjectConstruction } from "../utils/SmaliUtils.js";
 import { nullify } from "../utils/SmaliBuilders.js";
 
 const INTENT_INIT = "Landroid/content/Intent;-><init>";
+const INTENT_TYPE = "Landroid/content/Intent;";
 
 export const NullIntentMutator = defineMutator({
     name: "NullIntentMutator",
@@ -15,20 +15,8 @@ export const NullIntentMutator = defineMutator({
         if (!regs) return null;
         const objReg = regs[0];
 
-        const newInst = prevInstructionWhere(instr, i =>
-            i.opCodeName === "new-instance" &&
-            i.code.includes("Landroid/content/Intent;") &&
-            i.code.includes(objReg)
-        );
-        if (!newInst) return null;
-
-        const between: Instruction[] = [];
-        let cur = prevInstruction(instr);
-        while (cur && cur !== newInst) {
-            between.unshift(cur);
-            cur = prevInstruction(cur);
-        }
-        const allInstrs = [newInst, ...between, instr];
+        const allInstrs = captureObjectConstruction(instr, objReg, regs.slice(1), INTENT_TYPE);
+        if (!allInstrs) return null;
 
         return {
             originalCode: allInstrs.map(i => i.code).join("\n"),
