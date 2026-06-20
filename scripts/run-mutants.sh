@@ -61,8 +61,15 @@ if [[ ! -f "$REPORT" ]]; then
     exit 1
 fi
 
+TEST_APK="$METFORD/apks/$DIR/test.apk"
+
 echo "Installing $APK ..."
 adb install -r "$APK"
+
+if [[ -f "$TEST_APK" ]]; then
+    echo "Installing $TEST_APK ..."
+    adb install -r "$TEST_APK"
+fi
 
 TOTAL=$(python3 -c "import json; d=json.load(open('$REPORT')); print(sum(len(s['variants']) for s in d['sites']))")
 
