@@ -143,11 +143,25 @@ export function runMutators(opts: RunOptions): void {
     }, null, 2));
     console.log(`[schemata] ${reportPath} written`);
 
+    // MUTANT_ID selects the active mutant. It is initialised at class load from
+    // the `debug.mutant.id` system property (set per run via `adb shell setprop`),
+    // defaulting to 0 (original program). The harness force-stops the app between
+    // mutants, so the class reloads and re-reads the property each time.
     const MUTATION_CONTROLLER_SMALI = [
         ".class public Lpt/up/fe/specs/metford/MutationController;",
         ".super Ljava/lang/Object;",
         "",
         ".field public static MUTANT_ID:I",
+        "",
+        ".method static constructor <clinit>()V",
+        "    .locals 2",
+        '    const-string v0, "debug.mutant.id"',
+        "    const/4 v1, 0x0",
+        "    invoke-static {v0, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I",
+        "    move-result v0",
+        "    sput v0, Lpt/up/fe/specs/metford/MutationController;->MUTANT_ID:I",
+        "    return-void",
+        ".end method",
     ].join("\n");
     const mcDir = "output/smali/pt/up/fe/specs/metford";
     fs.mkdirSync(mcDir, { recursive: true });
