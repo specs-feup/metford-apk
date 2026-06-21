@@ -1,0 +1,3634 @@
+{
+  "projectName": "Omni-Notes",
+  "totalMutants": 501,
+  "sites": [
+    {
+      "siteTag": "1",
+      "method": "Lit/feio/android/omninotes/utils/date/DateUtils;->getNextMinute()J",
+      "line": null,
+      "original": "add-long/2addr v1, v3",
+      "variants": [
+        {
+          "code": "sub-long/2addr v1, v3",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "2",
+      "method": "Lit/feio/android/omninotes/models/adapters/NoteAdapter;->colorNote(Lit/feio/android/omninotes/models/Note;Landroid/view/View;Lit/feio/android/omninotes/models/holders/NoteViewHolder;)V",
+      "line": null,
+      "original": "invoke-virtual {p2, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v2",
+      "variants": [
+        {
+          "code": "const/16 v2, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v2, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v4, 0x7fffffff\ninvoke-virtual {p2, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v2",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v4, 0x7fffffff\ninvoke-virtual {p2, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v2",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {p2, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v2\ninvoke-virtual {v2}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p2, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v2\ninvoke-virtual {v2}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p2, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v2\nconst/16 v5, 0x4\ninvoke-virtual {v2, v5}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p2, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v2\nconst/16 v5, 0x4\ninvoke-virtual {v2, v5}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "3",
+      "method": "Lit/feio/android/omninotes/models/adapters/NoteAdapter;->manageCloserNote(Ljava/util/List;I)V",
+      "line": null,
+      "original": "add-int/lit8 v1, v1, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v1, v1, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "4",
+      "method": "Lit/feio/android/omninotes/models/adapters/NavDrawerAdapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;",
+      "line": null,
+      "original": "invoke-virtual {p2, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v4",
+      "variants": [
+        {
+          "code": "const/16 v4, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v4, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v4, 0x7fffffff\ninvoke-virtual {p2, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v4",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v4, 0x7fffffff\ninvoke-virtual {p2, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v4",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {p2, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v4\ninvoke-virtual {v4}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p2, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v4\ninvoke-virtual {v4}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p2, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v4\nconst/16 v7, 0x4\ninvoke-virtual {v4, v7}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p2, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v4\nconst/16 v7, 0x4\ninvoke-virtual {v4, v7}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "5",
+      "method": "Lit/feio/android/omninotes/models/adapters/AttachmentAdapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;",
+      "line": null,
+      "original": "invoke-virtual {p2, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v6",
+      "variants": [
+        {
+          "code": "const/16 v6, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v6, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v6, 0x7fffffff\ninvoke-virtual {p2, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v6",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v6, 0x7fffffff\ninvoke-virtual {p2, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v6",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {p2, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v6\ninvoke-virtual {v6}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p2, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v6\ninvoke-virtual {v6}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p2, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v6\nconst/16 v10, 0x4\ninvoke-virtual {v6, v10}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p2, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v6\nconst/16 v10, 0x4\ninvoke-virtual {v6, v10}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "6",
+      "method": "Lit/feio/android/omninotes/utils/ColorsUtil;->calculateColorLuminance(I)D",
+      "line": null,
+      "original": "add-double/2addr v1, v3",
+      "variants": [
+        {
+          "code": "sub-double/2addr v1, v3",
+          "operator": "ArithmeticOperatorMutator"
+        },
+        {
+          "code": "sub-double/2addr v1, v3",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "7",
+      "method": "Lit/feio/android/omninotes/utils/ColorsUtil;->calculateColorLuminance(I)D",
+      "line": null,
+      "original": "mul-double/2addr v1, v3",
+      "variants": [
+        {
+          "code": "div-double/2addr v1, v3",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "8",
+      "method": "Lit/feio/android/omninotes/utils/ColorsUtil;->calculateColorLuminance(I)D",
+      "line": null,
+      "original": "mul-double/2addr v3, v5",
+      "variants": [
+        {
+          "code": "div-double/2addr v3, v5",
+          "operator": "ArithmeticOperatorMutator"
+        },
+        {
+          "code": "div-double/2addr v3, v5",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "9",
+      "method": "Lit/feio/android/omninotes/utils/Security$Companion;->md5(Ljava/lang/String;)Ljava/lang/String;",
+      "line": null,
+      "original": "add-int/lit8 v6, v6, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v6, v6, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "10",
+      "method": "Lit/feio/android/omninotes/utils/AssetUtils;->exists(Ljava/lang/String;Ljava/lang/String;Landroid/content/res/AssetManager;)Z",
+      "line": null,
+      "original": "add-int/lit8 v5, v5, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v5, v5, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "11",
+      "method": "Lit/feio/android/omninotes/utils/TagsHelper;->addTagToNote(Ljava/util/List;[Ljava/lang/Integer;Lit/feio/android/omninotes/models/Note;)Landroidx/core/util/Pair;",
+      "line": null,
+      "original": "add-int/lit8 v6, v6, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v6, v6, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "12",
+      "method": "Lit/feio/android/omninotes/utils/TagsHelper;->getTagsArray(Ljava/util/List;)[Ljava/lang/String;",
+      "line": 119,
+      "original": ".line 119\nadd-int/lit8 v2, v2, 0x1",
+      "variants": [
+        {
+          "code": ".line 119\nadd-int/lit8 v2, v2, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "13",
+      "method": "Lit/feio/android/omninotes/utils/TagsHelper;->retrieveTags(Lit/feio/android/omninotes/models/Note;)Ljava/util/Map;",
+      "line": null,
+      "original": "add-int/2addr v9, v2",
+      "variants": [
+        {
+          "code": "sub-int/2addr v9, v2",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "14",
+      "method": "Lit/feio/android/omninotes/utils/TagsHelper;->retrieveTags(Lit/feio/android/omninotes/models/Note;)Ljava/util/Map;",
+      "line": null,
+      "original": "add-int/lit8 v6, v6, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v6, v6, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "15",
+      "method": "Lit/feio/android/omninotes/utils/ReminderHelper;->addReminder(Landroid/content/Context;Lit/feio/android/omninotes/models/Note;J)V",
+      "line": 55,
+      "original": ".line 55\nnew-instance v1, Landroid/content/Intent;\nconst-class v3, Lit/feio/android/omninotes/receiver/AlarmReceiver;\ninvoke-direct {v1, p0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "NullIntentMutator"
+        },
+        {
+          "code": "new-instance v1, Landroid/content/Intent;\nsget-object v6, Landroid/content/Intent;->ACTION_VIEW:Ljava/lang/String;\ninvoke-direct {v1, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        },
+        {
+          "code": "new-instance v1, Landroid/content/Intent;\nsget-object v6, Landroid/content/Intent;->ACTION_SEND:Ljava/lang/String;\ninvoke-direct {v1, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "16",
+      "method": "Lit/feio/android/omninotes/utils/ReminderHelper;->addReminder(Landroid/content/Context;Lit/feio/android/omninotes/models/Note;J)V",
+      "line": null,
+      "original": "const-class v3, Lit/feio/android/omninotes/receiver/AlarmReceiver;\ninvoke-direct {v1, p0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const-class v3, Lit/feio/android/omninotes/receiver/BootCompleteReceiver;\ninvoke-direct {v1, p0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "IntentTargetReplacementMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "17",
+      "method": "Lit/feio/android/omninotes/utils/ReminderHelper;->addReminder(Landroid/content/Context;Lit/feio/android/omninotes/models/Note;J)V",
+      "line": null,
+      "original": "invoke-virtual {v1, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[B)Landroid/content/Intent;",
+      "variants": [
+        {
+          "code": "const/16 v4, 0x0\ninvoke-virtual {v1, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[B)Landroid/content/Intent;",
+          "operator": "NullPutExtraValueMutator"
+        },
+        {
+          "code": "const-string v3, \"__metford_invalid_key__\"\ninvoke-virtual {v1, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[B)Landroid/content/Intent;",
+          "operator": "NullPutExtraKeyMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "18",
+      "method": "Lit/feio/android/omninotes/utils/ReminderHelper;->addReminder(Landroid/content/Context;Lit/feio/android/omninotes/models/Note;J)V",
+      "line": null,
+      "original": "invoke-direct {v1, p0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/16 p0, 0x0\ninvoke-direct {v1, p0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "InvalidKeyIntentMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "19",
+      "method": "Lit/feio/android/omninotes/utils/ReminderHelper;->checkReminder(Landroid/content/Context;Lit/feio/android/omninotes/models/Note;)Z",
+      "line": null,
+      "original": "new-instance v3, Landroid/content/Intent;\nconst-class v4, Lit/feio/android/omninotes/receiver/AlarmReceiver;\ninvoke-direct {v3, p0, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/16 v3, 0x0",
+          "operator": "NullIntentMutator"
+        },
+        {
+          "code": "new-instance v3, Landroid/content/Intent;\nsget-object v6, Landroid/content/Intent;->ACTION_VIEW:Ljava/lang/String;\ninvoke-direct {v3, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        },
+        {
+          "code": "new-instance v3, Landroid/content/Intent;\nsget-object v6, Landroid/content/Intent;->ACTION_SEND:Ljava/lang/String;\ninvoke-direct {v3, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "20",
+      "method": "Lit/feio/android/omninotes/utils/ReminderHelper;->checkReminder(Landroid/content/Context;Lit/feio/android/omninotes/models/Note;)Z",
+      "line": null,
+      "original": "const-class v4, Lit/feio/android/omninotes/receiver/AlarmReceiver;\ninvoke-direct {v3, p0, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const-class v4, Lit/feio/android/omninotes/receiver/BootCompleteReceiver;\ninvoke-direct {v3, p0, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "IntentTargetReplacementMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "21",
+      "method": "Lit/feio/android/omninotes/utils/ReminderHelper;->checkReminder(Landroid/content/Context;Lit/feio/android/omninotes/models/Note;)Z",
+      "line": null,
+      "original": "invoke-direct {v3, p0, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/16 p0, 0x0\ninvoke-direct {v3, p0, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "InvalidKeyIntentMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "22",
+      "method": "Lit/feio/android/omninotes/utils/ReminderHelper;->getRequestCode(Lit/feio/android/omninotes/models/Note;)I",
+      "line": null,
+      "original": "div-long/2addr v3, v5",
+      "variants": [
+        {
+          "code": "mul-long/2addr v3, v5",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "23",
+      "method": "Lit/feio/android/omninotes/utils/ReminderHelper;->removeReminder(Landroid/content/Context;Lit/feio/android/omninotes/models/Note;)V",
+      "line": 82,
+      "original": ".line 82\nnew-instance v3, Landroid/content/Intent;\nconst-class v4, Lit/feio/android/omninotes/receiver/AlarmReceiver;\ninvoke-direct {v3, p0, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/16 v3, 0x0",
+          "operator": "NullIntentMutator"
+        },
+        {
+          "code": "new-instance v3, Landroid/content/Intent;\nsget-object v7, Landroid/content/Intent;->ACTION_VIEW:Ljava/lang/String;\ninvoke-direct {v3, v7}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        },
+        {
+          "code": "new-instance v3, Landroid/content/Intent;\nsget-object v7, Landroid/content/Intent;->ACTION_SEND:Ljava/lang/String;\ninvoke-direct {v3, v7}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "24",
+      "method": "Lit/feio/android/omninotes/utils/ReminderHelper;->removeReminder(Landroid/content/Context;Lit/feio/android/omninotes/models/Note;)V",
+      "line": null,
+      "original": "const-class v4, Lit/feio/android/omninotes/receiver/AlarmReceiver;\ninvoke-direct {v3, p0, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const-class v4, Lit/feio/android/omninotes/receiver/BootCompleteReceiver;\ninvoke-direct {v3, p0, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "IntentTargetReplacementMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "25",
+      "method": "Lit/feio/android/omninotes/utils/ReminderHelper;->removeReminder(Landroid/content/Context;Lit/feio/android/omninotes/models/Note;)V",
+      "line": null,
+      "original": "invoke-direct {v3, p0, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/16 p0, 0x0\ninvoke-direct {v3, p0, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "InvalidKeyIntentMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "26",
+      "method": "Lit/feio/android/omninotes/utils/PasswordHelper;->requestPassword(Landroid/app/Activity;Lit/feio/android/omninotes/models/PasswordValidator;)V",
+      "line": null,
+      "original": "invoke-virtual {v4, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v5",
+      "variants": [
+        {
+          "code": "const/16 v5, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v5, 0x7fffffff\ninvoke-virtual {v4, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v5",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {v4, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v5\ninvoke-virtual {v5}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {v4, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v5\nconst/16 v10, 0x4\ninvoke-virtual {v5, v10}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "27",
+      "method": "Lit/feio/android/omninotes/utils/PasswordHelper;->resetPassword(Landroid/app/Activity;)V",
+      "line": null,
+      "original": "invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v2",
+      "variants": [
+        {
+          "code": "const/16 v2, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v2, 0x7fffffff\ninvoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v2",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v2\ninvoke-virtual {v2}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v2\nconst/16 v9, 0x4\ninvoke-virtual {v2, v9}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "28",
+      "method": "Lit/feio/android/omninotes/utils/IntentChecker;->checkAction(Landroid/content/Intent;[Ljava/lang/String;)Z",
+      "line": null,
+      "original": "add-int/lit8 v4, v4, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v4, v4, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "29",
+      "method": "Lit/feio/android/omninotes/utils/IntentChecker;->isAvailable(Landroid/content/Context;Landroid/content/Intent;[Ljava/lang/String;)Z",
+      "line": null,
+      "original": "add-int/lit8 v5, v5, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v5, v5, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "30",
+      "method": "Lit/feio/android/omninotes/utils/SystemHelper;->closeCloseable([Ljava/io/Closeable;)V",
+      "line": null,
+      "original": "add-int/lit8 v3, v3, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v3, v3, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "31",
+      "method": "Lit/feio/android/omninotes/utils/Display;->getNavigationBarHeightKitkat(Landroid/content/Context;)I",
+      "line": null,
+      "original": "sub-int/2addr v1, v2",
+      "variants": [
+        {
+          "code": "add-int/2addr v1, v2",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "32",
+      "method": "Lit/feio/android/omninotes/utils/Display;->getRootView(Landroid/app/Activity;)Landroid/view/View;",
+      "line": null,
+      "original": "invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v2, 0x7fffffff\ninvoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v3, 0x4\ninvoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "33",
+      "method": "Lit/feio/android/omninotes/utils/Display;->getSoftButtonsBarHeight(Landroid/app/Activity;)I",
+      "line": 134,
+      "original": ".line 134\nsub-int v5, v4, v2",
+      "variants": [
+        {
+          "code": ".line 134\nadd-int v5, v4, v2",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "34",
+      "method": "Lit/feio/android/omninotes/utils/Display;->getVisibleSize(Landroid/app/Activity;)Landroid/graphics/Point;",
+      "line": null,
+      "original": "sub-int/2addr v4, v5",
+      "variants": [
+        {
+          "code": "add-int/2addr v4, v5",
+          "operator": "ArithmeticOperatorMutator"
+        },
+        {
+          "code": "add-int/2addr v4, v5",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "35",
+      "method": "Lit/feio/android/omninotes/utils/StorageHelper;->getSize(Ljava/io/File;J)J",
+      "line": null,
+      "original": "add-long/2addr v1, v8",
+      "variants": [
+        {
+          "code": "sub-long/2addr v1, v8",
+          "operator": "ArithmeticOperatorMutator"
+        },
+        {
+          "code": "sub-long/2addr v1, v8",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "36",
+      "method": "Lit/feio/android/omninotes/utils/StorageHelper;->getSize(Ljava/io/File;J)J",
+      "line": null,
+      "original": "add-long/2addr v8, v10",
+      "variants": [
+        {
+          "code": "sub-long/2addr v8, v10",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "37",
+      "method": "Lit/feio/android/omninotes/utils/StorageHelper;->getSize(Ljava/io/File;J)J",
+      "line": null,
+      "original": "add-int/lit8 v6, v6, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v6, v6, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "38",
+      "method": "Lit/feio/android/omninotes/utils/StorageHelper;->getSize(Ljava/io/File;J)J",
+      "line": null,
+      "original": "mul-long/2addr v8, p1",
+      "variants": [
+        {
+          "code": "div-long/2addr v8, p1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "39",
+      "method": "Lit/feio/android/omninotes/utils/StorageHelper;->getSize(Ljava/io/File;J)J",
+      "line": null,
+      "original": "div-long/2addr v8, p1",
+      "variants": [
+        {
+          "code": "mul-long/2addr v8, p1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "40",
+      "method": "Lit/feio/android/omninotes/models/misc/DynamicNavigationLookupTable;->lambda$update$0$it-feio-android-omninotes-models-misc-DynamicNavigationLookupTable()V",
+      "line": null,
+      "original": "add-int/2addr v4, v3",
+      "variants": [
+        {
+          "code": "sub-int/2addr v4, v3",
+          "operator": "ArithmeticOperatorMutator"
+        },
+        {
+          "code": "sub-int/2addr v4, v3",
+          "operator": "ArithmeticOperatorMutator"
+        },
+        {
+          "code": "sub-int/2addr v4, v3",
+          "operator": "ArithmeticOperatorMutator"
+        },
+        {
+          "code": "sub-int/2addr v4, v3",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "41",
+      "method": "Lit/feio/android/omninotes/models/misc/DynamicNavigationLookupTable;->lambda$update$0$it-feio-android-omninotes-models-misc-DynamicNavigationLookupTable()V",
+      "line": null,
+      "original": "add-int/lit8 v2, v2, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v2, v2, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "42",
+      "method": "Lit/feio/android/omninotes/models/listeners/RecyclerViewItemClickSupport$3;->onChildViewAttachedToWindow(Landroid/view/View;)V",
+      "line": null,
+      "original": "invoke-virtual {p1, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0\ninvoke-virtual {p1, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+          "operator": "BuggyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "43",
+      "method": "Lit/feio/android/omninotes/models/listeners/RecyclerViewItemClickSupport$1;->onClick(Landroid/view/View;)V",
+      "line": null,
+      "original": "return-void ",
+      "variants": [
+        {
+          "code": "const-wide/16 v6, 0x2710\ninvoke-static {v6, v7}, Ljava/lang/Thread;->sleep(J)V\nreturn-void ",
+          "operator": "LengthyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "44",
+      "method": "Lit/feio/android/omninotes/helpers/date/DateHelper;->formatShortTime(Landroid/content/Context;J)Ljava/lang/String;",
+      "line": null,
+      "original": "div-long v3, p1, v1",
+      "variants": [
+        {
+          "code": "mul-long v3, p1, v1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "45",
+      "method": "Lit/feio/android/omninotes/helpers/date/DateHelper;->formatShortTime(Landroid/content/Context;J)Ljava/lang/String;",
+      "line": null,
+      "original": "div-long/2addr v3, v5",
+      "variants": [
+        {
+          "code": "mul-long/2addr v3, v5",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "46",
+      "method": "Lit/feio/android/omninotes/helpers/date/DateHelper;->formatShortTime(Landroid/content/Context;J)Ljava/lang/String;",
+      "line": null,
+      "original": "div-long v1, p1, v1",
+      "variants": [
+        {
+          "code": "mul-long v1, p1, v1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "47",
+      "method": "Lit/feio/android/omninotes/PasswordActivity;->initViews()V",
+      "line": null,
+      "original": "invoke-virtual {v1, v3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+      "variants": [
+        {
+          "code": "const/16 v3, 0x0\ninvoke-virtual {v1, v3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+          "operator": "BuggyGUIListenerMutator"
+        },
+        {
+          "code": "const/16 v3, 0x0\ninvoke-virtual {v1, v3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+          "operator": "BuggyGUIListenerMutator"
+        },
+        {
+          "code": "const/16 v3, 0x0\ninvoke-virtual {v1, v3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+          "operator": "BuggyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "48",
+      "method": "Lit/feio/android/omninotes/PasswordActivity;->initViews()V",
+      "line": null,
+      "original": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/PasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p0, v1}, Lit/feio/android/omninotes/PasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p0, v1}, Lit/feio/android/omninotes/PasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p0, v1}, Lit/feio/android/omninotes/PasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p0, v1}, Lit/feio/android/omninotes/PasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p0, v1}, Lit/feio/android/omninotes/PasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p0, v1}, Lit/feio/android/omninotes/PasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p0, v1}, Lit/feio/android/omninotes/PasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p0, v1}, Lit/feio/android/omninotes/PasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p0, v1}, Lit/feio/android/omninotes/PasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/PasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/PasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/PasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/PasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/PasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/PasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/PasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/PasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/PasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/PasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v4, 0x4\ninvoke-virtual {v1, v4}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/PasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v4, 0x4\ninvoke-virtual {v1, v4}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/PasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v4, 0x4\ninvoke-virtual {v1, v4}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/PasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v4, 0x4\ninvoke-virtual {v1, v4}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/PasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v4, 0x4\ninvoke-virtual {v1, v4}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/PasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v4, 0x4\ninvoke-virtual {v1, v4}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/PasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v4, 0x4\ninvoke-virtual {v1, v4}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/PasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v4, 0x4\ninvoke-virtual {v1, v4}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/PasswordActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v4, 0x4\ninvoke-virtual {v1, v4}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "49",
+      "method": "Lit/feio/android/omninotes/PasswordActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": null,
+      "original": "mul-double/2addr v3, v5",
+      "variants": [
+        {
+          "code": "div-double/2addr v3, v5",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "50",
+      "method": "Lit/feio/android/omninotes/PasswordActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": null,
+      "original": "mul-double/2addr v7, v5",
+      "variants": [
+        {
+          "code": "div-double/2addr v7, v5",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "51",
+      "method": "Lit/feio/android/omninotes/PasswordActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": 58,
+      "original": ".line 58\ninvoke-super {p0, p1}, Lit/feio/android/omninotes/BaseActivity;->onCreate(Landroid/os/Bundle;)V",
+      "variants": [
+        {
+          "code": ".line 58\ninvoke-super {p0, p1}, Lit/feio/android/omninotes/BaseActivity;->onCreate(Landroid/os/Bundle;)V\nconst-wide/16 v9, 0x2710\ninvoke-static {v9, v10}, Ljava/lang/Thread;->sleep(J)V",
+          "operator": "LengthyGUICreationMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "52",
+      "method": "Lit/feio/android/omninotes/AboutActivity$$ExternalSyntheticLambda1;->onClick(Landroid/view/View;)V",
+      "line": null,
+      "original": "return-void ",
+      "variants": [
+        {
+          "code": "const-wide/16 v1, 0x2710\ninvoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V\nreturn-void ",
+          "operator": "LengthyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "53",
+      "method": "Lit/feio/android/omninotes/SketchFragment;->showPopup(Landroid/view/View;I)V",
+      "line": null,
+      "original": "invoke-virtual {v7, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v6",
+      "variants": [
+        {
+          "code": "const/16 v6, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v6, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v6, 0x7fffffff\ninvoke-virtual {v7, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v6",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v6, 0x7fffffff\ninvoke-virtual {v7, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v6",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {v7, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v6\ninvoke-virtual {v6}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {v7, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v6\ninvoke-virtual {v6}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {v7, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v6\nconst/16 v9, 0x4\ninvoke-virtual {v6, v9}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {v7, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v6\nconst/16 v9, 0x4\ninvoke-virtual {v6, v9}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "54",
+      "method": "Lit/feio/android/omninotes/SketchFragment;->onActivityCreated(Landroid/os/Bundle;)V",
+      "line": null,
+      "original": "invoke-virtual {v4, v5}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+      "variants": [
+        {
+          "code": "const/16 v5, 0x0\ninvoke-virtual {v4, v5}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+          "operator": "BuggyGUIListenerMutator"
+        },
+        {
+          "code": "const/16 v5, 0x0\ninvoke-virtual {v4, v5}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+          "operator": "BuggyGUIListenerMutator"
+        },
+        {
+          "code": "const/16 v5, 0x0\ninvoke-virtual {v4, v5}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+          "operator": "BuggyGUIListenerMutator"
+        },
+        {
+          "code": "const/16 v5, 0x0\ninvoke-virtual {v4, v5}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+          "operator": "BuggyGUIListenerMutator"
+        },
+        {
+          "code": "const/16 v5, 0x0\ninvoke-virtual {v4, v5}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+          "operator": "BuggyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "55",
+      "method": "Lit/feio/android/omninotes/SketchFragment;->onActivityCreated(Landroid/os/Bundle;)V",
+      "line": null,
+      "original": "invoke-virtual {v6, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v6",
+      "variants": [
+        {
+          "code": "const/16 v6, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v7, 0x7fffffff\ninvoke-virtual {v6, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v6",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {v6, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v6\ninvoke-virtual {v6}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {v6, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v6\nconst/16 v9, 0x4\ninvoke-virtual {v6, v9}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "56",
+      "method": "Lit/feio/android/omninotes/SketchFragment;->onActivityCreated(Landroid/os/Bundle;)V",
+      "line": null,
+      "original": "invoke-virtual {v8, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v7",
+      "variants": [
+        {
+          "code": "const/16 v7, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v7, 0x7fffffff\ninvoke-virtual {v8, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v7",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {v8, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v7\ninvoke-virtual {v7}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {v8, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v7\nconst/16 v9, 0x4\ninvoke-virtual {v7, v9}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "57",
+      "method": "Lit/feio/android/omninotes/SketchFragment;->onActivityCreated(Landroid/os/Bundle;)V",
+      "line": null,
+      "original": "invoke-virtual {v1, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v7, 0x7fffffff\ninvoke-virtual {v1, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {v1, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {v1, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v9, 0x4\ninvoke-virtual {v1, v9}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "58",
+      "method": "Lit/feio/android/omninotes/SketchFragment;->onActivityCreated(Landroid/os/Bundle;)V",
+      "line": null,
+      "original": "invoke-virtual {v7, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v7",
+      "variants": [
+        {
+          "code": "const/16 v7, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v7, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v8, 0x7fffffff\ninvoke-virtual {v7, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v7",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v8, 0x7fffffff\ninvoke-virtual {v7, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v7",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {v7, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v7\ninvoke-virtual {v7}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {v7, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v7\ninvoke-virtual {v7}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {v7, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v7\nconst/16 v9, 0x4\ninvoke-virtual {v7, v9}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {v7, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v7\nconst/16 v9, 0x4\ninvoke-virtual {v7, v9}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "59",
+      "method": "Lit/feio/android/omninotes/SketchFragment;->onCreate(Landroid/os/Bundle;)V",
+      "line": 72,
+      "original": ".line 72\ninvoke-super {p0, p1}, Landroidx/fragment/app/Fragment;->onCreate(Landroid/os/Bundle;)V",
+      "variants": [
+        {
+          "code": ".line 72\ninvoke-super {p0, p1}, Landroidx/fragment/app/Fragment;->onCreate(Landroid/os/Bundle;)V\nconst-wide/16 v3, 0x2710\ninvoke-static {v3, v4}, Ljava/lang/Thread;->sleep(J)V",
+          "operator": "LengthyGUICreationMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "60",
+      "method": "Lit/feio/android/omninotes/SketchFragment;->setSeekbarProgress(II)V",
+      "line": null,
+      "original": "sub-int/2addr v4, v3",
+      "variants": [
+        {
+          "code": "add-int/2addr v4, v3",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "61",
+      "method": "Lit/feio/android/omninotes/SketchFragment;->setSeekbarProgress(II)V",
+      "line": null,
+      "original": "mul-float/2addr v3, v4",
+      "variants": [
+        {
+          "code": "div-float/2addr v3, v4",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "62",
+      "method": "Lit/feio/android/omninotes/SketchFragment;->setSeekbarProgress(II)V",
+      "line": null,
+      "original": "div-float/2addr v3, v4",
+      "variants": [
+        {
+          "code": "mul-float/2addr v3, v4",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "63",
+      "method": "Lit/feio/android/omninotes/SketchFragment;->setSeekbarProgress(II)V",
+      "line": null,
+      "original": "div-int/lit8 v4, v4, 0x2",
+      "variants": [
+        {
+          "code": "mul-int/lit8 v4, v4, 0x2",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "64",
+      "method": "Lit/feio/android/omninotes/SettingsActivity;->onBackPressed()V",
+      "line": null,
+      "original": "sub-int/2addr v3, v2",
+      "variants": [
+        {
+          "code": "add-int/2addr v3, v2",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "65",
+      "method": "Lit/feio/android/omninotes/SettingsActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": 43,
+      "original": ".line 43\ninvoke-super {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->onCreate(Landroid/os/Bundle;)V",
+      "variants": [
+        {
+          "code": ".line 43\ninvoke-super {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->onCreate(Landroid/os/Bundle;)V\nconst-wide/16 v6, 0x2710\ninvoke-static {v6, v7}, Ljava/lang/Thread;->sleep(J)V",
+          "operator": "LengthyGUICreationMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "66",
+      "method": "Lit/feio/android/omninotes/BaseActivity;->notifyAppWidgets(Landroid/content/Context;)V",
+      "line": null,
+      "original": "new-instance v5, Landroid/content/Intent;\nconst-string v6, \"update_dashclock\"\ninvoke-direct {v5, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+      "variants": [
+        {
+          "code": "const/16 v5, 0x0",
+          "operator": "NullIntentMutator"
+        },
+        {
+          "code": "new-instance v5, Landroid/content/Intent;\nsget-object v7, Landroid/content/Intent;->ACTION_VIEW:Ljava/lang/String;\ninvoke-direct {v5, v7}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        },
+        {
+          "code": "new-instance v5, Landroid/content/Intent;\nsget-object v7, Landroid/content/Intent;->ACTION_SEND:Ljava/lang/String;\ninvoke-direct {v5, v7}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "67",
+      "method": "Lit/feio/android/omninotes/BaseActivity;->setActionBarTitle(Ljava/lang/String;)V",
+      "line": null,
+      "original": "invoke-virtual {v2, v1}, Landroid/view/Window;->findViewById(I)Landroid/view/View;\nmove-result-object v2",
+      "variants": [
+        {
+          "code": "const/16 v2, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {v2, v1}, Landroid/view/Window;->findViewById(I)Landroid/view/View;\nmove-result-object v2",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {v2, v1}, Landroid/view/Window;->findViewById(I)Landroid/view/View;\nmove-result-object v2\ninvoke-virtual {v2}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {v2, v1}, Landroid/view/Window;->findViewById(I)Landroid/view/View;\nmove-result-object v2\nconst/16 v6, 0x4\ninvoke-virtual {v2, v6}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "68",
+      "method": "Lit/feio/android/omninotes/MainActivity;->launchIntroIfRequired()Z",
+      "line": null,
+      "original": "const-class v4, Lit/feio/android/omninotes/intro/IntroActivity;\ninvoke-direct {v1, v3, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const-class v4, Lit/feio/android/omninotes/intro/IntroSlide5$$ExternalSynthetic$Condy0;\ninvoke-direct {v1, v3, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "IntentTargetReplacementMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "69",
+      "method": "Lit/feio/android/omninotes/MainActivity;->launchIntroIfRequired()Z",
+      "line": null,
+      "original": "invoke-direct {v1, v3, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/16 v3, 0x0\ninvoke-direct {v1, v3, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "InvalidKeyIntentMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "70",
+      "method": "Lit/feio/android/omninotes/MainActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": 101,
+      "original": ".line 101\ninvoke-super {p0, p1}, Lit/feio/android/omninotes/BaseActivity;->onCreate(Landroid/os/Bundle;)V",
+      "variants": [
+        {
+          "code": ".line 101\ninvoke-super {p0, p1}, Lit/feio/android/omninotes/BaseActivity;->onCreate(Landroid/os/Bundle;)V\nconst-wide/16 v4, 0x2710\ninvoke-static {v4, v5}, Ljava/lang/Thread;->sleep(J)V",
+          "operator": "LengthyGUICreationMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "71",
+      "method": "Lit/feio/android/omninotes/BaseFragment;->isOptionsItemFastClick()Z",
+      "line": null,
+      "original": "sub-long/2addr v1, v3",
+      "variants": [
+        {
+          "code": "add-long/2addr v1, v3",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "72",
+      "method": "Lit/feio/android/omninotes/NoteInfosActivity;->getChecklistCompletionState(Lit/feio/android/omninotes/models/StatsSingleNote;)Ljava/lang/String;",
+      "line": null,
+      "original": "mul-float/2addr v1, v3",
+      "variants": [
+        {
+          "code": "div-float/2addr v1, v3",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "73",
+      "method": "Lit/feio/android/omninotes/NoteInfosActivity;->getChecklistCompletionState(Lit/feio/android/omninotes/models/StatsSingleNote;)Ljava/lang/String;",
+      "line": null,
+      "original": "div-float/2addr v1, v3",
+      "variants": [
+        {
+          "code": "mul-float/2addr v1, v3",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "74",
+      "method": "Lit/feio/android/omninotes/NoteInfosActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": 40,
+      "original": ".line 40\ninvoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V",
+      "variants": [
+        {
+          "code": ".line 40\ninvoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V\nconst-wide/16 v5, 0x2710\ninvoke-static {v5, v6}, Ljava/lang/Thread;->sleep(J)V",
+          "operator": "LengthyGUICreationMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "75",
+      "method": "Lit/feio/android/omninotes/SettingsActivity$$ExternalSyntheticLambda1;->onClick(Landroid/view/View;)V",
+      "line": null,
+      "original": "return-void ",
+      "variants": [
+        {
+          "code": "const-wide/16 v1, 0x2710\ninvoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V\nreturn-void ",
+          "operator": "LengthyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "76",
+      "method": "Lit/feio/android/omninotes/ShortcutActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": 33,
+      "original": ".line 33\nnew-instance v2, Landroid/content/Intent;\nconst-class v3, Lit/feio/android/omninotes/MainActivity;\ninvoke-direct {v2, p0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/16 v2, 0x0",
+          "operator": "NullIntentMutator"
+        },
+        {
+          "code": "new-instance v2, Landroid/content/Intent;\nsget-object v7, Landroid/content/Intent;->ACTION_VIEW:Ljava/lang/String;\ninvoke-direct {v2, v7}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        },
+        {
+          "code": "new-instance v2, Landroid/content/Intent;\nsget-object v7, Landroid/content/Intent;->ACTION_SEND:Ljava/lang/String;\ninvoke-direct {v2, v7}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "77",
+      "method": "Lit/feio/android/omninotes/ShortcutActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": 39,
+      "original": ".line 39\nnew-instance v4, Landroid/content/Intent;\ninvoke-direct {v4}, Landroid/content/Intent;-><init>()V",
+      "variants": [
+        {
+          "code": "const/16 v4, 0x0",
+          "operator": "NullIntentMutator"
+        },
+        {
+          "code": "new-instance v4, Landroid/content/Intent;\nsget-object v7, Landroid/content/Intent;->ACTION_VIEW:Ljava/lang/String;\ninvoke-direct {v4, v7}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        },
+        {
+          "code": "new-instance v4, Landroid/content/Intent;\nsget-object v7, Landroid/content/Intent;->ACTION_SEND:Ljava/lang/String;\ninvoke-direct {v4, v7}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "78",
+      "method": "Lit/feio/android/omninotes/ShortcutActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": null,
+      "original": "const-class v3, Lit/feio/android/omninotes/MainActivity;\ninvoke-direct {v2, p0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const-class v3, Lit/feio/android/omninotes/DetailFragment$$ExternalSyntheticLambda10;\ninvoke-direct {v2, p0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "IntentTargetReplacementMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "79",
+      "method": "Lit/feio/android/omninotes/ShortcutActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": null,
+      "original": "invoke-virtual {v4, v5, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;",
+      "variants": [
+        {
+          "code": "const/16 v2, 0x0\ninvoke-virtual {v4, v5, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;",
+          "operator": "NullPutExtraValueMutator"
+        },
+        {
+          "code": "const-string v5, \"__metford_invalid_key__\"\ninvoke-virtual {v4, v5, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;",
+          "operator": "NullPutExtraKeyMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "80",
+      "method": "Lit/feio/android/omninotes/ShortcutActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": null,
+      "original": "invoke-virtual {v4, v6, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;",
+      "variants": [
+        {
+          "code": "const/16 v5, 0x0\ninvoke-virtual {v4, v6, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;",
+          "operator": "NullPutExtraValueMutator"
+        },
+        {
+          "code": "const-string v6, \"__metford_invalid_key__\"\ninvoke-virtual {v4, v6, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;",
+          "operator": "NullPutExtraKeyMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "81",
+      "method": "Lit/feio/android/omninotes/ShortcutActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": null,
+      "original": "invoke-virtual {v4, v5, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;",
+      "variants": [
+        {
+          "code": "const/16 v3, 0x0\ninvoke-virtual {v4, v5, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;",
+          "operator": "NullPutExtraValueMutator"
+        },
+        {
+          "code": "const-string v5, \"__metford_invalid_key__\"\ninvoke-virtual {v4, v5, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;",
+          "operator": "NullPutExtraKeyMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "82",
+      "method": "Lit/feio/android/omninotes/ShortcutActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": 31,
+      "original": ".line 31\ninvoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V",
+      "variants": [
+        {
+          "code": ".line 31\ninvoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V\nconst-wide/16 v7, 0x2710\ninvoke-static {v7, v8}, Ljava/lang/Thread;->sleep(J)V",
+          "operator": "LengthyGUICreationMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "83",
+      "method": "Lit/feio/android/omninotes/ShortcutActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": null,
+      "original": "invoke-direct {v2, p0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/16 p0, 0x0\ninvoke-direct {v2, p0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "InvalidKeyIntentMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "84",
+      "method": "Lit/feio/android/omninotes/AboutActivity;->initUI()V",
+      "line": null,
+      "original": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/AboutActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p0, v1}, Lit/feio/android/omninotes/AboutActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/AboutActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/AboutActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v4, 0x4\ninvoke-virtual {v1, v4}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "85",
+      "method": "Lit/feio/android/omninotes/AboutActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": 28,
+      "original": ".line 28\ninvoke-super {p0, p1}, Lit/feio/android/omninotes/BaseActivity;->onCreate(Landroid/os/Bundle;)V",
+      "variants": [
+        {
+          "code": ".line 28\ninvoke-super {p0, p1}, Lit/feio/android/omninotes/BaseActivity;->onCreate(Landroid/os/Bundle;)V\nconst-wide/16 v4, 0x2710\ninvoke-static {v4, v5}, Ljava/lang/Thread;->sleep(J)V",
+          "operator": "LengthyGUICreationMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "86",
+      "method": "Lit/feio/android/omninotes/AboutActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": null,
+      "original": "invoke-virtual {p0, v2}, Lit/feio/android/omninotes/AboutActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v2",
+      "variants": [
+        {
+          "code": "const/16 v2, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v2, 0x7fffffff\ninvoke-virtual {p0, v2}, Lit/feio/android/omninotes/AboutActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v2",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v2}, Lit/feio/android/omninotes/AboutActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v2\ninvoke-virtual {v2}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v2}, Lit/feio/android/omninotes/AboutActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v2\nconst/16 v4, 0x4\ninvoke-virtual {v2, v4}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "87",
+      "method": "Lit/feio/android/omninotes/StatsActivity;->populateViews(Lit/feio/android/omninotes/models/Stats;)V",
+      "line": null,
+      "original": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v5, 0x4\ninvoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v5, 0x4\ninvoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v5, 0x4\ninvoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v5, 0x4\ninvoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v5, 0x4\ninvoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v5, 0x4\ninvoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v5, 0x4\ninvoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v5, 0x4\ninvoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v5, 0x4\ninvoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v5, 0x4\ninvoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v5, 0x4\ninvoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v5, 0x4\ninvoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v5, 0x4\ninvoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v5, 0x4\ninvoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v5, 0x4\ninvoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v5, 0x4\ninvoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v5, 0x4\ninvoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v5, 0x4\ninvoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v5, 0x4\ninvoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v5, 0x4\ninvoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v5, 0x4\ninvoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v5, 0x4\ninvoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/StatsActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v5, 0x4\ninvoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "88",
+      "method": "Lit/feio/android/omninotes/StatsActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": 33,
+      "original": ".line 33\ninvoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V",
+      "variants": [
+        {
+          "code": ".line 33\ninvoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V\nconst-wide/16 v3, 0x2710\ninvoke-static {v3, v4}, Ljava/lang/Thread;->sleep(J)V",
+          "operator": "LengthyGUICreationMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "89",
+      "method": "Lit/feio/android/omninotes/SketchFragment$$ExternalSyntheticLambda3;->onClick(Landroid/view/View;)V",
+      "line": null,
+      "original": "return-void ",
+      "variants": [
+        {
+          "code": "const-wide/16 v1, 0x2710\ninvoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V\nreturn-void ",
+          "operator": "LengthyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "90",
+      "method": "Lit/feio/android/omninotes/SnoozeActivity;->manageNotification()V",
+      "line": null,
+      "original": "add-long/2addr v3, v5",
+      "variants": [
+        {
+          "code": "sub-long/2addr v3, v5",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "91",
+      "method": "Lit/feio/android/omninotes/SnoozeActivity;->manageNotification()V",
+      "line": null,
+      "original": "mul-int/lit8 v5, v5, 0x3c",
+      "variants": [
+        {
+          "code": "div-int/lit8 v5, v5, 0x3c",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "92",
+      "method": "Lit/feio/android/omninotes/SnoozeActivity;->manageNotification()V",
+      "line": null,
+      "original": "mul-int/lit16 v5, v5, 0x3e8",
+      "variants": [
+        {
+          "code": "div-int/lit16 v5, v5, 0x3e8",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "93",
+      "method": "Lit/feio/android/omninotes/SnoozeActivity;->manageNotification()V",
+      "line": null,
+      "original": "new-instance v1, Landroid/content/Intent;\nconst-class v3, Lit/feio/android/omninotes/MainActivity;\ninvoke-direct {v1, p0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "NullIntentMutator"
+        },
+        {
+          "code": "new-instance v1, Landroid/content/Intent;\nsget-object v7, Landroid/content/Intent;->ACTION_VIEW:Ljava/lang/String;\ninvoke-direct {v1, v7}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        },
+        {
+          "code": "new-instance v1, Landroid/content/Intent;\nsget-object v7, Landroid/content/Intent;->ACTION_SEND:Ljava/lang/String;\ninvoke-direct {v1, v7}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "94",
+      "method": "Lit/feio/android/omninotes/SnoozeActivity;->manageNotification()V",
+      "line": null,
+      "original": "const-class v3, Lit/feio/android/omninotes/MainActivity;\ninvoke-direct {v1, p0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const-class v3, Lit/feio/android/omninotes/DetailFragment$$ExternalSyntheticLambda10;\ninvoke-direct {v1, p0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "IntentTargetReplacementMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "95",
+      "method": "Lit/feio/android/omninotes/SnoozeActivity;->manageNotification()V",
+      "line": null,
+      "original": "invoke-virtual {v1, v4, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;",
+      "variants": [
+        {
+          "code": "const/16 v3, 0x0\ninvoke-virtual {v1, v4, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;",
+          "operator": "NullPutExtraValueMutator"
+        },
+        {
+          "code": "const-string v4, \"__metford_invalid_key__\"\ninvoke-virtual {v1, v4, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;",
+          "operator": "NullPutExtraKeyMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "96",
+      "method": "Lit/feio/android/omninotes/SnoozeActivity;->manageNotification()V",
+      "line": null,
+      "original": "invoke-direct {v1, p0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/16 p0, 0x0\ninvoke-direct {v1, p0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "InvalidKeyIntentMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "97",
+      "method": "Lit/feio/android/omninotes/SnoozeActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": 77,
+      "original": ".line 77\ninvoke-super {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->onCreate(Landroid/os/Bundle;)V",
+      "variants": [
+        {
+          "code": ".line 77\ninvoke-super {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->onCreate(Landroid/os/Bundle;)V\nconst-wide/16 v5, 0x2710\ninvoke-static {v5, v6}, Ljava/lang/Thread;->sleep(J)V",
+          "operator": "LengthyGUICreationMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "98",
+      "method": "Lit/feio/android/omninotes/SnoozeActivity;->onRecurrenceReminderPicked(Ljava/lang/String;)V",
+      "line": null,
+      "original": "add-int/lit8 v4, v4, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v4, v4, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "99",
+      "method": "Lit/feio/android/omninotes/SnoozeActivity;->onReminderPicked(J)V",
+      "line": null,
+      "original": "add-int/lit8 v4, v4, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v4, v4, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "100",
+      "method": "Lit/feio/android/omninotes/PasswordActivity$$ExternalSyntheticLambda1;->onClick(Landroid/view/View;)V",
+      "line": null,
+      "original": "return-void ",
+      "variants": [
+        {
+          "code": "const-wide/16 v1, 0x2710\ninvoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V\nreturn-void ",
+          "operator": "LengthyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "101",
+      "method": "Lit/feio/android/omninotes/PasswordActivity$$ExternalSyntheticLambda3;->onClick(Landroid/view/View;)V",
+      "line": null,
+      "original": "return-void ",
+      "variants": [
+        {
+          "code": "const-wide/16 v1, 0x2710\ninvoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V\nreturn-void ",
+          "operator": "LengthyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "102",
+      "method": "Lit/feio/android/omninotes/SketchFragment$$ExternalSyntheticLambda5;->onClick(Landroid/view/View;)V",
+      "line": null,
+      "original": "return-void ",
+      "variants": [
+        {
+          "code": "const-wide/16 v1, 0x2710\ninvoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V\nreturn-void ",
+          "operator": "LengthyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "103",
+      "method": "Lit/feio/android/omninotes/SketchFragment$$ExternalSyntheticLambda2;->onClick(Landroid/view/View;)V",
+      "line": null,
+      "original": "return-void ",
+      "variants": [
+        {
+          "code": "const-wide/16 v1, 0x2710\ninvoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V\nreturn-void ",
+          "operator": "LengthyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "104",
+      "method": "Lit/feio/android/omninotes/NavigationDrawerFragment;->animateBurger(I)V",
+      "line": null,
+      "original": "add-int/lit8 v4, p1, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v4, p1, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "105",
+      "method": "Lit/feio/android/omninotes/NavigationDrawerFragment;->onCreate(Landroid/os/Bundle;)V",
+      "line": 63,
+      "original": ".line 63\ninvoke-super {p0, p1}, Landroidx/fragment/app/Fragment;->onCreate(Landroid/os/Bundle;)V",
+      "variants": [
+        {
+          "code": ".line 63\ninvoke-super {p0, p1}, Landroidx/fragment/app/Fragment;->onCreate(Landroid/os/Bundle;)V\nconst-wide/16 v3, 0x2710\ninvoke-static {v3, v4}, Ljava/lang/Thread;->sleep(J)V",
+          "operator": "LengthyGUICreationMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "106",
+      "method": "Lit/feio/android/omninotes/PasswordActivity$$ExternalSyntheticLambda2;->onClick(Landroid/view/View;)V",
+      "line": null,
+      "original": "return-void ",
+      "variants": [
+        {
+          "code": "const-wide/16 v1, 0x2710\ninvoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V\nreturn-void ",
+          "operator": "LengthyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "107",
+      "method": "Lit/feio/android/omninotes/SketchFragment$1;->onClick(Landroid/view/View;)V",
+      "line": null,
+      "original": "return-void ",
+      "variants": [
+        {
+          "code": "const-wide/16 v2, 0x2710\ninvoke-static {v2, v3}, Ljava/lang/Thread;->sleep(J)V\nreturn-void ",
+          "operator": "LengthyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "108",
+      "method": "Lit/feio/android/omninotes/SketchFragment$$ExternalSyntheticLambda4;->onClick(Landroid/view/View;)V",
+      "line": null,
+      "original": "return-void ",
+      "variants": [
+        {
+          "code": "const-wide/16 v1, 0x2710\ninvoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V\nreturn-void ",
+          "operator": "LengthyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "109",
+      "method": "Lit/feio/android/omninotes/SketchFragment$$ExternalSyntheticLambda6;->onClick(Landroid/view/View;)V",
+      "line": null,
+      "original": "return-void ",
+      "variants": [
+        {
+          "code": "const-wide/16 v1, 0x2710\ninvoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V\nreturn-void ",
+          "operator": "LengthyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "110",
+      "method": "Lit/feio/android/omninotes/commons/utils/EqualityChecker;->check([Ljava/lang/Object;[Ljava/lang/Object;)Z",
+      "line": null,
+      "original": "add-int/lit8 v5, v5, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v5, v5, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "111",
+      "method": "Lit/feio/android/omninotes/helpers/AttachmentsHelper;->typeOf(Lit/feio/android/omninotes/models/Attachment;[Ljava/lang/String;)Z",
+      "line": null,
+      "original": "add-int/lit8 v4, v4, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v4, v4, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "112",
+      "method": "Lit/feio/android/omninotes/helpers/TagOpenerHelper$Companion;->openOrGetIntent(Landroid/content/Context;Ljava/lang/String;)Landroid/content/Intent;",
+      "line": null,
+      "original": "new-instance v3, Landroid/content/Intent;\nconst-string v4, \"android.intent.action.DIAL\"\ninvoke-direct {v3, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+      "variants": [
+        {
+          "code": "const/16 v3, 0x0",
+          "operator": "NullIntentMutator"
+        },
+        {
+          "code": "new-instance v3, Landroid/content/Intent;\nsget-object v8, Landroid/content/Intent;->ACTION_VIEW:Ljava/lang/String;\ninvoke-direct {v3, v8}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        },
+        {
+          "code": "new-instance v3, Landroid/content/Intent;\nsget-object v8, Landroid/content/Intent;->ACTION_SEND:Ljava/lang/String;\ninvoke-direct {v3, v8}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "113",
+      "method": "Lit/feio/android/omninotes/helpers/TagOpenerHelper$Companion;->openOrGetIntent(Landroid/content/Context;Ljava/lang/String;)Landroid/content/Intent;",
+      "line": null,
+      "original": "new-instance v3, Landroid/content/Intent;\nconst-string v4, \"android.intent.action.SENDTO\"\ninvoke-direct {v3, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+      "variants": [
+        {
+          "code": "const/16 v3, 0x0",
+          "operator": "NullIntentMutator"
+        },
+        {
+          "code": "new-instance v3, Landroid/content/Intent;\nsget-object v8, Landroid/content/Intent;->ACTION_VIEW:Ljava/lang/String;\ninvoke-direct {v3, v8}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        },
+        {
+          "code": "new-instance v3, Landroid/content/Intent;\nsget-object v8, Landroid/content/Intent;->ACTION_SEND:Ljava/lang/String;\ninvoke-direct {v3, v8}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "114",
+      "method": "Lit/feio/android/omninotes/helpers/count/DefaultWordCounter;->countWords(Lit/feio/android/omninotes/models/Note;)I",
+      "line": null,
+      "original": "add-int/lit8 v1, v1, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v1, v1, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        },
+        {
+          "code": "add-int/lit8 v1, v1, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "115",
+      "method": "Lit/feio/android/omninotes/helpers/count/DefaultWordCounter;->countWords(Lit/feio/android/omninotes/models/Note;)I",
+      "line": null,
+      "original": "add-int/lit8 v9, v9, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v9, v9, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "116",
+      "method": "Lit/feio/android/omninotes/helpers/count/DefaultWordCounter;->countWords(Lit/feio/android/omninotes/models/Note;)I",
+      "line": null,
+      "original": "add-int/lit8 v6, v6, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v6, v6, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "117",
+      "method": "Lit/feio/android/omninotes/helpers/count/DefaultWordCounter;->countWords(Lit/feio/android/omninotes/models/Note;)I",
+      "line": null,
+      "original": "sub-int/2addr v8, v2",
+      "variants": [
+        {
+          "code": "add-int/2addr v8, v2",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "118",
+      "method": "Lit/feio/android/omninotes/helpers/IntentHelper;->getNoteIntent(Landroid/content/Context;Ljava/lang/Class;Ljava/lang/String;Lit/feio/android/omninotes/models/Note;)Landroid/content/Intent;",
+      "line": 38,
+      "original": ".line 38\nnew-instance v1, Landroid/content/Intent;\ninvoke-direct {v1, p0, p1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "NullIntentMutator"
+        },
+        {
+          "code": "new-instance v1, Landroid/content/Intent;\nsget-object v5, Landroid/content/Intent;->ACTION_VIEW:Ljava/lang/String;\ninvoke-direct {v1, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        },
+        {
+          "code": "new-instance v1, Landroid/content/Intent;\nsget-object v5, Landroid/content/Intent;->ACTION_SEND:Ljava/lang/String;\ninvoke-direct {v1, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "119",
+      "method": "Lit/feio/android/omninotes/helpers/IntentHelper;->getNoteIntent(Landroid/content/Context;Ljava/lang/Class;Ljava/lang/String;Lit/feio/android/omninotes/models/Note;)Landroid/content/Intent;",
+      "line": null,
+      "original": "invoke-direct {v1, p0, p1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/16 p0, 0x0\ninvoke-direct {v1, p0, p1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "InvalidKeyIntentMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "120",
+      "method": "Lit/feio/android/omninotes/helpers/AppVersionHelper;->getAppVersionFromPreferences(Landroid/content/Context;)I",
+      "line": null,
+      "original": "sub-int/2addr v3, v1",
+      "variants": [
+        {
+          "code": "add-int/2addr v3, v1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "121",
+      "method": "Lit/feio/android/omninotes/helpers/PermissionsHelper$$ExternalSyntheticLambda2;->onClick(Landroid/view/View;)V",
+      "line": null,
+      "original": "return-void ",
+      "variants": [
+        {
+          "code": "const-wide/16 v4, 0x2710\ninvoke-static {v4, v5}, Ljava/lang/Thread;->sleep(J)V\nreturn-void ",
+          "operator": "LengthyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "122",
+      "method": "Lit/feio/android/omninotes/helpers/BackupHelper;->getBackupFolderPath()Ljava/lang/String;",
+      "line": null,
+      "original": "sub-int/2addr v4, v2",
+      "variants": [
+        {
+          "code": "add-int/2addr v4, v2",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "123",
+      "method": "Lit/feio/android/omninotes/helpers/BackupHelper;->startBackupService(Ljava/lang/String;)V",
+      "line": null,
+      "original": "const-class v3, Lit/feio/android/omninotes/async/DataBackupIntentService;\ninvoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const-class v3, Lit/feio/android/omninotes/async/CategoryMenuTask$$ExternalSyntheticLambda3;\ninvoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "IntentTargetReplacementMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "124",
+      "method": "Lit/feio/android/omninotes/helpers/BackupHelper;->startBackupService(Ljava/lang/String;)V",
+      "line": null,
+      "original": "invoke-virtual {v1, v2, p0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;",
+      "variants": [
+        {
+          "code": "const/16 p0, 0x0\ninvoke-virtual {v1, v2, p0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;",
+          "operator": "NullPutExtraValueMutator"
+        },
+        {
+          "code": "const-string v2, \"__metford_invalid_key__\"\ninvoke-virtual {v1, v2, p0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;",
+          "operator": "NullPutExtraKeyMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "125",
+      "method": "Lit/feio/android/omninotes/helpers/BackupHelper;->startBackupService(Ljava/lang/String;)V",
+      "line": null,
+      "original": "invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/16 v2, 0x0\ninvoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "InvalidKeyIntentMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "126",
+      "method": "Lit/feio/android/omninotes/extensions/ONDashClockExtension;->getNotesCounters()Ljava/util/Map;",
+      "line": null,
+      "original": "sub-long/2addr v9, v11",
+      "variants": [
+        {
+          "code": "add-long/2addr v9, v11",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "127",
+      "method": "Lit/feio/android/omninotes/extensions/ONDashClockExtension;->getNotesCounters()Ljava/util/Map;",
+      "line": null,
+      "original": "div-long/2addr v9, v11",
+      "variants": [
+        {
+          "code": "mul-long/2addr v9, v11",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "128",
+      "method": "Lit/feio/android/omninotes/extensions/ONDashClockExtension;->onUpdateData(I)V",
+      "line": null,
+      "original": "const-class v7, Lit/feio/android/omninotes/MainActivity;\ninvoke-direct {v6, p0, v7}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const-class v7, Lit/feio/android/omninotes/DetailFragment$$ExternalSyntheticLambda10;\ninvoke-direct {v6, p0, v7}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "IntentTargetReplacementMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "129",
+      "method": "Lit/feio/android/omninotes/extensions/ONDashClockExtension;->onUpdateData(I)V",
+      "line": null,
+      "original": "invoke-direct {v6, p0, v7}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/16 p0, 0x0\ninvoke-direct {v6, p0, v7}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "InvalidKeyIntentMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "130",
+      "method": "Lit/feio/android/omninotes/db/SqlParser;->splitSqlScript(Ljava/lang/String;C)Ljava/util/List;",
+      "line": null,
+      "original": "add-int/lit8 v6, v6, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v6, v6, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "131",
+      "method": "Lit/feio/android/omninotes/db/DbHelper;->getNotesByTag([Ljava/lang/String;)Ljava/util/List;",
+      "line": 745,
+      "original": ".line 745\nadd-int/lit8 v2, v2, 0x1",
+      "variants": [
+        {
+          "code": ".line 745\nadd-int/lit8 v2, v2, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "132",
+      "method": "Lit/feio/android/omninotes/db/DbHelper;->getTags(Lit/feio/android/omninotes/models/Note;)Ljava/util/List;",
+      "line": null,
+      "original": "add-int/2addr v11, v3",
+      "variants": [
+        {
+          "code": "sub-int/2addr v11, v3",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "133",
+      "method": "Lit/feio/android/omninotes/db/DbHelper;->onUpgrade(Landroid/database/sqlite/SQLiteDatabase;II)V",
+      "line": null,
+      "original": "add-int/lit8 v5, v5, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v5, v5, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "134",
+      "method": "Lit/feio/android/omninotes/db/DbHelper;->onUpgrade(Landroid/database/sqlite/SQLiteDatabase;II)V",
+      "line": null,
+      "original": "sub-int/2addr v8, v9",
+      "variants": [
+        {
+          "code": "add-int/2addr v8, v9",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "135",
+      "method": "Lit/feio/android/omninotes/models/views/Fab$$ExternalSyntheticLambda2;->onClick(Landroid/view/View;)V",
+      "line": null,
+      "original": "return-void ",
+      "variants": [
+        {
+          "code": "const-wide/16 v1, 0x2710\ninvoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V\nreturn-void ",
+          "operator": "LengthyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "136",
+      "method": "Lit/feio/android/omninotes/models/views/Fab$$ExternalSyntheticLambda5;->onClick(Landroid/view/View;)V",
+      "line": null,
+      "original": "return-void ",
+      "variants": [
+        {
+          "code": "const-wide/16 v1, 0x2710\ninvoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V\nreturn-void ",
+          "operator": "LengthyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "137",
+      "method": "Lit/feio/android/omninotes/models/views/Fab$$ExternalSyntheticLambda1;->onClick(Landroid/view/View;)V",
+      "line": null,
+      "original": "return-void ",
+      "variants": [
+        {
+          "code": "const-wide/16 v1, 0x2710\ninvoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V\nreturn-void ",
+          "operator": "LengthyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "138",
+      "method": "Lit/feio/android/omninotes/models/views/Fab;->init()V",
+      "line": null,
+      "original": "invoke-virtual {v3, v4}, Lcom/getbase/floatingactionbutton/AddFloatingActionButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+      "variants": [
+        {
+          "code": "const/16 v4, 0x0\ninvoke-virtual {v3, v4}, Lcom/getbase/floatingactionbutton/AddFloatingActionButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+          "operator": "BuggyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "139",
+      "method": "Lit/feio/android/omninotes/models/views/Fab;->init()V",
+      "line": null,
+      "original": "invoke-virtual {v4, v5}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+      "variants": [
+        {
+          "code": "const/16 v5, 0x0\ninvoke-virtual {v4, v5}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+          "operator": "BuggyGUIListenerMutator"
+        },
+        {
+          "code": "const/16 v5, 0x0\ninvoke-virtual {v4, v5}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+          "operator": "BuggyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "140",
+      "method": "Lit/feio/android/omninotes/models/views/Fab;->init()V",
+      "line": null,
+      "original": "invoke-virtual {v4, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+      "variants": [
+        {
+          "code": "const/16 v2, 0x0\ninvoke-virtual {v4, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+          "operator": "BuggyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "141",
+      "method": "Lit/feio/android/omninotes/models/views/Fab;->init()V",
+      "line": null,
+      "original": "invoke-virtual {v3, v4}, Lcom/getbase/floatingactionbutton/FloatingActionsMenu;->findViewById(I)Landroid/view/View;\nmove-result-object v3",
+      "variants": [
+        {
+          "code": "const/16 v3, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v4, 0x7fffffff\ninvoke-virtual {v3, v4}, Lcom/getbase/floatingactionbutton/FloatingActionsMenu;->findViewById(I)Landroid/view/View;\nmove-result-object v3",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {v3, v4}, Lcom/getbase/floatingactionbutton/FloatingActionsMenu;->findViewById(I)Landroid/view/View;\nmove-result-object v3\ninvoke-virtual {v3}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {v3, v4}, Lcom/getbase/floatingactionbutton/FloatingActionsMenu;->findViewById(I)Landroid/view/View;\nmove-result-object v3\nconst/16 v6, 0x4\ninvoke-virtual {v3, v6}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "142",
+      "method": "Lit/feio/android/omninotes/models/views/Fab;->init()V",
+      "line": null,
+      "original": "invoke-virtual {v4, v5}, Lcom/getbase/floatingactionbutton/FloatingActionsMenu;->findViewById(I)Landroid/view/View;\nmove-result-object v4",
+      "variants": [
+        {
+          "code": "const/16 v4, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v4, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v4, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v5, 0x7fffffff\ninvoke-virtual {v4, v5}, Lcom/getbase/floatingactionbutton/FloatingActionsMenu;->findViewById(I)Landroid/view/View;\nmove-result-object v4",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v5, 0x7fffffff\ninvoke-virtual {v4, v5}, Lcom/getbase/floatingactionbutton/FloatingActionsMenu;->findViewById(I)Landroid/view/View;\nmove-result-object v4",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v5, 0x7fffffff\ninvoke-virtual {v4, v5}, Lcom/getbase/floatingactionbutton/FloatingActionsMenu;->findViewById(I)Landroid/view/View;\nmove-result-object v4",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {v4, v5}, Lcom/getbase/floatingactionbutton/FloatingActionsMenu;->findViewById(I)Landroid/view/View;\nmove-result-object v4\ninvoke-virtual {v4}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {v4, v5}, Lcom/getbase/floatingactionbutton/FloatingActionsMenu;->findViewById(I)Landroid/view/View;\nmove-result-object v4\ninvoke-virtual {v4}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {v4, v5}, Lcom/getbase/floatingactionbutton/FloatingActionsMenu;->findViewById(I)Landroid/view/View;\nmove-result-object v4\ninvoke-virtual {v4}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {v4, v5}, Lcom/getbase/floatingactionbutton/FloatingActionsMenu;->findViewById(I)Landroid/view/View;\nmove-result-object v4\nconst/16 v6, 0x4\ninvoke-virtual {v4, v6}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {v4, v5}, Lcom/getbase/floatingactionbutton/FloatingActionsMenu;->findViewById(I)Landroid/view/View;\nmove-result-object v4\nconst/16 v6, 0x4\ninvoke-virtual {v4, v6}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {v4, v5}, Lcom/getbase/floatingactionbutton/FloatingActionsMenu;->findViewById(I)Landroid/view/View;\nmove-result-object v4\nconst/16 v6, 0x4\ninvoke-virtual {v4, v6}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "143",
+      "method": "Lit/feio/android/omninotes/models/views/Fab;->hideFab()V",
+      "line": null,
+      "original": "add-int/2addr v1, v3",
+      "variants": [
+        {
+          "code": "sub-int/2addr v1, v3",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "144",
+      "method": "Lit/feio/android/omninotes/models/views/Fab;->setOverlay(I)V",
+      "line": null,
+      "original": "invoke-virtual {v1, v4}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+      "variants": [
+        {
+          "code": "const/16 v4, 0x0\ninvoke-virtual {v1, v4}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+          "operator": "BuggyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "145",
+      "method": "Lit/feio/android/omninotes/models/views/Fab;->setOverlay(Landroid/view/View;)V",
+      "line": null,
+      "original": "invoke-virtual {p1, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0\ninvoke-virtual {p1, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+          "operator": "BuggyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "146",
+      "method": "Lit/feio/android/omninotes/models/views/Fab$$ExternalSyntheticLambda3;->onClick(Landroid/view/View;)V",
+      "line": null,
+      "original": "return-void ",
+      "variants": [
+        {
+          "code": "const-wide/16 v1, 0x2710\ninvoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V\nreturn-void ",
+          "operator": "LengthyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "147",
+      "method": "Lit/feio/android/omninotes/models/views/SketchView;->touch_move(FF)V",
+      "line": null,
+      "original": "add-float v4, p1, v2",
+      "variants": [
+        {
+          "code": "sub-float v4, p1, v2",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "148",
+      "method": "Lit/feio/android/omninotes/models/views/SketchView;->touch_move(FF)V",
+      "line": null,
+      "original": "add-float v6, p2, v3",
+      "variants": [
+        {
+          "code": "sub-float v6, p2, v3",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "149",
+      "method": "Lit/feio/android/omninotes/models/views/SketchView;->touch_move(FF)V",
+      "line": null,
+      "original": "div-float/2addr v4, v5",
+      "variants": [
+        {
+          "code": "mul-float/2addr v4, v5",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "150",
+      "method": "Lit/feio/android/omninotes/models/views/SketchView;->touch_move(FF)V",
+      "line": null,
+      "original": "div-float/2addr v6, v5",
+      "variants": [
+        {
+          "code": "mul-float/2addr v6, v5",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "151",
+      "method": "Lit/feio/android/omninotes/models/views/SketchView;->touch_start(FF)V",
+      "line": null,
+      "original": "add-float/2addr v3, p1",
+      "variants": [
+        {
+          "code": "sub-float/2addr v3, p1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "152",
+      "method": "Lit/feio/android/omninotes/models/views/SketchView;->redo()V",
+      "line": null,
+      "original": "sub-int/2addr v4, v2",
+      "variants": [
+        {
+          "code": "add-int/2addr v4, v2",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "153",
+      "method": "Lit/feio/android/omninotes/models/views/SketchView;->undo()V",
+      "line": null,
+      "original": "sub-int/2addr v4, v2",
+      "variants": [
+        {
+          "code": "add-int/2addr v4, v2",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "154",
+      "method": "Lit/feio/android/omninotes/models/views/VerticalSeekBar;->onTouchEvent(Landroid/view/MotionEvent;)Z",
+      "line": null,
+      "original": "sub-int/2addr v1, v4",
+      "variants": [
+        {
+          "code": "add-int/2addr v1, v4",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "155",
+      "method": "Lit/feio/android/omninotes/models/views/VerticalSeekBar;->onTouchEvent(Landroid/view/MotionEvent;)Z",
+      "line": null,
+      "original": "mul-float/2addr v4, v5",
+      "variants": [
+        {
+          "code": "div-float/2addr v4, v5",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "156",
+      "method": "Lit/feio/android/omninotes/models/views/VerticalSeekBar;->onTouchEvent(Landroid/view/MotionEvent;)Z",
+      "line": null,
+      "original": "div-float/2addr v4, v5",
+      "variants": [
+        {
+          "code": "mul-float/2addr v4, v5",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "157",
+      "method": "Lit/feio/android/omninotes/models/views/NonScrollableListView;->justifyListViewHeightBasedOnChildren()V",
+      "line": null,
+      "original": "add-int/2addr v4, v7",
+      "variants": [
+        {
+          "code": "sub-int/2addr v4, v7",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "158",
+      "method": "Lit/feio/android/omninotes/models/views/NonScrollableListView;->justifyListViewHeightBasedOnChildren()V",
+      "line": null,
+      "original": "add-int/lit8 v5, v5, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v5, v5, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "159",
+      "method": "Lit/feio/android/omninotes/models/views/NonScrollableListView;->justifyListViewHeightBasedOnChildren()V",
+      "line": null,
+      "original": "add-int/2addr v6, v4",
+      "variants": [
+        {
+          "code": "sub-int/2addr v6, v4",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "160",
+      "method": "Lit/feio/android/omninotes/models/views/NonScrollableListView;->justifyListViewHeightBasedOnChildren()V",
+      "line": null,
+      "original": "sub-int/2addr v7, v2",
+      "variants": [
+        {
+          "code": "add-int/2addr v7, v2",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "161",
+      "method": "Lit/feio/android/omninotes/models/views/NonScrollableListView;->justifyListViewHeightBasedOnChildren()V",
+      "line": null,
+      "original": "mul-int/2addr v6, v7",
+      "variants": [
+        {
+          "code": "div-int/2addr v6, v7",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "162",
+      "method": "Lit/feio/android/omninotes/widget/ListRemoteViewsFactory;->getViewAt(I)Landroid/widget/RemoteViews;",
+      "line": 129,
+      "original": ".line 129\nnew-instance v6, Landroid/content/Intent;\ninvoke-direct {v6}, Landroid/content/Intent;-><init>()V",
+      "variants": [
+        {
+          "code": "const/16 v6, 0x0",
+          "operator": "NullIntentMutator"
+        },
+        {
+          "code": "new-instance v6, Landroid/content/Intent;\nsget-object v11, Landroid/content/Intent;->ACTION_VIEW:Ljava/lang/String;\ninvoke-direct {v6, v11}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        },
+        {
+          "code": "new-instance v6, Landroid/content/Intent;\nsget-object v11, Landroid/content/Intent;->ACTION_SEND:Ljava/lang/String;\ninvoke-direct {v6, v11}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "163",
+      "method": "Lit/feio/android/omninotes/widget/WidgetProvider;->setLayout(Landroid/content/Context;Landroid/appwidget/AppWidgetManager;I)V",
+      "line": null,
+      "original": "const-class v1, Lit/feio/android/omninotes/MainActivity;\ninvoke-direct {v0, v6, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const-class v1, Lit/feio/android/omninotes/DetailFragment$$ExternalSyntheticLambda10;\ninvoke-direct {v0, v6, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "IntentTargetReplacementMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "164",
+      "method": "Lit/feio/android/omninotes/widget/WidgetProvider;->setLayout(Landroid/content/Context;Landroid/appwidget/AppWidgetManager;I)V",
+      "line": null,
+      "original": "const-class v3, Lit/feio/android/omninotes/MainActivity;\ninvoke-direct {v2, v6, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const-class v3, Lit/feio/android/omninotes/DetailFragment$$ExternalSyntheticLambda10;\ninvoke-direct {v2, v6, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "IntentTargetReplacementMutator"
+        },
+        {
+          "code": "const-class v3, Lit/feio/android/omninotes/DetailFragment$$ExternalSyntheticLambda10;\ninvoke-direct {v2, v6, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "IntentTargetReplacementMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "165",
+      "method": "Lit/feio/android/omninotes/widget/WidgetProvider;->setLayout(Landroid/content/Context;Landroid/appwidget/AppWidgetManager;I)V",
+      "line": null,
+      "original": "invoke-direct {v0, v6, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/16 v6, 0x0\ninvoke-direct {v0, v6, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "InvalidKeyIntentMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "166",
+      "method": "Lit/feio/android/omninotes/widget/WidgetProvider;->setLayout(Landroid/content/Context;Landroid/appwidget/AppWidgetManager;I)V",
+      "line": null,
+      "original": "invoke-direct {v2, v6, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/16 v6, 0x0\ninvoke-direct {v2, v6, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "InvalidKeyIntentMutator"
+        },
+        {
+          "code": "const/16 v6, 0x0\ninvoke-direct {v2, v6, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "InvalidKeyIntentMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "167",
+      "method": "Lit/feio/android/omninotes/widget/WidgetProvider;->onUpdate(Landroid/content/Context;Landroid/appwidget/AppWidgetManager;[I)V",
+      "line": null,
+      "original": "add-int/lit8 v5, v5, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v5, v5, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "168",
+      "method": "Lit/feio/android/omninotes/widget/ListWidgetProvider;->getRemoteViews(Landroid/content/Context;IZZLandroid/util/SparseArray;)Landroid/widget/RemoteViews;",
+      "line": 68,
+      "original": ".line 68\nnew-instance v1, Landroid/content/Intent;\nconst-class v3, Lit/feio/android/omninotes/widget/ListWidgetService;\ninvoke-direct {v1, p1, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "NullIntentMutator"
+        },
+        {
+          "code": "new-instance v1, Landroid/content/Intent;\nsget-object v8, Landroid/content/Intent;->ACTION_VIEW:Ljava/lang/String;\ninvoke-direct {v1, v8}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        },
+        {
+          "code": "new-instance v1, Landroid/content/Intent;\nsget-object v8, Landroid/content/Intent;->ACTION_SEND:Ljava/lang/String;\ninvoke-direct {v1, v8}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "169",
+      "method": "Lit/feio/android/omninotes/widget/ListWidgetProvider;->getRemoteViews(Landroid/content/Context;IZZLandroid/util/SparseArray;)Landroid/widget/RemoteViews;",
+      "line": 75,
+      "original": ".line 75\nnew-instance v4, Landroid/content/Intent;\nconst-class v6, Lit/feio/android/omninotes/MainActivity;\ninvoke-direct {v4, p1, v6}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/16 v4, 0x0",
+          "operator": "NullIntentMutator"
+        },
+        {
+          "code": "new-instance v4, Landroid/content/Intent;\nsget-object v8, Landroid/content/Intent;->ACTION_VIEW:Ljava/lang/String;\ninvoke-direct {v4, v8}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        },
+        {
+          "code": "new-instance v4, Landroid/content/Intent;\nsget-object v8, Landroid/content/Intent;->ACTION_SEND:Ljava/lang/String;\ninvoke-direct {v4, v8}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "170",
+      "method": "Lit/feio/android/omninotes/widget/ListWidgetProvider;->getRemoteViews(Landroid/content/Context;IZZLandroid/util/SparseArray;)Landroid/widget/RemoteViews;",
+      "line": null,
+      "original": "const-class v3, Lit/feio/android/omninotes/widget/ListWidgetService;\ninvoke-direct {v1, p1, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const-class v3, Lit/feio/android/omninotes/widget/ListRemoteViewsFactory;\ninvoke-direct {v1, p1, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "IntentTargetReplacementMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "171",
+      "method": "Lit/feio/android/omninotes/widget/ListWidgetProvider;->getRemoteViews(Landroid/content/Context;IZZLandroid/util/SparseArray;)Landroid/widget/RemoteViews;",
+      "line": null,
+      "original": "const-class v6, Lit/feio/android/omninotes/MainActivity;\ninvoke-direct {v4, p1, v6}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const-class v6, Lit/feio/android/omninotes/DetailFragment$$ExternalSyntheticLambda10;\ninvoke-direct {v4, p1, v6}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "IntentTargetReplacementMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "172",
+      "method": "Lit/feio/android/omninotes/widget/ListWidgetProvider;->getRemoteViews(Landroid/content/Context;IZZLandroid/util/SparseArray;)Landroid/widget/RemoteViews;",
+      "line": null,
+      "original": "invoke-virtual {v1, v3, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;",
+      "variants": [
+        {
+          "code": "const/16 p2, 0x0\ninvoke-virtual {v1, v3, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;",
+          "operator": "NullPutExtraValueMutator"
+        },
+        {
+          "code": "const-string v3, \"__metford_invalid_key__\"\ninvoke-virtual {v1, v3, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;",
+          "operator": "NullPutExtraKeyMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "173",
+      "method": "Lit/feio/android/omninotes/widget/ListWidgetProvider;->getRemoteViews(Landroid/content/Context;IZZLandroid/util/SparseArray;)Landroid/widget/RemoteViews;",
+      "line": null,
+      "original": "invoke-direct {v1, p1, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/16 p1, 0x0\ninvoke-direct {v1, p1, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "InvalidKeyIntentMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "174",
+      "method": "Lit/feio/android/omninotes/widget/ListWidgetProvider;->getRemoteViews(Landroid/content/Context;IZZLandroid/util/SparseArray;)Landroid/widget/RemoteViews;",
+      "line": null,
+      "original": "invoke-direct {v4, p1, v6}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/16 p1, 0x0\ninvoke-direct {v4, p1, v6}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "InvalidKeyIntentMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "175",
+      "method": "Lit/feio/android/omninotes/widget/WidgetConfigurationActivity$$ExternalSyntheticLambda2;->onClick(Landroid/view/View;)V",
+      "line": null,
+      "original": "return-void ",
+      "variants": [
+        {
+          "code": "const-wide/16 v1, 0x2710\ninvoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V\nreturn-void ",
+          "operator": "LengthyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "176",
+      "method": "Lit/feio/android/omninotes/widget/WidgetConfigurationActivity;->lambda$onCreate$1$it-feio-android-omninotes-widget-WidgetConfigurationActivity(Landroid/view/View;)V",
+      "line": 98,
+      "original": ".line 98\nnew-instance v4, Landroid/content/Intent;\ninvoke-direct {v4}, Landroid/content/Intent;-><init>()V",
+      "variants": [
+        {
+          "code": "const/16 v4, 0x0",
+          "operator": "NullIntentMutator"
+        },
+        {
+          "code": "new-instance v4, Landroid/content/Intent;\nsget-object v9, Landroid/content/Intent;->ACTION_VIEW:Ljava/lang/String;\ninvoke-direct {v4, v9}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        },
+        {
+          "code": "new-instance v4, Landroid/content/Intent;\nsget-object v9, Landroid/content/Intent;->ACTION_SEND:Ljava/lang/String;\ninvoke-direct {v4, v9}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "177",
+      "method": "Lit/feio/android/omninotes/widget/WidgetConfigurationActivity;->lambda$onCreate$1$it-feio-android-omninotes-widget-WidgetConfigurationActivity(Landroid/view/View;)V",
+      "line": null,
+      "original": "invoke-virtual {v4, v5, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;",
+      "variants": [
+        {
+          "code": "const/16 v6, 0x0\ninvoke-virtual {v4, v5, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;",
+          "operator": "NullPutExtraValueMutator"
+        },
+        {
+          "code": "const-string v5, \"__metford_invalid_key__\"\ninvoke-virtual {v4, v5, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;",
+          "operator": "NullPutExtraKeyMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "178",
+      "method": "Lit/feio/android/omninotes/widget/WidgetConfigurationActivity;->lambda$onCreate$1$it-feio-android-omninotes-widget-WidgetConfigurationActivity(Landroid/view/View;)V",
+      "line": null,
+      "original": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/widget/WidgetConfigurationActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p0, v1}, Lit/feio/android/omninotes/widget/WidgetConfigurationActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/widget/WidgetConfigurationActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lit/feio/android/omninotes/widget/WidgetConfigurationActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v9, 0x4\ninvoke-virtual {v1, v9}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "179",
+      "method": "Lit/feio/android/omninotes/widget/WidgetConfigurationActivity;->lambda$onCreate$1$it-feio-android-omninotes-widget-WidgetConfigurationActivity(Landroid/view/View;)V",
+      "line": null,
+      "original": "invoke-virtual {p0, v2}, Lit/feio/android/omninotes/widget/WidgetConfigurationActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v2",
+      "variants": [
+        {
+          "code": "const/16 v2, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v2, 0x7fffffff\ninvoke-virtual {p0, v2}, Lit/feio/android/omninotes/widget/WidgetConfigurationActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v2",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v2}, Lit/feio/android/omninotes/widget/WidgetConfigurationActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v2\ninvoke-virtual {v2}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v2}, Lit/feio/android/omninotes/widget/WidgetConfigurationActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v2\nconst/16 v9, 0x4\ninvoke-virtual {v2, v9}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "180",
+      "method": "Lit/feio/android/omninotes/widget/WidgetConfigurationActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": null,
+      "original": "invoke-virtual {v6, v7}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+      "variants": [
+        {
+          "code": "const/16 v7, 0x0\ninvoke-virtual {v6, v7}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+          "operator": "BuggyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "181",
+      "method": "Lit/feio/android/omninotes/widget/WidgetConfigurationActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": 47,
+      "original": ".line 47\ninvoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V",
+      "variants": [
+        {
+          "code": ".line 47\ninvoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V\nconst-wide/16 v9, 0x2710\ninvoke-static {v9, v10}, Ljava/lang/Thread;->sleep(J)V",
+          "operator": "LengthyGUICreationMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "182",
+      "method": "Lit/feio/android/omninotes/widget/WidgetConfigurationActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": null,
+      "original": "invoke-virtual {p0, v3}, Lit/feio/android/omninotes/widget/WidgetConfigurationActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v3",
+      "variants": [
+        {
+          "code": "const/16 v3, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v3, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v3, 0x7fffffff\ninvoke-virtual {p0, v3}, Lit/feio/android/omninotes/widget/WidgetConfigurationActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v3",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v3, 0x7fffffff\ninvoke-virtual {p0, v3}, Lit/feio/android/omninotes/widget/WidgetConfigurationActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v3",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v3}, Lit/feio/android/omninotes/widget/WidgetConfigurationActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v3\ninvoke-virtual {v3}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v3}, Lit/feio/android/omninotes/widget/WidgetConfigurationActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v3\ninvoke-virtual {v3}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v3}, Lit/feio/android/omninotes/widget/WidgetConfigurationActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v3\nconst/16 v9, 0x4\ninvoke-virtual {v3, v9}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v3}, Lit/feio/android/omninotes/widget/WidgetConfigurationActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v3\nconst/16 v9, 0x4\ninvoke-virtual {v3, v9}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "183",
+      "method": "Lit/feio/android/omninotes/widget/WidgetConfigurationActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": null,
+      "original": "invoke-virtual {p0, v6}, Lit/feio/android/omninotes/widget/WidgetConfigurationActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v6",
+      "variants": [
+        {
+          "code": "const/16 v6, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v6, 0x7fffffff\ninvoke-virtual {p0, v6}, Lit/feio/android/omninotes/widget/WidgetConfigurationActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v6",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v6}, Lit/feio/android/omninotes/widget/WidgetConfigurationActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v6\ninvoke-virtual {v6}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v6}, Lit/feio/android/omninotes/widget/WidgetConfigurationActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v6\nconst/16 v9, 0x4\ninvoke-virtual {v6, v9}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "184",
+      "method": "Lit/feio/android/omninotes/intro/IntroSlide6;->lambda$onActivityCreated$0$it-feio-android-omninotes-intro-IntroSlide6(Landroid/view/View;)V",
+      "line": 41,
+      "original": ".line 41\nnew-instance v1, Landroid/content/Intent;\nconst-string v2, \"android.intent.action.VIEW\"\ninvoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "NullIntentMutator"
+        },
+        {
+          "code": "new-instance v1, Landroid/content/Intent;\nsget-object v4, Landroid/content/Intent;->ACTION_VIEW:Ljava/lang/String;\ninvoke-direct {v1, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        },
+        {
+          "code": "new-instance v1, Landroid/content/Intent;\nsget-object v4, Landroid/content/Intent;->ACTION_SEND:Ljava/lang/String;\ninvoke-direct {v1, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "185",
+      "method": "Lit/feio/android/omninotes/intro/IntroSlide6;->onActivityCreated(Landroid/os/Bundle;)V",
+      "line": null,
+      "original": "invoke-virtual {v2, v4}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+      "variants": [
+        {
+          "code": "const/16 v4, 0x0\ninvoke-virtual {v2, v4}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+          "operator": "BuggyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "186",
+      "method": "Lit/feio/android/omninotes/intro/IntroSlide6$$ExternalSyntheticLambda1;->onClick(Landroid/view/View;)V",
+      "line": null,
+      "original": "return-void ",
+      "variants": [
+        {
+          "code": "const-wide/16 v1, 0x2710\ninvoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V\nreturn-void ",
+          "operator": "LengthyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "187",
+      "method": "Lit/feio/android/omninotes/models/UndoBarController$1;->onClick(Landroid/view/View;)V",
+      "line": null,
+      "original": "return-void ",
+      "variants": [
+        {
+          "code": "const-wide/16 v4, 0x2710\ninvoke-static {v4, v5}, Ljava/lang/Thread;->sleep(J)V\nreturn-void ",
+          "operator": "LengthyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "188",
+      "method": "Lit/feio/android/omninotes/models/Stats;->getNotesTotalNumber()I",
+      "line": null,
+      "original": "add-int/2addr v1, v2",
+      "variants": [
+        {
+          "code": "sub-int/2addr v1, v2",
+          "operator": "ArithmeticOperatorMutator"
+        },
+        {
+          "code": "sub-int/2addr v1, v2",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "189",
+      "method": "Lit/feio/android/omninotes/models/UndoBarController;-><init>(Landroid/view/View;Lit/feio/android/omninotes/models/UndoBarController$UndoListener;)V",
+      "line": null,
+      "original": "invoke-virtual {v3, v4}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+      "variants": [
+        {
+          "code": "const/16 v4, 0x0\ninvoke-virtual {v3, v4}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+          "operator": "BuggyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "190",
+      "method": "Lit/feio/android/omninotes/models/UndoBarController;-><init>(Landroid/view/View;Lit/feio/android/omninotes/models/UndoBarController$UndoListener;)V",
+      "line": null,
+      "original": "invoke-virtual {v3, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v3",
+      "variants": [
+        {
+          "code": "const/16 v3, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v3, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v4, 0x7fffffff\ninvoke-virtual {v3, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v3",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v4, 0x7fffffff\ninvoke-virtual {v3, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v3",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {v3, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v3\ninvoke-virtual {v3}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {v3, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v3\ninvoke-virtual {v3}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {v3, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v3\nconst/16 v6, 0x4\ninvoke-virtual {v3, v6}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {v3, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;\nmove-result-object v3\nconst/16 v6, 0x4\ninvoke-virtual {v3, v6}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "191",
+      "method": "Lit/feio/android/omninotes/async/CategoryMenuTask$$ExternalSyntheticLambda1;->onClick(Landroid/view/View;)V",
+      "line": null,
+      "original": "return-void ",
+      "variants": [
+        {
+          "code": "const-wide/16 v1, 0x2710\ninvoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V\nreturn-void ",
+          "operator": "LengthyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "192",
+      "method": "Lit/feio/android/omninotes/async/DataBackupIntentService;->createNotification(Landroid/content/Intent;Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V",
+      "line": null,
+      "original": "new-instance v1, Landroid/content/Intent;\nconst-class v3, Lit/feio/android/omninotes/MainActivity;\ninvoke-direct {v1, p2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "NullIntentMutator"
+        },
+        {
+          "code": "new-instance v1, Landroid/content/Intent;\nsget-object v8, Landroid/content/Intent;->ACTION_VIEW:Ljava/lang/String;\ninvoke-direct {v1, v8}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        },
+        {
+          "code": "new-instance v1, Landroid/content/Intent;\nsget-object v8, Landroid/content/Intent;->ACTION_SEND:Ljava/lang/String;\ninvoke-direct {v1, v8}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "193",
+      "method": "Lit/feio/android/omninotes/async/DataBackupIntentService;->createNotification(Landroid/content/Intent;Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V",
+      "line": null,
+      "original": "new-instance v1, Landroid/content/Intent;\ninvoke-direct {v1}, Landroid/content/Intent;-><init>()V",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "NullIntentMutator"
+        },
+        {
+          "code": "new-instance v1, Landroid/content/Intent;\nsget-object v8, Landroid/content/Intent;->ACTION_VIEW:Ljava/lang/String;\ninvoke-direct {v1, v8}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        },
+        {
+          "code": "new-instance v1, Landroid/content/Intent;\nsget-object v8, Landroid/content/Intent;->ACTION_SEND:Ljava/lang/String;\ninvoke-direct {v1, v8}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "194",
+      "method": "Lit/feio/android/omninotes/async/DataBackupIntentService;->createNotification(Landroid/content/Intent;Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V",
+      "line": null,
+      "original": "const-class v3, Lit/feio/android/omninotes/MainActivity;\ninvoke-direct {v1, p2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const-class v3, Lit/feio/android/omninotes/DetailFragment$$ExternalSyntheticLambda10;\ninvoke-direct {v1, p2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "IntentTargetReplacementMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "195",
+      "method": "Lit/feio/android/omninotes/async/DataBackupIntentService;->createNotification(Landroid/content/Intent;Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V",
+      "line": null,
+      "original": "invoke-direct {v1, p2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/16 p2, 0x0\ninvoke-direct {v1, p2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "InvalidKeyIntentMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "196",
+      "method": "Lit/feio/android/omninotes/async/MainMenuTask;->buildMainMenu()Ljava/util/List;",
+      "line": null,
+      "original": "add-int/lit8 v6, v6, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v6, v6, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "197",
+      "method": "Lit/feio/android/omninotes/async/MainMenuTask;->onPostExecute(Ljava/util/List;)V",
+      "line": null,
+      "original": "invoke-virtual {v1, v2}, Lit/feio/android/omninotes/MainActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v2, 0x7fffffff\ninvoke-virtual {v1, v2}, Lit/feio/android/omninotes/MainActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {v1, v2}, Lit/feio/android/omninotes/MainActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {v1, v2}, Lit/feio/android/omninotes/MainActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v5, 0x4\ninvoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "198",
+      "method": "Lit/feio/android/omninotes/async/CategoryMenuTask;->lambda$buildCategoryMenu$0$it-feio-android-omninotes-async-CategoryMenuTask(Landroid/view/View;)V",
+      "line": null,
+      "original": "const-class v3, Lit/feio/android/omninotes/SettingsActivity;\ninvoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const-class v3, Lit/feio/android/omninotes/DetailFragment$$ExternalSyntheticLambda10;\ninvoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "IntentTargetReplacementMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "199",
+      "method": "Lit/feio/android/omninotes/async/CategoryMenuTask;->lambda$buildCategoryMenu$0$it-feio-android-omninotes-async-CategoryMenuTask(Landroid/view/View;)V",
+      "line": null,
+      "original": "invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/16 v2, 0x0\ninvoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "InvalidKeyIntentMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "200",
+      "method": "Lit/feio/android/omninotes/async/CategoryMenuTask;->lambda$buildCategoryMenu$1$it-feio-android-omninotes-async-CategoryMenuTask(Landroid/view/View;)V",
+      "line": null,
+      "original": "invoke-virtual {p1, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0\ninvoke-virtual {p1, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+          "operator": "BuggyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "201",
+      "method": "Lit/feio/android/omninotes/async/CategoryMenuTask;->onPreExecute()V",
+      "line": null,
+      "original": "sub-int/2addr v4, v2",
+      "variants": [
+        {
+          "code": "add-int/2addr v4, v2",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "202",
+      "method": "Lit/feio/android/omninotes/async/CategoryMenuTask;->onPreExecute()V",
+      "line": null,
+      "original": "invoke-virtual {v1, v3}, Lit/feio/android/omninotes/MainActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v3, 0x7fffffff\ninvoke-virtual {v1, v3}, Lit/feio/android/omninotes/MainActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {v1, v3}, Lit/feio/android/omninotes/MainActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {v1, v3}, Lit/feio/android/omninotes/MainActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/16 v5, 0x4\ninvoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "203",
+      "method": "Lit/feio/android/omninotes/async/CategoryMenuTask;->onPreExecute()V",
+      "line": null,
+      "original": "invoke-virtual {v3, v4}, Lit/feio/android/omninotes/MainActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v3",
+      "variants": [
+        {
+          "code": "const/16 v3, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const/16 v3, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v4, 0x7fffffff\ninvoke-virtual {v3, v4}, Lit/feio/android/omninotes/MainActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v3",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "const v4, 0x7fffffff\ninvoke-virtual {v3, v4}, Lit/feio/android/omninotes/MainActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v3",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {v3, v4}, Lit/feio/android/omninotes/MainActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v3\ninvoke-virtual {v3}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {v3, v4}, Lit/feio/android/omninotes/MainActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v3\ninvoke-virtual {v3}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {v3, v4}, Lit/feio/android/omninotes/MainActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v3\nconst/16 v5, 0x4\ninvoke-virtual {v3, v5}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        },
+        {
+          "code": "invoke-virtual {v3, v4}, Lit/feio/android/omninotes/MainActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v3\nconst/16 v5, 0x4\ninvoke-virtual {v3, v5}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    }
+  ]
+}

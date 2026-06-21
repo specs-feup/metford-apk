@@ -1,0 +1,145 @@
+{
+  "projectName": "MyApplication",
+  "totalMutants": 19,
+  "sites": [
+    {
+      "siteTag": "1",
+      "method": "Lcom/example/myapplication/MainActivity;->add(II)I",
+      "original": ".line 30\nadd-int v0, p0, p1",
+      "variants": [
+        {
+          "code": ".line 30\nsub-int v0, p0, p1",
+          "operator": "ArithmeticOperatorMutator"
+        },
+        {
+          "code": ".line 30\nmul-int v0, p0, p1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "2",
+      "method": "Lcom/example/myapplication/MainActivity;->buildIntent(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;",
+      "original": ".line 38\nnew-instance v0, Landroid/content/Intent;\n.line 38\nnew-instance v0, Landroid/content/Intent;\nconst-class v1, Lcom/example/myapplication/MainActivity;\ninvoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/4 v0, 0x0",
+          "operator": "NullIntentMutator"
+        },
+        {
+          "code": "new-instance v0, Landroid/content/Intent;\nsget-object v2, Landroid/content/Intent;->ACTION_VIEW:Ljava/lang/String;\ninvoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        },
+        {
+          "code": "new-instance v0, Landroid/content/Intent;\nsget-object v2, Landroid/content/Intent;->ACTION_SEND:Ljava/lang/String;\ninvoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V",
+          "operator": "RandomIntentActionMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "3",
+      "method": "Lcom/example/myapplication/MainActivity;->buildIntent(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;",
+      "original": "invoke-virtual {v0, p1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;",
+      "variants": [
+        {
+          "code": "const/4 p2, 0x0\ninvoke-virtual {v0, p1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;",
+          "operator": "NullPutExtraValueMutator"
+        },
+        {
+          "code": "const-string p1, \"__metford_invalid_key__\"\ninvoke-virtual {v0, p1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;",
+          "operator": "NullPutExtraKeyMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "4",
+      "method": "Lcom/example/myapplication/MainActivity;->getCurrentDate()Ljava/util/Date;",
+      "original": ".line 34\nnew-instance v0, Ljava/util/Date;\ninvoke-direct {v0}, Ljava/util/Date;-><init>()V",
+      "variants": [
+        {
+          "code": "new-instance v0, Ljava/util/Date;\nconst-wide/16 v1, 0x2710\ninvoke-direct {v0, v1, v2}, Ljava/util/Date;-><init>(J)V",
+          "operator": "InvalidDateMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "5",
+      "method": "Lcom/example/myapplication/MainActivity;->onCreate(Landroid/os/Bundle;)V",
+      "original": "invoke-virtual {v0, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+      "variants": [
+        {
+          "code": "const/4 v2, 0x0\ninvoke-virtual {v0, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+          "operator": "BuggyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "6",
+      "method": "Lcom/example/myapplication/MainActivity;->onCreate(Landroid/os/Bundle;)V",
+      "original": ".line 15\ninvoke-super {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->onCreate(Landroid/os/Bundle;)V",
+      "variants": [
+        {
+          "code": ".line 15\ninvoke-super {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->onCreate(Landroid/os/Bundle;)V\nconst-wide/16 v3, 0x2710\ninvoke-static {v3, v4}, Ljava/lang/Thread;->sleep(J)V",
+          "operator": "LengthyGUICreationMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "7",
+      "method": "Lcom/example/myapplication/MainActivity;->onCreate(Landroid/os/Bundle;)V",
+      "original": "invoke-virtual {p0, v0}, Lcom/example/myapplication/MainActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+      "variants": [
+        {
+          "code": "const/4 v0, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v0, 0x7fffffff\ninvoke-virtual {p0, v0}, Lcom/example/myapplication/MainActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v0",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v0}, Lcom/example/myapplication/MainActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v0\ninvoke-virtual {v0}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v0}, Lcom/example/myapplication/MainActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v0\nconst/4 v3, 0x4\ninvoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "8",
+      "method": "Lcom/example/myapplication/MainActivity;->onCreate(Landroid/os/Bundle;)V",
+      "original": "invoke-virtual {p0, v1}, Lcom/example/myapplication/MainActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+      "variants": [
+        {
+          "code": "const/4 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\ninvoke-virtual {p0, v1}, Lcom/example/myapplication/MainActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lcom/example/myapplication/MainActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": "invoke-virtual {p0, v1}, Lcom/example/myapplication/MainActivity;->findViewById(I)Landroid/view/View;\nmove-result-object v1\nconst/4 v3, 0x4\ninvoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "9",
+      "method": "Lcom/example/myapplication/MainActivity$1;->onClick(Landroid/view/View;)V",
+      "original": ".line 25\nreturn-void ",
+      "variants": [
+        {
+          "code": "const-wide/16 v2, 0x2710\ninvoke-static {v2, v3}, Ljava/lang/Thread;->sleep(J)V\n.line 25\nreturn-void ",
+          "operator": "LengthyGUIListenerMutator"
+        }
+      ]
+    }
+  ]
+}

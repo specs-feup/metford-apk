@@ -1,0 +1,51 @@
+{
+    "projectName": "cleancalculator",
+    "inputApk": "InputSources/CleanCalculator.apk",
+    "outputApk": "mutated-cleancalculator.apk",
+    "reportPath": "reports/mutation-report-cleancalculator.json",
+    "packageFilter": "home/jmstudios/calc",
+    "verbose": true,
+    "operators": [
+        {
+            "name": "Arithmetic",
+            "from": "add",
+            "to": [
+                "sub"
+            ]
+        },
+        {
+            "name": "Arithmetic",
+            "from": "sub",
+            "to": [
+                "add"
+            ]
+        },
+        {
+            "name": "Arithmetic",
+            "from": "mul",
+            "to": [
+                "div"
+            ]
+        },
+        {
+            "name": "Arithmetic",
+            "from": "div",
+            "to": [
+                "mul"
+            ]
+        },
+        "NullIntent",
+        "IntentTargetReplacement",
+        "NullPutExtraValue",
+        "NullPutExtraKey",
+        "BuggyGUIListener",
+        "LengthyGUIListener",
+        "LengthyGUICreation",
+        "FindViewByIdReturnsNull",
+        "InvalidIDFindView",
+        "InvalidKeyIntent",
+        "InvalidViewFocus",
+        "ViewComponentNotVisible",
+        "RandomIntentAction"
+    ]
+}

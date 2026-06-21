@@ -1,0 +1,366 @@
+{
+  "projectName": "cpu_z",
+  "totalMutants": 46,
+  "sites": [
+    {
+      "siteTag": "1",
+      "method": "Lcom/cpuid/cpu_z/OGLActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": 1,
+      "original": ".line 1\ninvoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V",
+      "variants": [
+        {
+          "code": ".line 1\ninvoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V\nconst-wide/16 v1, 0x2710\ninvoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V",
+          "operator": "LengthyGUICreationMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "2",
+      "method": "Lcom/cpuid/cpu_z/SettingActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": 140,
+      "original": ".line 138\n.line 139\n.line 140\ninvoke-virtual {v0, v5}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+      "variants": [
+        {
+          "code": "const/16 v5, 0x0\n.line 138\n.line 139\n.line 140\ninvoke-virtual {v0, v5}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+          "operator": "BuggyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "3",
+      "method": "Lcom/cpuid/cpu_z/SettingActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": 148,
+      "original": ".line 146\n.line 147\n.line 148\ninvoke-virtual {v1, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+      "variants": [
+        {
+          "code": "const/16 v0, 0x0\n.line 146\n.line 147\n.line 148\ninvoke-virtual {v1, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+          "operator": "BuggyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "4",
+      "method": "Lcom/cpuid/cpu_z/SettingActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": 157,
+      "original": ".line 155\n.line 156\n.line 157\ninvoke-virtual {p1, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+      "variants": [
+        {
+          "code": "const/16 v0, 0x0\n.line 155\n.line 156\n.line 157\ninvoke-virtual {p1, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+          "operator": "BuggyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "5",
+      "method": "Lcom/cpuid/cpu_z/SettingActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": 165,
+      "original": ".line 163\n.line 164\n.line 165\ninvoke-virtual {v2, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+      "variants": [
+        {
+          "code": "const/16 p0, 0x0\n.line 163\n.line 164\n.line 165\ninvoke-virtual {v2, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+          "operator": "BuggyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "6",
+      "method": "Lcom/cpuid/cpu_z/SettingActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": 173,
+      "original": ".line 171\n.line 172\n.line 173\ninvoke-virtual {v3, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+      "variants": [
+        {
+          "code": "const/16 p0, 0x0\n.line 171\n.line 172\n.line 173\ninvoke-virtual {v3, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+          "operator": "BuggyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "7",
+      "method": "Lcom/cpuid/cpu_z/SettingActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": 181,
+      "original": ".line 179\n.line 180\n.line 181\ninvoke-virtual {v4, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+      "variants": [
+        {
+          "code": "const/16 p0, 0x0\n.line 179\n.line 180\n.line 181\ninvoke-virtual {v4, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V",
+          "operator": "BuggyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "8",
+      "method": "Lcom/cpuid/cpu_z/SettingActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": 1,
+      "original": ".line 1\ninvoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V",
+      "variants": [
+        {
+          "code": ".line 1\ninvoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V\nconst-wide/16 v8, 0x2710\ninvoke-static {v8, v9}, Ljava/lang/Thread;->sleep(J)V",
+          "operator": "LengthyGUICreationMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "9",
+      "method": "Lcom/cpuid/cpu_z/SettingActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": 29,
+      "original": ".line 27\n.line 28\n.line 29\ninvoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;\n.line 30\n.line 31\n.line 32\nmove-result-object p1",
+      "variants": [
+        {
+          "code": "const/16 p1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const p1, 0x7fffffff\n.line 27\n.line 28\n.line 29\ninvoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;\n.line 30\n.line 31\n.line 32\nmove-result-object p1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": ".line 27\n.line 28\n.line 29\ninvoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;\n.line 30\n.line 31\n.line 32\nmove-result-object p1\ninvoke-virtual {p1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": ".line 27\n.line 28\n.line 29\ninvoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;\n.line 30\n.line 31\n.line 32\nmove-result-object p1\nconst/16 v8, 0x4\ninvoke-virtual {p1, v8}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "10",
+      "method": "Lcom/cpuid/cpu_z/SettingActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": 38,
+      "original": ".line 36\n.line 37\n.line 38\ninvoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;\n.line 39\n.line 40\n.line 41\nmove-result-object v0",
+      "variants": [
+        {
+          "code": "const/16 v0, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v0, 0x7fffffff\n.line 36\n.line 37\n.line 38\ninvoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;\n.line 39\n.line 40\n.line 41\nmove-result-object v0",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": ".line 36\n.line 37\n.line 38\ninvoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;\n.line 39\n.line 40\n.line 41\nmove-result-object v0\ninvoke-virtual {v0}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": ".line 36\n.line 37\n.line 38\ninvoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;\n.line 39\n.line 40\n.line 41\nmove-result-object v0\nconst/16 v8, 0x4\ninvoke-virtual {v0, v8}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "11",
+      "method": "Lcom/cpuid/cpu_z/SettingActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": 47,
+      "original": ".line 45\n.line 46\n.line 47\ninvoke-virtual {p0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;\n.line 48\n.line 49\n.line 50\nmove-result-object v1",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\n.line 45\n.line 46\n.line 47\ninvoke-virtual {p0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;\n.line 48\n.line 49\n.line 50\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": ".line 45\n.line 46\n.line 47\ninvoke-virtual {p0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;\n.line 48\n.line 49\n.line 50\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": ".line 45\n.line 46\n.line 47\ninvoke-virtual {p0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;\n.line 48\n.line 49\n.line 50\nmove-result-object v1\nconst/16 v8, 0x4\ninvoke-virtual {v1, v8}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "12",
+      "method": "Lcom/cpuid/cpu_z/SettingActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": 56,
+      "original": ".line 54\n.line 55\n.line 56\ninvoke-virtual {p0, v2}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;\n.line 57\n.line 58\n.line 59\nmove-result-object v2",
+      "variants": [
+        {
+          "code": "const/16 v2, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v2, 0x7fffffff\n.line 54\n.line 55\n.line 56\ninvoke-virtual {p0, v2}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;\n.line 57\n.line 58\n.line 59\nmove-result-object v2",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": ".line 54\n.line 55\n.line 56\ninvoke-virtual {p0, v2}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;\n.line 57\n.line 58\n.line 59\nmove-result-object v2\ninvoke-virtual {v2}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": ".line 54\n.line 55\n.line 56\ninvoke-virtual {p0, v2}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;\n.line 57\n.line 58\n.line 59\nmove-result-object v2\nconst/16 v8, 0x4\ninvoke-virtual {v2, v8}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "13",
+      "method": "Lcom/cpuid/cpu_z/SettingActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": 65,
+      "original": ".line 63\n.line 64\n.line 65\ninvoke-virtual {p0, v3}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;\n.line 66\n.line 67\n.line 68\nmove-result-object v3",
+      "variants": [
+        {
+          "code": "const/16 v3, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v3, 0x7fffffff\n.line 63\n.line 64\n.line 65\ninvoke-virtual {p0, v3}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;\n.line 66\n.line 67\n.line 68\nmove-result-object v3",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": ".line 63\n.line 64\n.line 65\ninvoke-virtual {p0, v3}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;\n.line 66\n.line 67\n.line 68\nmove-result-object v3\ninvoke-virtual {v3}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": ".line 63\n.line 64\n.line 65\ninvoke-virtual {p0, v3}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;\n.line 66\n.line 67\n.line 68\nmove-result-object v3\nconst/16 v8, 0x4\ninvoke-virtual {v3, v8}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "14",
+      "method": "Lcom/cpuid/cpu_z/SettingActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": 74,
+      "original": ".line 72\n.line 73\n.line 74\ninvoke-virtual {p0, v4}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;\n.line 75\n.line 76\n.line 77\nmove-result-object v4",
+      "variants": [
+        {
+          "code": "const/16 v4, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v4, 0x7fffffff\n.line 72\n.line 73\n.line 74\ninvoke-virtual {p0, v4}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;\n.line 75\n.line 76\n.line 77\nmove-result-object v4",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": ".line 72\n.line 73\n.line 74\ninvoke-virtual {p0, v4}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;\n.line 75\n.line 76\n.line 77\nmove-result-object v4\ninvoke-virtual {v4}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": ".line 72\n.line 73\n.line 74\ninvoke-virtual {p0, v4}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;\n.line 75\n.line 76\n.line 77\nmove-result-object v4\nconst/16 v8, 0x4\ninvoke-virtual {v4, v8}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "15",
+      "method": "Lcom/cpuid/cpu_z/SettingActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": 120,
+      "original": ".line 118\n.line 119\n.line 120\ninvoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;\n.line 121\n.line 122\n.line 123\nmove-result-object v0",
+      "variants": [
+        {
+          "code": "const/16 v0, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v0, 0x7fffffff\n.line 118\n.line 119\n.line 120\ninvoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;\n.line 121\n.line 122\n.line 123\nmove-result-object v0",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": ".line 118\n.line 119\n.line 120\ninvoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;\n.line 121\n.line 122\n.line 123\nmove-result-object v0\ninvoke-virtual {v0}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": ".line 118\n.line 119\n.line 120\ninvoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;\n.line 121\n.line 122\n.line 123\nmove-result-object v0\nconst/16 v8, 0x4\ninvoke-virtual {v0, v8}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "16",
+      "method": "Lcom/cpuid/cpu_z/SettingActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": 129,
+      "original": ".line 127\n.line 128\n.line 129\ninvoke-virtual {p0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;\n.line 130\n.line 131\n.line 132\nmove-result-object v1",
+      "variants": [
+        {
+          "code": "const/16 v1, 0x0",
+          "operator": "FindViewByIdReturnsNullMutator"
+        },
+        {
+          "code": "const v1, 0x7fffffff\n.line 127\n.line 128\n.line 129\ninvoke-virtual {p0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;\n.line 130\n.line 131\n.line 132\nmove-result-object v1",
+          "operator": "InvalidIDFindViewMutator"
+        },
+        {
+          "code": ".line 127\n.line 128\n.line 129\ninvoke-virtual {p0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;\n.line 130\n.line 131\n.line 132\nmove-result-object v1\ninvoke-virtual {v1}, Landroid/view/View;->requestFocus()Z",
+          "operator": "InvalidViewFocusMutator"
+        },
+        {
+          "code": ".line 127\n.line 128\n.line 129\ninvoke-virtual {p0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;\n.line 130\n.line 131\n.line 132\nmove-result-object v1\nconst/16 v8, 0x4\ninvoke-virtual {v1, v8}, Landroid/view/View;->setVisibility(I)V",
+          "operator": "ViewComponentNotVisibleMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "17",
+      "method": "Lcom/cpuid/cpu_z/SettingActivity;->onRadioButtonClick(Landroid/view/View;)V",
+      "line": 10,
+      "original": ".line 8\n.line 9\n.line 10\nreturn-void ",
+      "variants": [
+        {
+          "code": "const-wide/16 v0, 0x2710\ninvoke-static {v0, v1}, Ljava/lang/Thread;->sleep(J)V\n.line 8\n.line 9\n.line 10\nreturn-void ",
+          "operator": "LengthyGUIListenerMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "18",
+      "method": "Lcom/cpuid/cpu_z/MainActivity;->onCreate(Landroid/os/Bundle;)V",
+      "line": 215,
+      "original": ".line 214\n.line 215\ninvoke-direct {p0, v8, p1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+      "variants": [
+        {
+          "code": "const/16 v8, 0x0\n.line 214\n.line 215\ninvoke-direct {p0, v8, p1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V",
+          "operator": "InvalidKeyIntentMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "19",
+      "method": "Lcom/cpuid/cpu_z/MainActivity;->onOptionsItemSelected(Landroid/view/MenuItem;)Z",
+      "line": null,
+      "original": "add-int/lit8 v7, v7, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v7, v7, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "20",
+      "method": "Lcom/cpuid/cpu_z/MainActivity;->onPause()V",
+      "line": 27,
+      "original": ".line 27\nadd-int/lit8 v3, v3, 0x1",
+      "variants": [
+        {
+          "code": ".line 27\nadd-int/lit8 v3, v3, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "21",
+      "method": "Lcom/cpuid/cpu_z/MainActivity;->onResume()V",
+      "line": 27,
+      "original": ".line 27\nadd-int/lit8 v3, v3, 0x1",
+      "variants": [
+        {
+          "code": ".line 27\nadd-int/lit8 v3, v3, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    },
+    {
+      "siteTag": "22",
+      "method": "Lcom/cpuid/cpu_z/MainActivity;->s()V",
+      "line": null,
+      "original": "add-int/lit8 v4, v4, 0x1",
+      "variants": [
+        {
+          "code": "add-int/lit8 v4, v4, -0x1",
+          "operator": "ArithmeticOperatorMutator"
+        }
+      ]
+    }
+  ]
+}
